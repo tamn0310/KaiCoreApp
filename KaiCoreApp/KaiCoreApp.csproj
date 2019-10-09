@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-KaiCoreApp-DE04198D-68ED-45A2-8DAC-C9BFF82F92E5</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KaiCoreApp.Application\KaiCoreApp.Application.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.Data\KaiCoreApp.Data.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.EF\KaiCoreApp.EF.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.Infrastructure\KaiCoreApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.Utilities\KaiCoreApp.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

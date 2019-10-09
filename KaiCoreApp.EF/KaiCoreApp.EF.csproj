@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KaiCoreApp.Data\KaiCoreApp.Data.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.Infrastructure\KaiCoreApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.Utilities\KaiCoreApp.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

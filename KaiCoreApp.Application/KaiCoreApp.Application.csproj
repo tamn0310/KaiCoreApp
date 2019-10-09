@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KaiCoreApp.Data\KaiCoreApp.Data.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.EF\KaiCoreApp.EF.csproj" />
+    <ProjectReference Include="..\KaiCoreApp.Utilities\KaiCoreApp.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
