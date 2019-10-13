@@ -10,6 +10,11 @@
     <Folder Include="AutoMapper\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\KaiCoreApp.Data\KaiCoreApp.Data.csproj" />
