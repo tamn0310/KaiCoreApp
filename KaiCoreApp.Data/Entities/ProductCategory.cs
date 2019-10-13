@@ -24,7 +24,7 @@ namespace KaiCoreApp.Data.Entities
         public int? HomeOrder { get; set; }
 
         [StringLength(256)]
-        public string Image { get; set; }
+        public string Images { get; set; }
         public bool HomeFlag { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime DateModified { get; set; }

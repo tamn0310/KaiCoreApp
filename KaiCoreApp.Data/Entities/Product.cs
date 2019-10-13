@@ -33,6 +33,9 @@ namespace KaiCoreApp.Data.Entities
         public bool HotFlag { get; set; }
         public int? ViewCount { get; set; }
 
+        [StringLength(255)]
+        public string Image { get; set; }
+
         [StringLength(256)]
         public string Tags { get; set; }
 
