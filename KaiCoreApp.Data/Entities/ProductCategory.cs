@@ -15,16 +15,37 @@ namespace KaiCoreApp.Data.Entities
         {
             Products = new List<Product>();
         }
+        
+
+        public ProductCategory(string name, string description, int? parentId, int? homeOrder,
+            string images, bool homeFlag, int sortOrder, Status status, string seoPageTitle,
+            string seoAlias, string seoKeywords, string seoDescription)
+        {
+            Name = name;
+            Description = description;
+            ParentId = parentId;
+            HomeOrder = homeOrder;
+            HomeFlag = homeFlag;
+            Images = images;
+            SortOrder = sortOrder;
+            Status = status;
+            SeoPageTitle = seoPageTitle;
+            SeoAlias = seoAlias;
+            SeoKeywords = seoKeywords;
+            SeoDescription = seoDescription;
+        }
 
         [MaxLength(256)]
         [Required]
         public string Name { get; set; }
+
         public string Description { get; set; }
         public int? ParentId { get; set; }
         public int? HomeOrder { get; set; }
 
         [StringLength(256)]
         public string Images { get; set; }
+
         public bool HomeFlag { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime DateModified { get; set; }
@@ -33,7 +54,7 @@ namespace KaiCoreApp.Data.Entities
         public string SeoPageTitle { get; set; }
 
         [StringLength(256)]
-        [Column(TypeName ="varchar")]
+        [Column(TypeName = "varchar")]
         public string SeoAlias { get; set; }
 
         [StringLength(256)]
