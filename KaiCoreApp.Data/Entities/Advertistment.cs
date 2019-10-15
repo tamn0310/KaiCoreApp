@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KaiCoreApp.Data.Entities
 {
+    [Table("Advertistments")]
     public class Advertistment : DomainEntity<int>, ISwitchable, ISortable
     {
         [StringLength(250)]

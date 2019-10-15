@@ -12,8 +12,8 @@ namespace KaiCoreApp.Data.Entities
     {
         public int ProductId { get; set; }
 
-        [StringLength(50)]
-        [Column(TypeName = "varchar")]
+       [StringLength(50)]
+        [Column(TypeName = "varchar(50)")]
         public string TagId { set; get; }
 
         [ForeignKey("ProductId")]

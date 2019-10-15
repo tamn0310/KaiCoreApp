@@ -8,6 +8,7 @@ namespace KaiCoreApp.Data.Entities
     {
         public int BlogId { set; get; }
 
+        [Column(TypeName = "varchar(50)")]
         public string TagId { set; get; }
 
         [ForeignKey("BlogId")]
