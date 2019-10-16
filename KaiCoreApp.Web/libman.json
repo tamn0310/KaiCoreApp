@@ -57,6 +57,14 @@
     {
       "library": "flot@0.8.3",
       "destination": "wwwroot/lib/flot/"
+    },
+    {
+      "library": "notify@0.4.2",
+      "destination": "wwwroot/lib/notify/"
+    },
+    {
+      "library": "bootbox.js@5.3.2",
+      "destination": "wwwroot/lib/bootbox.js/"
     }
   ]
 }
