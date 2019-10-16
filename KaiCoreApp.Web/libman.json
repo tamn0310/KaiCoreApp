@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "gentelella@1.4.0",
+      "destination": "wwwroot/lib/gentelella/"
+    },
+    {
+      "library": "font-awesome@5.11.2",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "nprogress@0.2.0",
+      "destination": "wwwroot/lib/nprogress/"
+    },
+    {
+      "library": "iCheck@1.0.2",
+      "destination": "wwwroot/lib/iCheck/"
+    },
+    {
+      "library": "bootstrap-progressbar@0.9.0",
+      "destination": "wwwroot/lib/bootstrap-progressbar/"
+    },
+    {
+      "library": "jqvmap@1.5.1",
+      "destination": "wwwroot/lib/jqvmap/"
+    },
+    {
+      "library": "bootstrap-daterangepicker@3.0.5",
+      "destination": "wwwroot/lib/bootstrap-daterangepicker/"
+    },
+    {
+      "library": "fastclick@1.0.6",
+      "destination": "wwwroot/lib/fastclick/"
+    },
+    {
+      "library": "Chart.js@2.8.0",
+      "destination": "wwwroot/lib/Chart.js/"
+    },
+    {
+      "library": "gauge.js@1.3.6",
+      "destination": "wwwroot/lib/gauge.js/"
+    },
+    {
+      "library": "skycons@1396634940",
+      "destination": "wwwroot/lib/skycons/"
+    },
+    {
+      "library": "datejs@1.0",
+      "destination": "wwwroot/lib/datejs/"
+    },
+    {
+      "library": "moment.js@2.24.0",
+      "destination": "wwwroot/lib/moment.js/"
+    },
+    {
+      "library": "flot@0.8.3",
+      "destination": "wwwroot/lib/flot/"
+    }
+  ]
+}
