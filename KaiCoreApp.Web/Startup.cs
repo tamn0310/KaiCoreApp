@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using System;
 
 namespace KaiCoreApp.Web
@@ -44,7 +46,8 @@ namespace KaiCoreApp.Web
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddJsonOptions(options=>options.SerializerSettings.ContractResolver=new DefaultContractResolver());
 
             //add automapper
             services.AddAutoMapper();
@@ -80,8 +83,9 @@ namespace KaiCoreApp.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/kai-{Date}.txt");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -107,7 +111,7 @@ namespace KaiCoreApp.Web
 
                 routes.MapRoute(
                      name: "areas",
-                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                     template: "{area:exists}/{controller=Login}/{action=Index}/{id?}");
             });
         }
     }

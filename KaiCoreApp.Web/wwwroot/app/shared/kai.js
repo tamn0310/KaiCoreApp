@@ -3,22 +3,40 @@
         pageSize: 10,
         pageIndex: 1
     },
+    configs: {
+        pageSize: 10,
+        pageIndex: 1
+    },
     notify: function (message, type) {
         $.notify(message, {
+            // whether to hide the notification on click
             clickToHide: true,
+            // whether to auto-hide the notification
             autoHide: true,
+            // if autoHide, hide after milliseconds
             autoHideDelay: 5000,
+            // show the arrow pointing at the element
             arrowShow: true,
+            // arrow size in pixels
             arrowSize: 5,
+            // position defines the notification position though uses the defaults below
             position: '...',
-            elementPosition: 'top right',
-            globalPosition: 'top right',
-            style: 'boostrap',
+            // default positions
+            elementPosition: 'top center',
+            globalPosition: 'top center',
+            // default style
+            style: 'bootstrap',
+            // default class (string or [string])
             className: type,
+            // show animation
             showAnimation: 'slideDown',
+            // show animation duration
             showDuration: 400,
+            // hide animation
             hideAnimation: 'slideUp',
+            // hide animation duration
             hideDuration: 200,
+            // padding between element and notification
             gap: 2
         });
     },
@@ -45,12 +63,12 @@
     dateFormatJson: function (datetime) {
         if (datetime == null || datetime == '')
             return '';
-        var newDate = new Date(parseInt(datetime.substr(6)));
-        var month = newDate.getMonth() + 1;
-        var day = newDate.getDate();
-        var year = newDate.getFullYear();
-        var hh = newDate.getHours();
-        var mm = newDate.getMinutes();
+        var newdate = new Date(parseInt(datetime.substr(6)));
+        var month = newdate.getMonth() + 1;
+        var day = newdate.getDate();
+        var year = newdate.getFullYear();
+        var hh = newdate.getHours();
+        var mm = newdate.getMinutes();
         if (month < 10)
             month = "0" + month;
         if (day < 10)
@@ -64,13 +82,13 @@
     dateTimeFormatJson: function (datetime) {
         if (datetime == null || datetime == '')
             return '';
-        var newDate = new Date(parseInt(datetime.substr(6)));
-        var month = newDate.getMonth() + 1;
-        var day = newDate.getDate();
-        var year = newDate.getFullYear();
-        var hh = newDate.getHours();
-        var mm = newDate.getMinutes();
-        var ss = newDate.getSeconds();
+        var newdate = new Date(parseInt(datetime.substr(6)));
+        var month = newdate.getMonth() + 1;
+        var day = newdate.getDate();
+        var year = newdate.getFullYear();
+        var hh = newdate.getHours();
+        var mm = newdate.getMinutes();
+        var ss = newdate.getSeconds();
         if (month < 10)
             month = "0" + month;
         if (day < 10)
@@ -81,7 +99,7 @@
             mm = "0" + mm;
         if (ss < 10)
             ss = "0" + ss;
-        return day + "/" + month + "/" + year + "" + hh + ":" + mm + ":" + ss;
+        return day + "/" + month + "/" + year + " " + hh + ":" + mm + ":" + ss;
     },
     startLoading: function () {
         if ($('.dv-loading').length > 0)
@@ -89,14 +107,14 @@
     },
     stopLoading: function () {
         if ($('.dv-loading').length > 0)
-            $('.dv-loading').removeClass('hide')
+            $('.dv-loading')
                 .addClass('hide');
     },
     getStatus: function (status) {
-        if (status == 0)
+        if (status == 1)
             return '<span class="badge bg-green">Kích hoạt</span>';
         else
-            return '<span class="badge bg-red">Khóa</span>';
+            return '<span class="badge bg-red">Khoá</span>';
     },
     formatNumber: function (number, precision) {
         if (!isFinite(number)) {
@@ -113,14 +131,20 @@
         for (var i = 0; i < arr.length; i += 1) {
             var node = arr[i];
             node.children = [];
-            map[node.Id] = i;
-            if (node.ParentId != null) {
+            map[node.Id] = i; // use map to look-up the parents
+            if (node.ParentId !== null) {
                 arr[map[node.ParentId]].children.push(node);
-            }
-            else {
+            } else {
                 roots.push(node);
             }
         }
         return roots;
     }
 }
+
+$(document).ajaxSend(function (e, xhr, options) {
+    if (options.type.toUpperCase() == "POST" || options.type.toUpperCase() == "PUT") {
+        var token = $('form').find("input[name='__RequestVerificationToken']").val();
+        xhr.setRequestHeader("RequestVerificationToken", token);
+    }
+});
