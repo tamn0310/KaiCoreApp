@@ -18,12 +18,11 @@
             // show the arrow pointing at the element
             arrowShow: true,
             // arrow size in pixels
-            arrowSize: 5,
+            arrowSize: 10,
             // position defines the notification position though uses the defaults below
-            position: '...',
+           // position: '...',
             // default positions
-            elementPosition: 'top center',
-            globalPosition: 'top center',
+            elementPosition: 'top right',
             // default style
             style: 'bootstrap',
             // default class (string or [string])
@@ -31,13 +30,13 @@
             // show animation
             showAnimation: 'slideDown',
             // show animation duration
-            showDuration: 400,
+            showDuration: 500,
             // hide animation
             hideAnimation: 'slideUp',
             // hide animation duration
-            hideDuration: 200,
+            hideDuration: 300,
             // padding between element and notification
-            gap: 2
+            gap: 5
         });
     },
     confirm: function (message, okCallback) {
