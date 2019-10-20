@@ -39,10 +39,10 @@
             success: function (res) {
                 if (res.Success) {
                     window.location.href = "/Admin/Home/Index";
-                    kai.notify("Đăng nhập thành công, chào mừng bạn về nhà ^^", "success");
+                    kai.notify("Login success welcome home", "success");
                 }
                 else {
-                    kai.notify('Tên tài khoản hoặc mật khẩu bạn vừa nhập không đúng, xin vui lòng thử lại.', 'error');
+                    kai.notify('Login failed', 'error');
                 }
             }
         })

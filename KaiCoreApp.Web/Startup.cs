@@ -5,6 +5,7 @@ using KaiCoreApp.Data.Entities;
 using KaiCoreApp.Data.IRepositories;
 using KaiCoreApp.EF;
 using KaiCoreApp.EF.Repositories;
+using KaiCoreApp.Web.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -60,6 +61,7 @@ namespace KaiCoreApp.Web
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             services.AddTransient<DbInitializer>();
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimnsPrincipalFactory>();
 
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
