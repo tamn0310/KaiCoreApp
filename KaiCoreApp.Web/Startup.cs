@@ -48,12 +48,12 @@ namespace KaiCoreApp.Web
                 .AddEntityFrameworkStores<AppDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                .AddJsonOptions(options=>options.SerializerSettings.ContractResolver=new DefaultContractResolver());
+                .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
             //add automapper
             services.AddAutoMapper();
 
-            //Add application services
+            //System
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
@@ -63,8 +63,13 @@ namespace KaiCoreApp.Web
             services.AddTransient<DbInitializer>();
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimnsPrincipalFactory>();
 
+            //Repository
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
+
+            //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+            services.AddTransient<IFunctionService, FunctionService>();
 
             //Config identity
             services.Configure<IdentityOptions>(options =>
