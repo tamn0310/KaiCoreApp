@@ -5,16 +5,16 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace KaiCoreApp.EF
 {
-   public class DbInitializer
+    public class DbInitializer
     {
         private readonly AppDbContext _context;
         private UserManager<AppUser> _userManager;
         private RoleManager<AppRole> _roleManager;
+
         public DbInitializer(AppDbContext context, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _context = context;
@@ -55,8 +55,8 @@ namespace KaiCoreApp.EF
                     Balance = 0,
                     CreatedDate = DateTime.Now,
                     DateModified = DateTime.Now,
-                    BirthDay = new DateTime(1998,10,03),
-                    Avatar= "~/images/goku.png",
+                    BirthDay = new DateTime(1998, 10, 03),
+                    Avatar = "~/images/goku.png",
                     Status = Status.Active
                 }, "Tamn0310@");
                 var user = await _userManager.FindByNameAsync("tamn0310");
@@ -105,7 +105,6 @@ namespace KaiCoreApp.EF
                 _context.SaveChanges();
             }
 
-            
             if (_context.AdvertistmentPages.Count() == 0)
             {
                 List<AdvertistmentPage> pages = new List<AdvertistmentPage>()
@@ -121,11 +120,9 @@ namespace KaiCoreApp.EF
                         AdvertistmentPositions = new List<AdvertistmentPosition>(){
                         new AdvertistmentPosition(){Id="product-detail-left",Name="Bên trái"}
                     } },
-
                 };
                 _context.AdvertistmentPages.AddRange(pages);
             }
-
 
             if (_context.Slides.Count() == 0)
             {
@@ -150,9 +147,6 @@ namespace KaiCoreApp.EF
                 _context.Slides.AddRange(slides);
             }
 
-
-          
-
             if (_context.ProductCategories.Count() == 0)
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()
@@ -160,39 +154,39 @@ namespace KaiCoreApp.EF
                     new ProductCategory() { Name="Toy Marvel",SeoAlias="toy-marvel",ParentId = null,Status=Status.Active,SortOrder=1,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 1",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-1",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 2",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-2",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 3",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-3",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 4",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-4",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 5",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-5",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 1",Image="/client-side/images/products/product-1.jpg", CreatedDate = DateTime.Now, SeoAlias = "san-pham-1",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 2",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-2",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 3",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-3",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 4",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-4",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 5",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-5",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }
                     },
                     new ProductCategory() { Name="Toy Onepiece",SeoAlias="toy-one-piece",ParentId = null,Status=Status.Active ,SortOrder=2,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 6",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-6",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 7",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-7",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 8",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-8",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 9",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-9",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 10",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-10",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 6",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-6",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 7",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-7",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 8",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-8",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 9",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-9",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 10",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-10",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }},
                     new ProductCategory() { Name="Toy Naruto",SeoAlias="toy-naruto",ParentId = null,Status=Status.Active ,SortOrder=3,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 11",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-11",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 12",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-12",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 13",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-13",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 14",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-14",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 15",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-15",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 11",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-11",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 12",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-12",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 13",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-13",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 14",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-14",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 15",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-15",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }},
                     new ProductCategory() { Name="Toy Dragon Ball",SeoAlias="toy-dragon-ball",ParentId = null,Status=Status.Active,SortOrder=4,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 16",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-16",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 17",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-17",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 18",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-18",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 19",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-19",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 20",Image="/client-side/images/products/product-1.jpg",SeoAlias = "san-pham-20",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 16",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-16",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 17",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-17",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 18",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-18",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 19",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-19",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 20",Image="/client-side/images/products/product-1.jpg",CreatedDate = DateTime.Now,SeoAlias = "san-pham-20",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }}
                 };
                 _context.ProductCategories.AddRange(listProductCategory);
@@ -228,6 +222,8 @@ namespace KaiCoreApp.EF
                     Status = Status.Active
                 });
             }
+
+            await _context.SaveChangesAsync();
         }
     }
 }
