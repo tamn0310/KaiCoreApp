@@ -3,6 +3,7 @@
     Layout = "_Layout";
 }
 @section Script{
+
     <script src="~/app/controllers/product/index.js"></script>
     <script>
         var product = new productController();
@@ -13,15 +14,15 @@
 
 <div class="page-title">
     <div class="title_left">
-        <h3>Products</h3>
+        <h3>Danh sách sản phẩm</h3>
     </div>
 
     <div class="title_right">
         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" id="txtSearch" class="form-control" placeholder="Nhập từ khóa">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
+                    <button class="btn btn-default" id="btnSearch" type="button">Tìm kiếm</button>
                 </span>
             </div>
         </div>
@@ -36,18 +37,40 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th width="10%">#</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Created Date</th>
-                            <th width="5%">Status</th>
+                            <th style="width:10%">#</th>
+                            <th style="width:25%">Tên Sản Phẩm</th>
+                            <th style="width:20%">Danh Mục</th>
+                            <th style="width:10%">Giá</th>
+                            <th style="width:15%">Hình Ảnh</th>
+                            <th style="width:15%">Ngày Tạo</th>
+                            <th width="5%">Trạng Thái</th>
                         </tr>
                     </thead>
                     <tbody id="tbl-product">
                     </tbody>
                 </table>
+                <!--Paging-->
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="dataTables_info" id="datatable-checkbox_info" role="status" aria-live="polite">
+                            <select id="ddlShowPage">
+                                <option value="10" selected="selected">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                            </select>
+                            <span class="item-per-page">
+                                bản ghi/trang.
+                            </span>
+                            Tổng số bản ghi: <strong id="lblTotalRecords"></strong>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="datatable-checkbox_paginate">
+                            <ul id="paginationUL"></ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

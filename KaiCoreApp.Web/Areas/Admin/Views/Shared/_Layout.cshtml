@@ -40,7 +40,7 @@
     <!-- Custom Theme Style -->
     <link href="~/css/custom.min.css" rel="stylesheet" />
 
-    @RenderSection("Styles",required:false)
+    @RenderSection("Styles", required: false)
 </head>
 
 <body class="nav-md">
@@ -60,7 +60,7 @@
                             <img src="@User.GetSpecificClaim("Avatar")" alt="" class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
-                            <span>Welcome,</span>
+                            <span>Chào mừng,</span>
                             <h2>@User.GetSpecificClaim("FullName")</h2>
                         </div>
                     </div>
@@ -245,14 +245,17 @@
     <script src="~/lib/notify/notify.js"></script>
     <script src="~/lib/notify/styles/metro/notify-metro.js"></script>
 
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.js"></script>
     <!--BootBox-->
     <script src="~/lib/bootbox.js/bootbox.js"></script>
     <!--app-->
     <script src="~/app/shared/kai.js"></script>
 
+
+
     <!-- Custom Theme Scripts -->
     <script src="~/js/custom.js"></script>
 
-    @RenderSection("Script", required:false)
+    @RenderSection("Script", required: false)
 </body>
 </html>

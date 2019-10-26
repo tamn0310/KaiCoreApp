@@ -24,6 +24,13 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
             var model = _productService.GetAll();
             return new ObjectResult(model);
         }
+
+        [HttpGet]
+        public IActionResult GetAllPaging(int? categoryId, string search,int page, int pageSize)
+        {
+            var model = _productService.GetAllPaging(categoryId,search,page,pageSize);
+            return new ObjectResult(model);
+        }
         #endregion
     }
 }
