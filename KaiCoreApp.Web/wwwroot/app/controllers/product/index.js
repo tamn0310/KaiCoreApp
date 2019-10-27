@@ -1,5 +1,6 @@
 ﻿var productController = function () {
     this.initialize = function () {
+        loadCate();
         loadData();
         registerEvent();
     }
@@ -11,6 +12,32 @@
             kai.configs.pageIndex = 1;
             loadData(true);
         });
+        $('#btnSearch').on('click', function () {
+            loadData();
+        });
+        $('#txtSearch').on('keypress', function (e) {
+            if (e.which === 13) {
+                loadData();
+            }
+        });
+    }
+
+    function loadCate() {
+        $.ajax({
+            type: 'GET',
+            url: '/admin/product/GetAllCategory',
+            dataType: 'json',
+            success: function (res) {
+                var render = "<option value=''>--Chọn danh mục--</option>";
+                $.each(res, function (i, item) {
+                    render += "<option value='" + item.Id + "'>" + item.Name + "</option>"
+                });
+                $('#ddlProductCate').html(render);
+            },
+                error: function (status) {
+                    kai.notify('Không thể tải dữ liệu của danh mục sản phẩm', 'error');
+                }
+            });
     }
 
     function loadData(isPageChanged) {
@@ -19,7 +46,7 @@
         $.ajax({
             type: 'GET',
             data: {
-                categoryId: null,
+                categoryId: $('#ddlProductCate').val(),
                 search: $('#txtSearch').val(),
                 page: kai.configs.pageIndex,
                 pageSize: kai.configs.pageSize

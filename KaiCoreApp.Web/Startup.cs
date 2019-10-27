@@ -5,6 +5,7 @@ using KaiCoreApp.Data.Entities;
 using KaiCoreApp.Data.IRepositories;
 using KaiCoreApp.EF;
 using KaiCoreApp.EF.Repositories;
+using KaiCoreApp.Infrastructure.Interfaces;
 using KaiCoreApp.Web.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -62,6 +63,9 @@ namespace KaiCoreApp.Web
 
             services.AddTransient<DbInitializer>();
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimnsPrincipalFactory>();
+
+            services.AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(Repository<,>));
 
             //Repository
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();

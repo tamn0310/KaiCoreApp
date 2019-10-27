@@ -6,10 +6,12 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
     public class ProductController : BaseController
     {
         private IProductService _productService;
+        private IProductCategoryService _productCategoryService;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, IProductCategoryService productCategoryService)
         {
             this._productService = productService;
+            this._productCategoryService = productCategoryService;
         }
 
         public IActionResult Index()
@@ -18,6 +20,7 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
         }
 
         #region AJAX API
+
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -26,11 +29,19 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllPaging(int? categoryId, string search,int page, int pageSize)
+        public IActionResult GetAllCategory()
         {
-            var model = _productService.GetAllPaging(categoryId,search,page,pageSize);
+            var model = _productCategoryService.GetAll();
             return new ObjectResult(model);
         }
-        #endregion
+
+        [HttpGet]
+        public IActionResult GetAllPaging(int? categoryId, string search, int page, int pageSize)
+        {
+            var model = _productService.GetAllPaging(categoryId, search, page, pageSize);
+            return new ObjectResult(model);
+        }
+
+        #endregion AJAX API
     }
 }
