@@ -104,7 +104,8 @@ namespace KaiCoreApp.Application.Implementations
 
         public void Update(ProductCategoryViewModel productCategoryVm)
         {
-            throw new NotImplementedException();
+            var productCate = Mapper.Map<ProductCategoryViewModel, ProductCategory>(productCategoryVm);
+            _productCategoryRepository.Update(productCate);
         }
 
         public void UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)

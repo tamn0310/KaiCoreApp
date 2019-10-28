@@ -9584,3 +9584,812 @@ OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
 2019-10-27T16:29:12.7154231+07:00 0HLQQNS6AP685:00000061 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/luffy.jpg   (ca22a1cb)
 2019-10-27T16:29:12.7294859+07:00 0HLQQNS6AP685:00000061 [INF] Sending file. Request path: '"/client-side/images/products/luffy.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\luffy.jpg"' (27b0a520)
 2019-10-27T16:29:12.7334495+07:00 0HLQQNS6AP685:00000061 [INF] Request finished in 19.288ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:28.8932907+07:00 0HLQQO2AQN28S:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-10-27T16:32:29.0563999+07:00 0HLQQO2AQN28S:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Controllers.HomeController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:29.0649570+07:00 0HLQQO2AQN28S:00000001 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:29.0751586+07:00 0HLQQO2AQN28S:00000001 [INF] Executing action method "KaiCoreApp.Web.Controllers.HomeController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:29.0785770+07:00 0HLQQO2AQN28S:00000001 [INF] Executed action method "KaiCoreApp.Web.Controllers.HomeController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.3358ms. (50a9e262)
+2019-10-27T16:32:29.0929235+07:00 0HLQQO2AQN28S:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:32:29.1938756+07:00 0HLQQO2AQN28S:00000001 [INF] Executed ViewResult - view "Index" executed in 107.9959ms. (f66409e9)
+2019-10-27T16:32:29.1945848+07:00 0HLQQO2AQN28S:00000001 [INF] Executed action "KaiCoreApp.Web.Controllers.HomeController.Index (KaiCoreApp.Web)" in 137.5831ms (afa2e885)
+2019-10-27T16:32:29.2043189+07:00 0HLQQO2AQN28S:00000001 [INF] Request finished in 312.8779ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:32:29.2468110+07:00 0HLQQO2AQN28S:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2019-10-27T16:32:29.2475557+07:00 0HLQQO2AQN290:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/site.css   (ca22a1cb)
+2019-10-27T16:32:29.2478770+07:00 0HLQQO2AQN292:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/banner2.svg   (ca22a1cb)
+2019-10-27T16:32:29.2485339+07:00 0HLQQO2AQN291:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/banner1.svg   (ca22a1cb)
+2019-10-27T16:32:29.2657059+07:00 0HLQQO2AQN290:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\site.css"' (27b0a520)
+2019-10-27T16:32:29.2662568+07:00 0HLQQO2AQN290:00000001 [INF] Request finished in 18.5699ms 200 text/css (791a596a)
+2019-10-27T16:32:29.2726586+07:00 0HLQQO2AQN290:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery/dist/jquery.js   (ca22a1cb)
+2019-10-27T16:32:29.2738670+07:00 0HLQQO2AQN292:00000001 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\banner2.svg"' (27b0a520)
+2019-10-27T16:32:29.2739422+07:00 0HLQQO2AQN292:00000001 [INF] Request finished in 26.1953ms 200 image/svg+xml (791a596a)
+2019-10-27T16:32:29.2887640+07:00 0HLQQO2AQN291:00000001 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\banner1.svg"' (27b0a520)
+2019-10-27T16:32:29.2913434+07:00 0HLQQO2AQN292:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2019-10-27T16:32:29.2927939+07:00 0HLQQO2AQN291:00000001 [INF] Request finished in 44.2554ms 200 image/svg+xml (791a596a)
+2019-10-27T16:32:29.2929369+07:00 0HLQQO2AQN291:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   (ca22a1cb)
+2019-10-27T16:32:29.2951317+07:00 0HLQQO2AQN291:00000002 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\js\site.js"' (27b0a520)
+2019-10-27T16:32:29.2953476+07:00 0HLQQO2AQN291:00000002 [INF] Request finished in 2.4152ms 200 application/javascript (791a596a)
+2019-10-27T16:32:29.2957446+07:00 0HLQQO2AQN28S:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2019-10-27T16:32:29.2958305+07:00 0HLQQO2AQN28S:00000002 [INF] Request finished in 49.1292ms 200 text/css (791a596a)
+2019-10-27T16:32:29.2990342+07:00 0HLQQO2AQN291:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/banner3.svg   (ca22a1cb)
+2019-10-27T16:32:29.2995407+07:00 0HLQQO2AQN291:00000003 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\banner3.svg"' (27b0a520)
+2019-10-27T16:32:29.2996014+07:00 0HLQQO2AQN291:00000003 [INF] Request finished in 0.6124ms 200 image/svg+xml (791a596a)
+2019-10-27T16:32:29.3023211+07:00 0HLQQO2AQN292:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2019-10-27T16:32:29.3024731+07:00 0HLQQO2AQN292:00000002 [INF] Request finished in 11.3273ms 200 application/javascript (791a596a)
+2019-10-27T16:32:29.3032688+07:00 0HLQQO2AQN290:00000002 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2019-10-27T16:32:29.3040480+07:00 0HLQQO2AQN290:00000002 [INF] Request finished in 31.2869ms 200 application/javascript (791a596a)
+2019-10-27T16:32:29.4515026+07:00 0HLQQO2AQN290:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2019-10-27T16:32:29.4520682+07:00 0HLQQO2AQN290:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2019-10-27T16:32:29.4521435+07:00 0HLQQO2AQN290:00000003 [INF] Request finished in 0.7411ms 200 font/woff2 (791a596a)
+2019-10-27T16:32:35.5628742+07:00 0HLQQO2AQN290:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/   (ca22a1cb)
+2019-10-27T16:32:35.5652465+07:00 0HLQQO2AQN290:00000004 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Controllers.HomeController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:35.5661288+07:00 0HLQQO2AQN290:00000004 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:35.5664659+07:00 0HLQQO2AQN290:00000004 [INF] Executing action method "KaiCoreApp.Web.Controllers.HomeController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:35.5666894+07:00 0HLQQO2AQN290:00000004 [INF] Executed action method "KaiCoreApp.Web.Controllers.HomeController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.059ms. (50a9e262)
+2019-10-27T16:32:35.5677047+07:00 0HLQQO2AQN290:00000004 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:32:35.5744299+07:00 0HLQQO2AQN290:00000004 [INF] Executed ViewResult - view "Index" executed in 6.9563ms. (f66409e9)
+2019-10-27T16:32:35.5745447+07:00 0HLQQO2AQN290:00000004 [INF] Executed action "KaiCoreApp.Web.Controllers.HomeController.Index (KaiCoreApp.Web)" in 9.2356ms (afa2e885)
+2019-10-27T16:32:35.5747038+07:00 0HLQQO2AQN290:00000004 [INF] Request finished in 11.9127ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:32:35.6183270+07:00 0HLQQO2AQN290:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2019-10-27T16:32:35.6183270+07:00 0HLQQO2AQN292:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/site.css   (ca22a1cb)
+2019-10-27T16:32:35.6186798+07:00 0HLQQO2AQN28S:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/banner2.svg   (ca22a1cb)
+2019-10-27T16:32:35.6187020+07:00 0HLQQO2AQN291:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/banner1.svg   (ca22a1cb)
+2019-10-27T16:32:35.6193775+07:00 0HLQQO2AQN28S:00000003 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\banner2.svg"' (27b0a520)
+2019-10-27T16:32:35.6195421+07:00 0HLQQO2AQN28S:00000003 [INF] Request finished in 0.7918ms 200 image/svg+xml (791a596a)
+2019-10-27T16:32:35.6193467+07:00 0HLQQO2AQN291:00000004 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\banner1.svg"' (27b0a520)
+2019-10-27T16:32:35.6200508+07:00 0HLQQO2AQN291:00000004 [INF] Request finished in 1.3756ms 200 image/svg+xml (791a596a)
+2019-10-27T16:32:35.6236581+07:00 0HLQQO2AQN290:00000005 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2019-10-27T16:32:35.6238179+07:00 0HLQQO2AQN290:00000005 [INF] Request finished in 5.519ms 200 text/css (791a596a)
+2019-10-27T16:32:35.6258909+07:00 0HLQQO2AQN292:00000003 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\site.css"' (27b0a520)
+2019-10-27T16:32:35.6259624+07:00 0HLQQO2AQN292:00000003 [INF] Request finished in 7.6377ms 200 text/css (791a596a)
+2019-10-27T16:32:35.6352021+07:00 0HLQQO2AQN292:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery/dist/jquery.js   (ca22a1cb)
+2019-10-27T16:32:35.6386819+07:00 0HLQQO2AQN292:00000004 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2019-10-27T16:32:35.6395333+07:00 0HLQQO2AQN292:00000004 [INF] Request finished in 4.29ms 200 application/javascript (791a596a)
+2019-10-27T16:32:35.6396861+07:00 0HLQQO2AQN290:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2019-10-27T16:32:35.6396868+07:00 0HLQQO2AQN28S:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/banner3.svg   (ca22a1cb)
+2019-10-27T16:32:35.6402739+07:00 0HLQQO2AQN291:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   (ca22a1cb)
+2019-10-27T16:32:35.6403990+07:00 0HLQQO2AQN28S:00000004 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\banner3.svg"' (27b0a520)
+2019-10-27T16:32:35.6406187+07:00 0HLQQO2AQN291:00000005 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\js\site.js"' (27b0a520)
+2019-10-27T16:32:35.6406961+07:00 0HLQQO2AQN290:00000006 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2019-10-27T16:32:35.6406932+07:00 0HLQQO2AQN291:00000005 [INF] Request finished in 0.4348ms 200 application/javascript (791a596a)
+2019-10-27T16:32:35.6407760+07:00 0HLQQO2AQN290:00000006 [INF] Request finished in 1.1153ms 200 application/javascript (791a596a)
+2019-10-27T16:32:35.6404531+07:00 0HLQQO2AQN28S:00000004 [INF] Request finished in 0.793ms 200 image/svg+xml (791a596a)
+2019-10-27T16:32:35.7288374+07:00 0HLQQO2AQN290:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2019-10-27T16:32:35.7293877+07:00 0HLQQO2AQN290:00000007 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2019-10-27T16:32:35.7296933+07:00 0HLQQO2AQN290:00000007 [INF] Request finished in 0.7205ms 200 font/woff2 (791a596a)
+2019-10-27T16:32:37.8780789+07:00 0HLQQO2AQN290:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin   (ca22a1cb)
+2019-10-27T16:32:37.8820321+07:00 0HLQQO2AQN290:00000008 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:37.8825690+07:00 0HLQQO2AQN290:00000008 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:37.8829881+07:00 0HLQQO2AQN290:00000008 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2503ms. (50a9e262)
+2019-10-27T16:32:37.8913271+07:00 0HLQQO2AQN290:00000008 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:32:37.9137897+07:00 0HLQQO2AQN290:00000008 [INF] Executed ViewResult - view "Index" executed in 30.309ms. (f66409e9)
+2019-10-27T16:32:37.9138935+07:00 0HLQQO2AQN290:00000008 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Index (KaiCoreApp.Web)" in 31.7712ms (afa2e885)
+2019-10-27T16:32:37.9139947+07:00 0HLQQO2AQN290:00000008 [INF] Request finished in 35.9476ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:32:37.9458711+07:00 0HLQQO2AQN28S:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/nprogress/nprogress.css   (ca22a1cb)
+2019-10-27T16:32:37.9458796+07:00 0HLQQO2AQN290:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2019-10-27T16:32:37.9462948+07:00 0HLQQO2AQN291:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/animate.css/animate.css   (ca22a1cb)
+2019-10-27T16:32:37.9463326+07:00 0HLQQO2AQN295:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/custom.css   (ca22a1cb)
+2019-10-27T16:32:37.9464136+07:00 0HLQQO2AQN292:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/notify/styles/metro/notify-metro.css   (ca22a1cb)
+2019-10-27T16:32:37.9467928+07:00 0HLQQO2AQN28S:00000005 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2019-10-27T16:32:37.9467927+07:00 0HLQQO2AQN292:00000005 [INF] Sending file. Request path: '"/lib/notify/styles/metro/notify-metro.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\notify\styles\metro\notify-metro.css"' (27b0a520)
+2019-10-27T16:32:37.9468642+07:00 0HLQQO2AQN292:00000005 [INF] Request finished in 0.4511ms 200 text/css (791a596a)
+2019-10-27T16:32:37.9468596+07:00 0HLQQO2AQN28S:00000005 [INF] Request finished in 1.0173ms 200 text/css (791a596a)
+2019-10-27T16:32:37.9490899+07:00 0HLQQO2AQN291:00000006 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2019-10-27T16:32:37.9491734+07:00 0HLQQO2AQN291:00000006 [INF] Request finished in 2.8923ms 200 text/css (791a596a)
+2019-10-27T16:32:37.9470277+07:00 0HLQQO2AQN290:00000009 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2019-10-27T16:32:37.9494422+07:00 0HLQQO2AQN290:00000009 [INF] Request finished in 3.6183ms 200 text/css (791a596a)
+2019-10-27T16:32:37.9531376+07:00 0HLQQO2AQN28S:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validate/jquery.validate.js   (ca22a1cb)
+2019-10-27T16:32:37.9538068+07:00 0HLQQO2AQN292:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/notify/styles/metro/notify-metro.js   (ca22a1cb)
+2019-10-27T16:32:37.9538479+07:00 0HLQQO2AQN290:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validate/additional-methods.js   (ca22a1cb)
+2019-10-27T16:32:37.9542064+07:00 0HLQQO2AQN292:00000006 [INF] Sending file. Request path: '"/lib/notify/styles/metro/notify-metro.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\notify\styles\metro\notify-metro.js"' (27b0a520)
+2019-10-27T16:32:37.9541994+07:00 0HLQQO2AQN291:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/notify/notify.js   (ca22a1cb)
+2019-10-27T16:32:37.9542581+07:00 0HLQQO2AQN292:00000006 [INF] Request finished in 0.4965ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9546398+07:00 0HLQQO2AQN291:00000007 [INF] Sending file. Request path: '"/lib/notify/notify.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\notify\notify.js"' (27b0a520)
+2019-10-27T16:32:37.9546927+07:00 0HLQQO2AQN291:00000007 [INF] Request finished in 0.5078ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9550140+07:00 0HLQQO2AQN28S:00000006 [INF] Sending file. Request path: '"/lib/jquery-validate/jquery.validate.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validate\jquery.validate.js"' (27b0a520)
+2019-10-27T16:32:37.9550659+07:00 0HLQQO2AQN28S:00000006 [INF] Request finished in 1.9689ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9567614+07:00 0HLQQO2AQN295:00000001 [INF] Sending file. Request path: '"/css/custom.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\custom.css"' (27b0a520)
+2019-10-27T16:32:37.9568360+07:00 0HLQQO2AQN295:00000001 [INF] Request finished in 10.4929ms 200 text/css (791a596a)
+2019-10-27T16:32:37.9617814+07:00 0HLQQO2AQN290:0000000A [INF] Sending file. Request path: '"/lib/jquery-validate/additional-methods.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validate\additional-methods.js"' (27b0a520)
+2019-10-27T16:32:37.9618614+07:00 0HLQQO2AQN290:0000000A [INF] Request finished in 8.011ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9621414+07:00 0HLQQO2AQN295:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2019-10-27T16:32:37.9623109+07:00 0HLQQO2AQN291:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validate/localization/messages_vi.js   (ca22a1cb)
+2019-10-27T16:32:37.9625494+07:00 0HLQQO2AQN292:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/app/shared/kai.js   (ca22a1cb)
+2019-10-27T16:32:37.9627242+07:00 0HLQQO2AQN291:00000008 [INF] Sending file. Request path: '"/lib/jquery-validate/localization/messages_vi.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validate\localization\messages_vi.js"' (27b0a520)
+2019-10-27T16:32:37.9644321+07:00 0HLQQO2AQN28S:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/app/controllers/login/index.js   (ca22a1cb)
+2019-10-27T16:32:37.9644669+07:00 0HLQQO2AQN292:00000007 [INF] Sending file. Request path: '"/app/shared/kai.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\app\shared\kai.js"' (27b0a520)
+2019-10-27T16:32:37.9644813+07:00 0HLQQO2AQN295:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2019-10-27T16:32:37.9645298+07:00 0HLQQO2AQN292:00000007 [INF] Request finished in 1.9861ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9645298+07:00 0HLQQO2AQN295:00000002 [INF] Request finished in 2.4128ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9649900+07:00 0HLQQO2AQN291:00000008 [INF] Request finished in 0.5691ms 200 application/javascript (791a596a)
+2019-10-27T16:32:37.9651055+07:00 0HLQQO2AQN28S:00000007 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2019-10-27T16:32:37.9651683+07:00 0HLQQO2AQN28S:00000007 [INF] Request finished in 1.819ms 200 application/javascript (791a596a)
+2019-10-27T16:32:45.8543550+07:00 0HLQQO2AQN295:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 38 (ca22a1cb)
+2019-10-27T16:32:45.8724416+07:00 0HLQQO2AQN295:00000003 [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(KaiCoreApp.Web.Models.LoginViewModel)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:45.9012017+07:00 0HLQQO2AQN295:00000003 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Authen (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:45.9073272+07:00 0HLQQO2AQN295:00000003 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:45.9558119+07:00 0HLQQO2AQN295:00000003 [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2019-10-27T16:32:46.0797338+07:00 0HLQQO2AQN295:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2019-10-27T16:32:46.1408498+07:00 0HLQQO2AQN295:00000003 [INF] Executed DbCommand ("29"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2019-10-27T16:32:46.1552215+07:00 0HLQQO2AQN295:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2019-10-27T16:32:46.1733337+07:00 0HLQQO2AQN295:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2019-10-27T16:32:46.1779564+07:00 0HLQQO2AQN295:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2019-10-27T16:32:46.1846951+07:00 0HLQQO2AQN295:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2019-10-27T16:32:46.1872189+07:00 0HLQQO2AQN295:00000003 [INF] User logged in. (fdce0db4)
+2019-10-27T16:32:46.1892329+07:00 0HLQQO2AQN295:00000003 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Authen (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 287.9316ms. (50a9e262)
+2019-10-27T16:32:46.1954062+07:00 0HLQQO2AQN295:00000003 [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2019-10-27T16:32:46.2262538+07:00 0HLQQO2AQN295:00000003 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Authen (KaiCoreApp.Web)" in 353.7223ms (afa2e885)
+2019-10-27T16:32:46.2283224+07:00 0HLQQO2AQN295:00000003 [INF] Request finished in 373.994ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:32:46.2380665+07:00 0HLQQO2AQN295:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Admin/Home/Index   (ca22a1cb)
+2019-10-27T16:32:46.2438881+07:00 0HLQQO2AQN295:00000004 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.HomeController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:46.2441623+07:00 0HLQQO2AQN295:00000004 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:46.2448127+07:00 0HLQQO2AQN295:00000004 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.HomeController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:46.2470535+07:00 0HLQQO2AQN295:00000004 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.HomeController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 1.969ms. (50a9e262)
+2019-10-27T16:32:46.2524752+07:00 0HLQQO2AQN295:00000004 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:32:46.3048186+07:00 0HLQQO2AQN295:00000004 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:46.3329955+07:00 0HLQQO2AQN295:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2019-10-27T16:32:46.3781657+07:00 0HLQQO2AQN295:00000004 [INF] Executed ViewResult - view "Index" executed in 130.691ms. (f66409e9)
+2019-10-27T16:32:46.3847530+07:00 0HLQQO2AQN295:00000004 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.HomeController.Index (KaiCoreApp.Web)" in 140.3201ms (afa2e885)
+2019-10-27T16:32:46.3855766+07:00 0HLQQO2AQN295:00000004 [INF] Request finished in 147.4412ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:32:46.4042823+07:00 0HLQQO2AQN295:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/fontawesome/css/font-awesome.css   (ca22a1cb)
+2019-10-27T16:32:46.4044831+07:00 0HLQQO2AQN291:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css   (ca22a1cb)
+2019-10-27T16:32:46.4050745+07:00 0HLQQO2AQN295:00000005 [INF] Sending file. Request path: '"/lib/fontawesome/css/font-awesome.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\fontawesome\css\font-awesome.css"' (27b0a520)
+2019-10-27T16:32:46.4051416+07:00 0HLQQO2AQN295:00000005 [INF] Request finished in 0.9136ms 200 text/css (791a596a)
+2019-10-27T16:32:46.4052607+07:00 0HLQQO2AQN292:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/mustache.js/mustache.js   (ca22a1cb)
+2019-10-27T16:32:46.4052715+07:00 0HLQQO2AQN290:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/dist/jqvmap.css   (ca22a1cb)
+2019-10-27T16:32:46.4052840+07:00 0HLQQO2AQN28S:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/iCheck/skins/flat/green.css   (ca22a1cb)
+2019-10-27T16:32:46.4057851+07:00 0HLQQO2AQN291:00000009 [INF] Sending file. Request path: '"/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-progressbar\css\bootstrap-progressbar-3.3.4.css"' (27b0a520)
+2019-10-27T16:32:46.4058707+07:00 0HLQQO2AQN291:00000009 [INF] Request finished in 1.3793ms 200 text/css (791a596a)
+2019-10-27T16:32:46.4061834+07:00 0HLQQO2AQN290:0000000B [INF] Sending file. Request path: '"/lib/jqvmap/dist/jqvmap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\dist\jqvmap.css"' (27b0a520)
+2019-10-27T16:32:46.4063702+07:00 0HLQQO2AQN290:0000000B [INF] Request finished in 1.0215ms 200 text/css (791a596a)
+2019-10-27T16:32:46.4066513+07:00 0HLQQO2AQN292:00000008 [INF] Sending file. Request path: '"/lib/mustache.js/mustache.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\mustache.js\mustache.js"' (27b0a520)
+2019-10-27T16:32:46.4067324+07:00 0HLQQO2AQN292:00000008 [INF] Request finished in 1.4752ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4124459+07:00 0HLQQO2AQN295:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/custom.min.css   (ca22a1cb)
+2019-10-27T16:32:46.4132245+07:00 0HLQQO2AQN291:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2019-10-27T16:32:46.4143285+07:00 0HLQQO2AQN295:00000006 [INF] Sending file. Request path: '"/css/custom.min.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\custom.min.css"' (27b0a520)
+2019-10-27T16:32:46.4144632+07:00 0HLQQO2AQN295:00000006 [INF] Request finished in 2.046ms 200 text/css (791a596a)
+2019-10-27T16:32:46.4146403+07:00 0HLQQO2AQN291:0000000A [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2019-10-27T16:32:46.4146921+07:00 0HLQQO2AQN291:0000000A [INF] Request finished in 1.6622ms 200 text/css (791a596a)
+2019-10-27T16:32:46.4157454+07:00 0HLQQO2AQN28S:00000008 [INF] Sending file. Request path: '"/lib/iCheck/skins/flat/green.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\iCheck\skins\flat\green.css"' (27b0a520)
+2019-10-27T16:32:46.4158098+07:00 0HLQQO2AQN28S:00000008 [INF] Request finished in 10.5311ms 200 text/css (791a596a)
+2019-10-27T16:32:46.4201611+07:00 0HLQQO2AQN28S:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/images/goku.jpg   (ca22a1cb)
+2019-10-27T16:32:46.4208703+07:00 0HLQQO2AQN291:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/Admin/Home/images/img.jpg   (ca22a1cb)
+2019-10-27T16:32:46.4217236+07:00 0HLQQO2AQN28S:00000009 [INF] Sending file. Request path: '"/images/goku.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\images\goku.jpg"' (27b0a520)
+2019-10-27T16:32:46.4217923+07:00 0HLQQO2AQN28S:00000009 [INF] Request finished in 1.6755ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:46.4240209+07:00 0HLQQO2AQN291:0000000B [INF] Request finished in 3.2217ms 404  (791a596a)
+2019-10-27T16:32:46.4488872+07:00 0HLQQO2AQN291:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2019-10-27T16:32:46.4495210+07:00 0HLQQO2AQN291:0000000C [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2019-10-27T16:32:46.4497294+07:00 0HLQQO2AQN291:0000000C [INF] Request finished in 0.8689ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4693092+07:00 0HLQQO2AQN291:0000000D [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/nprogress/nprogress.js   (ca22a1cb)
+2019-10-27T16:32:46.4694719+07:00 0HLQQO2AQN295:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/gauge.js/dist/gauge.js   (ca22a1cb)
+2019-10-27T16:32:46.4702864+07:00 0HLQQO2AQN28S:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2019-10-27T16:32:46.4703536+07:00 0HLQQO2AQN291:0000000D [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2019-10-27T16:32:46.4704498+07:00 0HLQQO2AQN291:0000000D [INF] Request finished in 1.1765ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4705616+07:00 0HLQQO2AQN292:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-progressbar/bootstrap-progressbar.js   (ca22a1cb)
+2019-10-27T16:32:46.4708643+07:00 0HLQQO2AQN290:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/iCheck/icheck.js   (ca22a1cb)
+2019-10-27T16:32:46.4711469+07:00 0HLQQO2AQN292:00000009 [INF] Sending file. Request path: '"/lib/bootstrap-progressbar/bootstrap-progressbar.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-progressbar\bootstrap-progressbar.js"' (27b0a520)
+2019-10-27T16:32:46.4713839+07:00 0HLQQO2AQN292:00000009 [INF] Request finished in 0.6947ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4715307+07:00 0HLQQO2AQN295:00000007 [INF] Sending file. Request path: '"/lib/gauge.js/dist/gauge.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\gauge.js\dist\gauge.js"' (27b0a520)
+2019-10-27T16:32:46.4715991+07:00 0HLQQO2AQN295:00000007 [INF] Request finished in 2.1584ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4717135+07:00 0HLQQO2AQN290:0000000C [INF] Sending file. Request path: '"/lib/iCheck/icheck.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\iCheck\icheck.js"' (27b0a520)
+2019-10-27T16:32:46.4718646+07:00 0HLQQO2AQN290:0000000C [INF] Request finished in 0.9992ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4794592+07:00 0HLQQO2AQN28S:0000000A [INF] Sending file. Request path: '"/lib/Chart.js/dist/Chart.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\Chart.js\dist\Chart.js"' (27b0a520)
+2019-10-27T16:32:46.4796415+07:00 0HLQQO2AQN28S:0000000A [INF] Request finished in 9.3888ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4921555+07:00 0HLQQO2AQN290:0000000D [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/skycons/skycons.js   (ca22a1cb)
+2019-10-27T16:32:46.4921555+07:00 0HLQQO2AQN28S:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot/jquery.flot.js   (ca22a1cb)
+2019-10-27T16:32:46.4927702+07:00 0HLQQO2AQN290:0000000D [INF] Sending file. Request path: '"/lib/skycons/skycons.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\skycons\skycons.js"' (27b0a520)
+2019-10-27T16:32:46.4928338+07:00 0HLQQO2AQN290:0000000D [INF] Request finished in 0.7128ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4929333+07:00 0HLQQO2AQN292:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot/jquery.flot.pie.js   (ca22a1cb)
+2019-10-27T16:32:46.4936336+07:00 0HLQQO2AQN292:0000000A [INF] Sending file. Request path: '"/lib/flot/jquery.flot.pie.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot\jquery.flot.pie.js"' (27b0a520)
+2019-10-27T16:32:46.4937422+07:00 0HLQQO2AQN292:0000000A [INF] Request finished in 0.8035ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4939358+07:00 0HLQQO2AQN295:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot/jquery.flot.time.js   (ca22a1cb)
+2019-10-27T16:32:46.4945392+07:00 0HLQQO2AQN291:0000000E [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot/jquery.flot.stack.js   (ca22a1cb)
+2019-10-27T16:32:46.4949604+07:00 0HLQQO2AQN295:00000008 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.time.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot\jquery.flot.time.js"' (27b0a520)
+2019-10-27T16:32:46.4951863+07:00 0HLQQO2AQN295:00000008 [INF] Request finished in 1.2511ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4952646+07:00 0HLQQO2AQN291:0000000E [INF] Sending file. Request path: '"/lib/flot/jquery.flot.stack.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot\jquery.flot.stack.js"' (27b0a520)
+2019-10-27T16:32:46.4953202+07:00 0HLQQO2AQN291:0000000E [INF] Request finished in 0.8076ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.4956718+07:00 0HLQQO2AQN28S:0000000B [INF] Sending file. Request path: '"/lib/flot/jquery.flot.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot\jquery.flot.js"' (27b0a520)
+2019-10-27T16:32:46.4957375+07:00 0HLQQO2AQN28S:0000000B [INF] Request finished in 3.6069ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5018292+07:00 0HLQQO2AQN28S:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot/jquery.flot.resize.js   (ca22a1cb)
+2019-10-27T16:32:46.5027039+07:00 0HLQQO2AQN28S:0000000C [INF] Sending file. Request path: '"/lib/flot/jquery.flot.resize.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot\jquery.flot.resize.js"' (27b0a520)
+2019-10-27T16:32:46.5027684+07:00 0HLQQO2AQN28S:0000000C [INF] Request finished in 1.0347ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5028888+07:00 0HLQQO2AQN291:0000000F [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot.orderbars/js/jquery.flot.orderBars.js   (ca22a1cb)
+2019-10-27T16:32:46.5028770+07:00 0HLQQO2AQN295:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot-spline/js/jquery.flot.spline.js   (ca22a1cb)
+2019-10-27T16:32:46.5036368+07:00 0HLQQO2AQN295:00000009 [INF] Sending file. Request path: '"/lib/flot-spline/js/jquery.flot.spline.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot-spline\js\jquery.flot.spline.js"' (27b0a520)
+2019-10-27T16:32:46.5037658+07:00 0HLQQO2AQN295:00000009 [INF] Request finished in 0.8708ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5039140+07:00 0HLQQO2AQN292:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/flot.curvedlines/curvedLines.js   (ca22a1cb)
+2019-10-27T16:32:46.5039874+07:00 0HLQQO2AQN290:0000000E [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/DateJS/build/date.js   (ca22a1cb)
+2019-10-27T16:32:46.5046204+07:00 0HLQQO2AQN292:0000000B [INF] Sending file. Request path: '"/lib/flot.curvedlines/curvedLines.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot.curvedlines\curvedLines.js"' (27b0a520)
+2019-10-27T16:32:46.5047306+07:00 0HLQQO2AQN292:0000000B [INF] Request finished in 0.8215ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5054823+07:00 0HLQQO2AQN28S:0000000D [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/dist/jquery.vmap.js   (ca22a1cb)
+2019-10-27T16:32:46.5056035+07:00 0HLQQO2AQN290:0000000E [INF] Sending file. Request path: '"/lib/DateJS/build/date.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\DateJS\build\date.js"' (27b0a520)
+2019-10-27T16:32:46.5056579+07:00 0HLQQO2AQN290:0000000E [INF] Request finished in 1.693ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5060936+07:00 0HLQQO2AQN291:0000000F [INF] Sending file. Request path: '"/lib/flot.orderbars/js/jquery.flot.orderBars.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\flot.orderbars\js\jquery.flot.orderBars.js"' (27b0a520)
+2019-10-27T16:32:46.5061299+07:00 0HLQQO2AQN28S:0000000D [INF] Sending file. Request path: '"/lib/jqvmap/dist/jquery.vmap.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\dist\jquery.vmap.js"' (27b0a520)
+2019-10-27T16:32:46.5061738+07:00 0HLQQO2AQN291:0000000F [INF] Request finished in 3.2952ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5061806+07:00 0HLQQO2AQN28S:0000000D [INF] Request finished in 0.738ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5113455+07:00 0HLQQO2AQN28S:0000000E [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/dist/maps/jquery.vmap.world.js   (ca22a1cb)
+2019-10-27T16:32:46.5114314+07:00 0HLQQO2AQN290:0000000F [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/examples/js/jquery.vmap.sampledata.js   (ca22a1cb)
+2019-10-27T16:32:46.5121188+07:00 0HLQQO2AQN290:0000000F [INF] Sending file. Request path: '"/lib/jqvmap/examples/js/jquery.vmap.sampledata.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\examples\js\jquery.vmap.sampledata.js"' (27b0a520)
+2019-10-27T16:32:46.5124951+07:00 0HLQQO2AQN290:0000000F [INF] Request finished in 1.0519ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5128070+07:00 0HLQQO2AQN28S:0000000E [INF] Sending file. Request path: '"/lib/jqvmap/dist/maps/jquery.vmap.world.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\dist\maps\jquery.vmap.world.js"' (27b0a520)
+2019-10-27T16:32:46.5128727+07:00 0HLQQO2AQN28S:0000000E [INF] Request finished in 1.5721ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5130215+07:00 0HLQQO2AQN291:00000010 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/moment/min/moment.min.js   (ca22a1cb)
+2019-10-27T16:32:46.5132918+07:00 0HLQQO2AQN292:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2019-10-27T16:32:46.5140330+07:00 0HLQQO2AQN291:00000010 [INF] Sending file. Request path: '"/lib/moment/min/moment.min.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\moment\min\moment.min.js"' (27b0a520)
+2019-10-27T16:32:46.5141128+07:00 0HLQQO2AQN291:00000010 [INF] Request finished in 1.0893ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5143749+07:00 0HLQQO2AQN292:0000000C [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2019-10-27T16:32:46.5143819+07:00 0HLQQO2AQN295:0000000A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/twbs-pagination/jquery.twbsPagination.js   (ca22a1cb)
+2019-10-27T16:32:46.5144703+07:00 0HLQQO2AQN292:0000000C [INF] Request finished in 1.1836ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5151451+07:00 0HLQQO2AQN295:0000000A [INF] Sending file. Request path: '"/lib/twbs-pagination/jquery.twbsPagination.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\twbs-pagination\jquery.twbsPagination.js"' (27b0a520)
+2019-10-27T16:32:46.5152867+07:00 0HLQQO2AQN295:0000000A [INF] Request finished in 0.8829ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5191848+07:00 0HLQQO2AQN28S:0000000F [INF] Request starting HTTP/1.1 GET https://localhost:5001/js/custom.js   (ca22a1cb)
+2019-10-27T16:32:46.5191848+07:00 0HLQQO2AQN291:00000011 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootbox.js/bootbox.js   (ca22a1cb)
+2019-10-27T16:32:46.5202086+07:00 0HLQQO2AQN291:00000011 [INF] Sending file. Request path: '"/lib/bootbox.js/bootbox.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootbox.js\bootbox.js"' (27b0a520)
+2019-10-27T16:32:46.5202919+07:00 0HLQQO2AQN291:00000011 [INF] Request finished in 1.1176ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5209483+07:00 0HLQQO2AQN292:0000000D [INF] Request starting HTTP/1.1 GET https://localhost:5001/Admin/Home/images/img.jpg   (ca22a1cb)
+2019-10-27T16:32:46.5212782+07:00 0HLQQO2AQN28S:0000000F [INF] Sending file. Request path: '"/js/custom.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\js\custom.js"' (27b0a520)
+2019-10-27T16:32:46.5213527+07:00 0HLQQO2AQN28S:0000000F [INF] Request finished in 2.1912ms 200 application/javascript (791a596a)
+2019-10-27T16:32:46.5218354+07:00 0HLQQO2AQN292:0000000D [INF] Request finished in 0.9097ms 404  (791a596a)
+2019-10-27T16:32:46.6727130+07:00 0HLQQO2AQN292:0000000E [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.5.0   (ca22a1cb)
+2019-10-27T16:32:46.6749708+07:00 0HLQQO2AQN292:0000000E [INF] Sending file. Request path: '"/lib/fontawesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\fontawesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2019-10-27T16:32:46.6755810+07:00 0HLQQO2AQN292:0000000E [INF] Request finished in 2.4142ms 200 font/woff2 (791a596a)
+2019-10-27T16:32:46.8520450+07:00 0HLQQO2AQN292:0000000F [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/iCheck/skins/flat/green.png   (ca22a1cb)
+2019-10-27T16:32:46.8527367+07:00 0HLQQO2AQN292:0000000F [INF] Sending file. Request path: '"/lib/iCheck/skins/flat/green.png"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\iCheck\skins\flat\green.png"' (27b0a520)
+2019-10-27T16:32:46.8529200+07:00 0HLQQO2AQN292:0000000F [INF] Request finished in 0.9691ms 200 image/png (791a596a)
+2019-10-27T16:32:47.0354369+07:00 0HLQQO2AQN292:00000010 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Admin/Home/images/favicon.ico   (ca22a1cb)
+2019-10-27T16:32:47.0381790+07:00 0HLQQO2AQN292:00000010 [INF] Request finished in 1.1381ms 404  (791a596a)
+2019-10-27T16:32:50.7407169+07:00 0HLQQO2AQN292:00000011 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/index   (ca22a1cb)
+2019-10-27T16:32:50.7450153+07:00 0HLQQO2AQN292:00000011 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:50.7455919+07:00 0HLQQO2AQN292:00000011 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:50.7467998+07:00 0HLQQO2AQN292:00000011 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:50.7470392+07:00 0HLQQO2AQN292:00000011 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.1394ms. (50a9e262)
+2019-10-27T16:32:50.7524560+07:00 0HLQQO2AQN292:00000011 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:32:50.7633039+07:00 0HLQQO2AQN292:00000011 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:50.7649324+07:00 0HLQQO2AQN292:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2019-10-27T16:32:50.7712139+07:00 0HLQQO2AQN292:00000011 [INF] Executed ViewResult - view "Index" executed in 24.0577ms. (f66409e9)
+2019-10-27T16:32:50.7715116+07:00 0HLQQO2AQN292:00000011 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.Index (KaiCoreApp.Web)" in 26.3912ms (afa2e885)
+2019-10-27T16:32:50.7725772+07:00 0HLQQO2AQN292:00000011 [INF] Request finished in 31.871ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:32:50.7978828+07:00 0HLQQO2AQN292:00000012 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/fontawesome/css/font-awesome.css   (ca22a1cb)
+2019-10-27T16:32:50.7988727+07:00 0HLQQO2AQN28S:00000010 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/iCheck/skins/flat/green.css   (ca22a1cb)
+2019-10-27T16:32:50.7998570+07:00 0HLQQO2AQN292:00000012 [INF] Sending file. Request path: '"/lib/fontawesome/css/font-awesome.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\fontawesome\css\font-awesome.css"' (27b0a520)
+2019-10-27T16:32:50.8007682+07:00 0HLQQO2AQN292:00000012 [INF] Request finished in 2.1843ms 200 text/css (791a596a)
+2019-10-27T16:32:50.8010220+07:00 0HLQQO2AQN28S:00000010 [INF] Sending file. Request path: '"/lib/iCheck/skins/flat/green.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\iCheck\skins\flat\green.css"' (27b0a520)
+2019-10-27T16:32:50.8010854+07:00 0HLQQO2AQN28S:00000010 [INF] Request finished in 2.2811ms 200 text/css (791a596a)
+2019-10-27T16:32:50.8011368+07:00 0HLQQO2AQN291:00000012 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css   (ca22a1cb)
+2019-10-27T16:32:50.8011680+07:00 0HLQQO2AQN295:0000000B [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/dist/jqvmap.css   (ca22a1cb)
+2019-10-27T16:32:50.8016401+07:00 0HLQQO2AQN290:00000010 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2019-10-27T16:32:50.8017746+07:00 0HLQQO2AQN291:00000012 [INF] Sending file. Request path: '"/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-progressbar\css\bootstrap-progressbar-3.3.4.css"' (27b0a520)
+2019-10-27T16:32:50.8018263+07:00 0HLQQO2AQN291:00000012 [INF] Request finished in 0.7107ms 200 text/css (791a596a)
+2019-10-27T16:32:50.8020532+07:00 0HLQQO2AQN295:0000000B [INF] Sending file. Request path: '"/lib/jqvmap/dist/jqvmap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\dist\jqvmap.css"' (27b0a520)
+2019-10-27T16:32:50.8021101+07:00 0HLQQO2AQN295:0000000B [INF] Request finished in 0.9429ms 200 text/css (791a596a)
+2019-10-27T16:32:50.8021413+07:00 0HLQQO2AQN290:00000010 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2019-10-27T16:32:50.8022191+07:00 0HLQQO2AQN290:00000010 [INF] Request finished in 0.6145ms 200 text/css (791a596a)
+2019-10-27T16:32:50.8068732+07:00 0HLQQO2AQN290:00000011 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/custom.min.css   (ca22a1cb)
+2019-10-27T16:32:50.8074675+07:00 0HLQQO2AQN291:00000013 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/images/img.jpg   (ca22a1cb)
+2019-10-27T16:32:50.8085899+07:00 0HLQQO2AQN291:00000013 [INF] Request finished in 1.1302ms 404  (791a596a)
+2019-10-27T16:32:50.8109041+07:00 0HLQQO2AQN290:00000011 [INF] Sending file. Request path: '"/css/custom.min.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\custom.min.css"' (27b0a520)
+2019-10-27T16:32:50.8110942+07:00 0HLQQO2AQN290:00000011 [INF] Request finished in 4.2233ms 200 text/css (791a596a)
+2019-10-27T16:32:50.8124412+07:00 0HLQQO2AQN290:00000012 [INF] Request starting HTTP/1.1 GET https://localhost:5001/app/controllers/product/index.js   (ca22a1cb)
+2019-10-27T16:32:50.8131392+07:00 0HLQQO2AQN290:00000012 [INF] Sending file. Request path: '"/app/controllers/product/index.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\app\controllers\product\index.js"' (27b0a520)
+2019-10-27T16:32:50.8132583+07:00 0HLQQO2AQN290:00000012 [INF] Request finished in 0.7945ms 200 application/javascript (791a596a)
+2019-10-27T16:32:50.9397605+07:00 0HLQQO2AQN290:00000013 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllCategory   (ca22a1cb)
+2019-10-27T16:32:50.9422029+07:00 0HLQQO2AQN291:00000014 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:32:50.9428646+07:00 0HLQQO2AQN290:00000013 [INF] Route matched with "{area = \"Admin\", action = \"GetAllCategory\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllCategory()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:50.9429668+07:00 0HLQQO2AQN290:00000013 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:50.9431038+07:00 0HLQQO2AQN290:00000013 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllCategory (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:50.9462514+07:00 0HLQQO2AQN290:00000013 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:50.9489500+07:00 0HLQQO2AQN291:00000014 [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:50.9490935+07:00 0HLQQO2AQN291:00000014 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:50.9521714+07:00 0HLQQO2AQN291:00000014 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:50.9591450+07:00 0HLQQO2AQN291:00000014 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:51.0127240+07:00 0HLQQO2AQN291:00000014 [INF] Executed DbCommand ("45"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2019-10-27T16:32:51.0259042+07:00 0HLQQO2AQN290:00000013 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], CAST(COALESCE([x].[HomeFlag], 0) AS bit) AS [HomeFlag], [x].[CreatedDate], [x].[DateModified], [x].[SortOrder], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId], [x].[Id]" (0723d8ff)
+2019-10-27T16:32:51.0436217+07:00 0HLQQO2AQN290:00000013 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ParentId], [t].[Id], [x.Products].[Id] AS [Id0], [x.Products].[Name], [x.Products].[CategoryId], [x.Products].[Price], COALESCE([x.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.Products].[OriginalPrice], [x.Products].[Description], [x.Products].[Content], [x.Products].[HomeFlag], CAST(COALESCE([x.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.Products].[ViewCount], [x.Products].[Image], [x.Products].[Tags], [x.Products].[Unit], [x.Products].[Status], [x.Products].[SeoPageTitle], [x.Products].[SeoAlias], [x.Products].[SeoKeywords], [x.Products].[SeoDescription], [x.Products].[CreatedDate], [x.Products].[DateModified]
+FROM [Products] AS [x.Products]
+INNER JOIN (
+    SELECT [x0].[ParentId], [x0].[Id]
+    FROM [ProductCategories] AS [x0]
+) AS [t] ON [x.Products].[CategoryId] = [t].[Id]
+ORDER BY [t].[ParentId], [t].[Id]" (0723d8ff)
+2019-10-27T16:32:51.0611664+07:00 0HLQQO2AQN290:00000013 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllCategory (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 117.9589ms. (50a9e262)
+2019-10-27T16:32:51.0616591+07:00 0HLQQO2AQN290:00000013 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[KaiCoreApp.Application.ViewModels.Product.ProductCategoryViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:32:51.0756594+07:00 0HLQQO2AQN291:00000014 [INF] Executed DbCommand ("6"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2019-10-27T16:32:51.0944929+07:00 0HLQQO2AQN290:00000013 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllCategory (KaiCoreApp.Web)" in 151.4616ms (afa2e885)
+2019-10-27T16:32:51.0948404+07:00 0HLQQO2AQN290:00000013 [INF] Request finished in 155.0905ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:32:51.1022534+07:00 0HLQQO2AQN291:00000014 [INF] Executed DbCommand ("9"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE [x0].[Status] = 1
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:32:51.1135089+07:00 0HLQQO2AQN291:00000014 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 161.2169ms. (50a9e262)
+2019-10-27T16:32:51.1136371+07:00 0HLQQO2AQN291:00000014 [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:32:51.1209749+07:00 0HLQQO2AQN291:00000014 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 171.8894ms (afa2e885)
+2019-10-27T16:32:51.1212291+07:00 0HLQQO2AQN291:00000014 [INF] Request finished in 179.1425ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:32:51.1316044+07:00 0HLQQO2AQN291:00000015 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:32:51.1324067+07:00 0HLQQO2AQN291:00000015 [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:51.1325849+07:00 0HLQQO2AQN291:00000015 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:51.1333422+07:00 0HLQQO2AQN291:00000015 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:51.1349570+07:00 0HLQQO2AQN291:00000015 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:51.1375864+07:00 0HLQQO2AQN291:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2019-10-27T16:32:51.1392010+07:00 0HLQQO2AQN291:00000015 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2019-10-27T16:32:51.1401136+07:00 0HLQQO2AQN291:00000015 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE [x0].[Status] = 1
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:32:51.1412418+07:00 0HLQQO2AQN291:00000015 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 7.7979ms. (50a9e262)
+2019-10-27T16:32:51.1413580+07:00 0HLQQO2AQN291:00000015 [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:32:51.1430087+07:00 0HLQQO2AQN291:00000015 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 10.492ms (afa2e885)
+2019-10-27T16:32:51.1434715+07:00 0HLQQO2AQN291:00000015 [INF] Request finished in 11.6837ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:32:51.1512134+07:00 0HLQQO2AQN290:00000014 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/vegeta.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1527083+07:00 0HLQQO2AQN291:00000016 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/product-1.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1559854+07:00 0HLQQO2AQN291:00000016 [INF] Request finished in 3.6311ms 404  (791a596a)
+2019-10-27T16:32:51.1585446+07:00 0HLQQO2AQN290:00000014 [INF] Sending file. Request path: '"/client-side/images/products/vegeta.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\vegeta.jpg"' (27b0a520)
+2019-10-27T16:32:51.1587039+07:00 0HLQQO2AQN290:00000014 [INF] Request finished in 7.905ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1629700+07:00 0HLQQO2AQN290:00000015 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/obito-thap-vi.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1633079+07:00 0HLQQO2AQN291:00000017 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/hinata.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1640725+07:00 0HLQQO2AQN295:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/naruto.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1648143+07:00 0HLQQO2AQN28S:00000011 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/sasuke-3.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1678572+07:00 0HLQQO2AQN28S:00000011 [INF] Sending file. Request path: '"/client-side/images/products/sasuke-3.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\sasuke-3.jpg"' (27b0a520)
+2019-10-27T16:32:51.1679292+07:00 0HLQQO2AQN28S:00000011 [INF] Request finished in 3.1472ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1681670+07:00 0HLQQO2AQN291:00000017 [INF] Sending file. Request path: '"/client-side/images/products/hinata.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\hinata.jpg"' (27b0a520)
+2019-10-27T16:32:51.1683096+07:00 0HLQQO2AQN291:00000017 [INF] Request finished in 5.0159ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1687615+07:00 0HLQQO2AQN295:0000000C [INF] Sending file. Request path: '"/client-side/images/products/naruto.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\naruto.jpg"' (27b0a520)
+2019-10-27T16:32:51.1688837+07:00 0HLQQO2AQN295:0000000C [INF] Request finished in 4.796ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1698812+07:00 0HLQQO2AQN290:00000015 [INF] Sending file. Request path: '"/client-side/images/products/obito-thap-vi.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\obito-thap-vi.jpg"' (27b0a520)
+2019-10-27T16:32:51.1711141+07:00 0HLQQO2AQN290:00000015 [INF] Request finished in 7.0835ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1738592+07:00 0HLQQO2AQN290:00000016 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/naruto-2.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1777165+07:00 0HLQQO2AQN291:00000018 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/luffy.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1827100+07:00 0HLQQO2AQN291:00000018 [INF] Sending file. Request path: '"/client-side/images/products/luffy.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\luffy.jpg"' (27b0a520)
+2019-10-27T16:32:51.1828125+07:00 0HLQQO2AQN291:00000018 [INF] Request finished in 5.1474ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1840419+07:00 0HLQQO2AQN290:00000016 [INF] Sending file. Request path: '"/client-side/images/products/naruto-2.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\naruto-2.jpg"' (27b0a520)
+2019-10-27T16:32:51.1842112+07:00 0HLQQO2AQN290:00000016 [INF] Request finished in 10.3248ms 200 image/jpeg (791a596a)
+2019-10-27T16:32:51.1862228+07:00 0HLQQO2AQN290:00000017 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/zoro.jpg   (ca22a1cb)
+2019-10-27T16:32:51.1871118+07:00 0HLQQO2AQN290:00000017 [INF] Request finished in 0.899ms 404  (791a596a)
+2019-10-27T16:32:56.5893589+07:00 0HLQQO2AQN290:00000018 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=2&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:32:56.5901297+07:00 0HLQQO2AQN290:00000018 [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:32:56.5902351+07:00 0HLQQO2AQN290:00000018 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:32:56.5907108+07:00 0HLQQO2AQN290:00000018 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:32:56.5910815+07:00 0HLQQO2AQN290:00000018 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:32:56.5962840+07:00 0HLQQO2AQN290:00000018 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[CategoryId] = @__categoryId_Value_0)" (0723d8ff)
+2019-10-27T16:32:56.6244929+07:00 0HLQQO2AQN290:00000018 [INF] Executed DbCommand ("3"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE ([x].[Status] = 1) AND ([x].[CategoryId] = @__categoryId_Value_0)
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2019-10-27T16:32:56.6308159+07:00 0HLQQO2AQN290:00000018 [INF] Executed DbCommand ("4"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE ([x0].[Status] = 1) AND ([x0].[CategoryId] = @__categoryId_Value_0)
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:32:56.6317034+07:00 0HLQQO2AQN290:00000018 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 40.909ms. (50a9e262)
+2019-10-27T16:32:56.6318285+07:00 0HLQQO2AQN290:00000018 [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:32:56.6328830+07:00 0HLQQO2AQN290:00000018 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 42.6258ms (afa2e885)
+2019-10-27T16:32:56.6332617+07:00 0HLQQO2AQN290:00000018 [INF] Request finished in 43.8502ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:33:06.6349501+07:00 0HLQQO2AQN290:00000019 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/productcategory/index   (ca22a1cb)
+2019-10-27T16:33:06.6398180+07:00 0HLQQO2AQN290:00000019 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"ProductCategory\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:06.6403676+07:00 0HLQQO2AQN290:00000019 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:06.6408399+07:00 0HLQQO2AQN290:00000019 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:06.6412913+07:00 0HLQQO2AQN290:00000019 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2494ms. (50a9e262)
+2019-10-27T16:33:06.6448548+07:00 0HLQQO2AQN290:00000019 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:33:06.6521877+07:00 0HLQQO2AQN290:00000019 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:06.6529570+07:00 0HLQQO2AQN290:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2019-10-27T16:33:06.6579560+07:00 0HLQQO2AQN290:00000019 [INF] Executed ViewResult - view "Index" executed in 16.5044ms. (f66409e9)
+2019-10-27T16:33:06.6580942+07:00 0HLQQO2AQN290:00000019 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController.Index (KaiCoreApp.Web)" in 18.1795ms (afa2e885)
+2019-10-27T16:33:06.6583686+07:00 0HLQQO2AQN290:00000019 [INF] Request finished in 23.5752ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:33:06.6880913+07:00 0HLQQO2AQN290:0000001A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/fontawesome/css/font-awesome.css   (ca22a1cb)
+2019-10-27T16:33:06.6910407+07:00 0HLQQO2AQN290:0000001A [INF] Sending file. Request path: '"/lib/fontawesome/css/font-awesome.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\fontawesome\css\font-awesome.css"' (27b0a520)
+2019-10-27T16:33:06.6913500+07:00 0HLQQO2AQN291:00000019 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/iCheck/skins/flat/green.css   (ca22a1cb)
+2019-10-27T16:33:06.6915798+07:00 0HLQQO2AQN290:0000001A [INF] Request finished in 3.1785ms 200 text/css (791a596a)
+2019-10-27T16:33:06.6925191+07:00 0HLQQO2AQN291:00000019 [INF] Sending file. Request path: '"/lib/iCheck/skins/flat/green.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\iCheck\skins\flat\green.css"' (27b0a520)
+2019-10-27T16:33:06.6926848+07:00 0HLQQO2AQN291:00000019 [INF] Request finished in 1.2822ms 200 text/css (791a596a)
+2019-10-27T16:33:06.6932442+07:00 0HLQQO2AQN295:0000000D [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/dist/jqvmap.css   (ca22a1cb)
+2019-10-27T16:33:06.6932350+07:00 0HLQQO2AQN28S:00000012 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css   (ca22a1cb)
+2019-10-27T16:33:06.6937185+07:00 0HLQQO2AQN292:00000013 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2019-10-27T16:33:06.6943566+07:00 0HLQQO2AQN292:00000013 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2019-10-27T16:33:06.6943824+07:00 0HLQQO2AQN28S:00000012 [INF] Sending file. Request path: '"/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-progressbar\css\bootstrap-progressbar-3.3.4.css"' (27b0a520)
+2019-10-27T16:33:06.6944359+07:00 0HLQQO2AQN292:00000013 [INF] Request finished in 0.7517ms 200 text/css (791a596a)
+2019-10-27T16:33:06.6944759+07:00 0HLQQO2AQN28S:00000012 [INF] Request finished in 1.2894ms 200 text/css (791a596a)
+2019-10-27T16:33:06.6950199+07:00 0HLQQO2AQN290:0000001B [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/custom.min.css   (ca22a1cb)
+2019-10-27T16:33:06.6950965+07:00 0HLQQO2AQN295:0000000D [INF] Sending file. Request path: '"/lib/jqvmap/dist/jqvmap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\dist\jqvmap.css"' (27b0a520)
+2019-10-27T16:33:06.6954092+07:00 0HLQQO2AQN295:0000000D [INF] Request finished in 2.1441ms 200 text/css (791a596a)
+2019-10-27T16:33:06.6955642+07:00 0HLQQO2AQN291:0000001A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-easyui-1.8.8/themes/bootstrap/easyui.css   (ca22a1cb)
+2019-10-27T16:33:06.6971283+07:00 0HLQQO2AQN290:0000001B [INF] Sending file. Request path: '"/css/custom.min.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\custom.min.css"' (27b0a520)
+2019-10-27T16:33:06.6975048+07:00 0HLQQO2AQN290:0000001B [INF] Request finished in 2.4854ms 200 text/css (791a596a)
+2019-10-27T16:33:06.6987462+07:00 0HLQQO2AQN291:0000001A [INF] Sending file. Request path: '"/lib/jquery-easyui-1.8.8/themes/bootstrap/easyui.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-easyui-1.8.8\themes\bootstrap\easyui.css"' (27b0a520)
+2019-10-27T16:33:06.6988978+07:00 0HLQQO2AQN291:0000001A [INF] Request finished in 3.2569ms 200 text/css (791a596a)
+2019-10-27T16:33:06.7064755+07:00 0HLQQO2AQN295:0000000E [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-easyui-1.8.8/themes/icon.css   (ca22a1cb)
+2019-10-27T16:33:06.7075520+07:00 0HLQQO2AQN295:0000000E [INF] Sending file. Request path: '"/lib/jquery-easyui-1.8.8/themes/icon.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-easyui-1.8.8\themes\icon.css"' (27b0a520)
+2019-10-27T16:33:06.7076320+07:00 0HLQQO2AQN295:0000000E [INF] Request finished in 1.1781ms 200 text/css (791a596a)
+2019-10-27T16:33:06.7106196+07:00 0HLQQO2AQN291:0000001B [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/productcategory/images/img.jpg   (ca22a1cb)
+2019-10-27T16:33:06.7106196+07:00 0HLQQO2AQN295:0000000F [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-easyui-1.8.8/jquery.easyui.min.js   (ca22a1cb)
+2019-10-27T16:33:06.7122611+07:00 0HLQQO2AQN291:0000001B [INF] Request finished in 1.6027ms 404  (791a596a)
+2019-10-27T16:33:06.7194113+07:00 0HLQQO2AQN295:0000000F [INF] Sending file. Request path: '"/lib/jquery-easyui-1.8.8/jquery.easyui.min.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-easyui-1.8.8\jquery.easyui.min.js"' (27b0a520)
+2019-10-27T16:33:06.7195155+07:00 0HLQQO2AQN295:0000000F [INF] Request finished in 9.0586ms 200 application/javascript (791a596a)
+2019-10-27T16:33:06.7469430+07:00 0HLQQO2AQN295:00000010 [INF] Request starting HTTP/1.1 GET https://localhost:5001/app/controllers/product-category/index.js?v=fpB41ct0ZbX498F6Bu1LDVZNcty7VO7P0wUbUykWjwc   (ca22a1cb)
+2019-10-27T16:33:06.7500048+07:00 0HLQQO2AQN295:00000010 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2019-10-27T16:33:06.7501138+07:00 0HLQQO2AQN295:00000010 [INF] Request finished in 3.2781ms 200 application/javascript (791a596a)
+2019-10-27T16:33:06.8495814+07:00 0HLQQO2AQN295:00000011 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Admin/ProductCategory/GetAll   (ca22a1cb)
+2019-10-27T16:33:06.8513162+07:00 0HLQQO2AQN295:00000011 [INF] Route matched with "{area = \"Admin\", action = \"GetAll\", controller = \"ProductCategory\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAll()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:06.8514901+07:00 0HLQQO2AQN295:00000011 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:06.8515879+07:00 0HLQQO2AQN295:00000011 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController.GetAll (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:06.8523034+07:00 0HLQQO2AQN295:00000011 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:06.8534610+07:00 0HLQQO2AQN295:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], CAST(COALESCE([x].[HomeFlag], 0) AS bit) AS [HomeFlag], [x].[CreatedDate], [x].[DateModified], [x].[SortOrder], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId], [x].[Id]" (0723d8ff)
+2019-10-27T16:33:06.8544566+07:00 0HLQQO2AQN295:00000011 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ParentId], [t].[Id], [x.Products].[Id] AS [Id0], [x.Products].[Name], [x.Products].[CategoryId], [x.Products].[Price], COALESCE([x.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.Products].[OriginalPrice], [x.Products].[Description], [x.Products].[Content], [x.Products].[HomeFlag], CAST(COALESCE([x.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.Products].[ViewCount], [x.Products].[Image], [x.Products].[Tags], [x.Products].[Unit], [x.Products].[Status], [x.Products].[SeoPageTitle], [x.Products].[SeoAlias], [x.Products].[SeoKeywords], [x.Products].[SeoDescription], [x.Products].[CreatedDate], [x.Products].[DateModified]
+FROM [Products] AS [x.Products]
+INNER JOIN (
+    SELECT [x0].[ParentId], [x0].[Id]
+    FROM [ProductCategories] AS [x0]
+) AS [t] ON [x.Products].[CategoryId] = [t].[Id]
+ORDER BY [t].[ParentId], [t].[Id]" (0723d8ff)
+2019-10-27T16:33:06.8551995+07:00 0HLQQO2AQN295:00000011 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController.GetAll (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3.5109ms. (50a9e262)
+2019-10-27T16:33:06.8553617+07:00 0HLQQO2AQN295:00000011 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[KaiCoreApp.Application.ViewModels.Product.ProductCategoryViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:33:06.8561323+07:00 0HLQQO2AQN295:00000011 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductCategoryController.GetAll (KaiCoreApp.Web)" in 4.6744ms (afa2e885)
+2019-10-27T16:33:06.8563622+07:00 0HLQQO2AQN295:00000011 [INF] Request finished in 6.7695ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:33:06.8969047+07:00 0HLQQO2AQN295:00000012 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-easyui-1.8.8/themes/bootstrap/images/tree_icons.png   (ca22a1cb)
+2019-10-27T16:33:06.8987620+07:00 0HLQQO2AQN295:00000012 [INF] Sending file. Request path: '"/lib/jquery-easyui-1.8.8/themes/bootstrap/images/tree_icons.png"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-easyui-1.8.8\themes\bootstrap\images\tree_icons.png"' (27b0a520)
+2019-10-27T16:33:06.8988904+07:00 0HLQQO2AQN295:00000012 [INF] Request finished in 2.0055ms 200 image/png (791a596a)
+2019-10-27T16:33:27.7531657+07:00 0HLQQO2AQN295:00000013 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/index   (ca22a1cb)
+2019-10-27T16:33:27.7542345+07:00 0HLQQO2AQN295:00000013 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:27.7544732+07:00 0HLQQO2AQN295:00000013 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:27.7546652+07:00 0HLQQO2AQN295:00000013 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:27.7547498+07:00 0HLQQO2AQN295:00000013 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.0163ms. (50a9e262)
+2019-10-27T16:33:27.7549648+07:00 0HLQQO2AQN295:00000013 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:33:27.7558370+07:00 0HLQQO2AQN295:00000013 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:27.7571728+07:00 0HLQQO2AQN295:00000013 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2019-10-27T16:33:27.7599656+07:00 0HLQQO2AQN295:00000013 [INF] Executed ViewResult - view "Index" executed in 5.0973ms. (f66409e9)
+2019-10-27T16:33:27.7615791+07:00 0HLQQO2AQN295:00000013 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.Index (KaiCoreApp.Web)" in 7.0328ms (afa2e885)
+2019-10-27T16:33:27.7624421+07:00 0HLQQO2AQN295:00000013 [INF] Request finished in 9.1045ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:33:27.7909013+07:00 0HLQQO2AQN295:00000014 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/fontawesome/css/font-awesome.css   (ca22a1cb)
+2019-10-27T16:33:27.7920606+07:00 0HLQQO2AQN291:0000001C [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/iCheck/skins/flat/green.css   (ca22a1cb)
+2019-10-27T16:33:27.7931558+07:00 0HLQQO2AQN295:00000014 [INF] Sending file. Request path: '"/lib/fontawesome/css/font-awesome.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\fontawesome\css\font-awesome.css"' (27b0a520)
+2019-10-27T16:33:27.7932196+07:00 0HLQQO2AQN295:00000014 [INF] Request finished in 6.5544ms 200 text/css (791a596a)
+2019-10-27T16:33:27.7930013+07:00 0HLQQO2AQN291:0000001C [INF] Sending file. Request path: '"/lib/iCheck/skins/flat/green.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\iCheck\skins\flat\green.css"' (27b0a520)
+2019-10-27T16:33:27.7956257+07:00 0HLQQO2AQN291:0000001C [INF] Request finished in 3.7278ms 200 text/css (791a596a)
+2019-10-27T16:33:27.7998256+07:00 0HLQQO2AQN295:00000015 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css   (ca22a1cb)
+2019-10-27T16:33:27.7999234+07:00 0HLQQO2AQN291:0000001D [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jqvmap/dist/jqvmap.css   (ca22a1cb)
+2019-10-27T16:33:27.8005968+07:00 0HLQQO2AQN28S:00000013 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/custom.min.css   (ca22a1cb)
+2019-10-27T16:33:27.8005967+07:00 0HLQQO2AQN292:00000014 [INF] Request starting HTTP/1.1 GET https://localhost:5001/app/controllers/product/index.js   (ca22a1cb)
+2019-10-27T16:33:27.8006674+07:00 0HLQQO2AQN290:0000001C [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2019-10-27T16:33:27.8010371+07:00 0HLQQO2AQN295:00000015 [INF] Sending file. Request path: '"/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-progressbar\css\bootstrap-progressbar-3.3.4.css"' (27b0a520)
+2019-10-27T16:33:27.8010371+07:00 0HLQQO2AQN291:0000001D [INF] Sending file. Request path: '"/lib/jqvmap/dist/jqvmap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jqvmap\dist\jqvmap.css"' (27b0a520)
+2019-10-27T16:33:27.8010878+07:00 0HLQQO2AQN291:0000001D [INF] Request finished in 1.1774ms 200 text/css (791a596a)
+2019-10-27T16:33:27.8010919+07:00 0HLQQO2AQN295:00000015 [INF] Request finished in 1.3327ms 200 text/css (791a596a)
+2019-10-27T16:33:27.8011271+07:00 0HLQQO2AQN290:0000001C [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2019-10-27T16:33:27.8011271+07:00 0HLQQO2AQN28S:00000013 [INF] Sending file. Request path: '"/css/custom.min.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\custom.min.css"' (27b0a520)
+2019-10-27T16:33:27.8011716+07:00 0HLQQO2AQN290:0000001C [INF] Request finished in 0.5336ms 200 text/css (791a596a)
+2019-10-27T16:33:27.8011821+07:00 0HLQQO2AQN292:00000014 [INF] Sending file. Request path: '"/app/controllers/product/index.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\app\controllers\product\index.js"' (27b0a520)
+2019-10-27T16:33:27.8012334+07:00 0HLQQO2AQN292:00000014 [INF] Request finished in 0.6794ms 200 application/javascript (791a596a)
+2019-10-27T16:33:27.8012732+07:00 0HLQQO2AQN28S:00000013 [INF] Request finished in 0.6255ms 200 text/css (791a596a)
+2019-10-27T16:33:27.8074702+07:00 0HLQQO2AQN292:00000015 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/images/img.jpg   (ca22a1cb)
+2019-10-27T16:33:27.8086277+07:00 0HLQQO2AQN292:00000015 [INF] Request finished in 1.0568ms 404  (791a596a)
+2019-10-27T16:33:27.9159326+07:00 0HLQQO2AQN292:00000016 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllCategory   (ca22a1cb)
+2019-10-27T16:33:27.9168026+07:00 0HLQQO2AQN292:00000016 [INF] Route matched with "{area = \"Admin\", action = \"GetAllCategory\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllCategory()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:27.9169133+07:00 0HLQQO2AQN292:00000016 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:27.9171863+07:00 0HLQQO2AQN292:00000016 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllCategory (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:27.9176067+07:00 0HLQQO2AQN292:00000016 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:27.9182536+07:00 0HLQQO2AQN290:0000001D [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:33:27.9192905+07:00 0HLQQO2AQN290:0000001D [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:27.9194195+07:00 0HLQQO2AQN290:0000001D [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:27.9198109+07:00 0HLQQO2AQN290:0000001D [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:27.9199203+07:00 0HLQQO2AQN292:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[Description], [x].[ParentId], [x].[HomeOrder], CAST(COALESCE([x].[HomeFlag], 0) AS bit) AS [HomeFlag], [x].[CreatedDate], [x].[DateModified], [x].[SortOrder], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId], [x].[Id]" (0723d8ff)
+2019-10-27T16:33:27.9204950+07:00 0HLQQO2AQN290:0000001D [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:27.9213702+07:00 0HLQQO2AQN292:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ParentId], [t].[Id], [x.Products].[Id] AS [Id0], [x.Products].[Name], [x.Products].[CategoryId], [x.Products].[Price], COALESCE([x.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.Products].[OriginalPrice], [x.Products].[Description], [x.Products].[Content], [x.Products].[HomeFlag], CAST(COALESCE([x.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.Products].[ViewCount], [x.Products].[Image], [x.Products].[Tags], [x.Products].[Unit], [x.Products].[Status], [x.Products].[SeoPageTitle], [x.Products].[SeoAlias], [x.Products].[SeoKeywords], [x.Products].[SeoDescription], [x.Products].[CreatedDate], [x.Products].[DateModified]
+FROM [Products] AS [x.Products]
+INNER JOIN (
+    SELECT [x0].[ParentId], [x0].[Id]
+    FROM [ProductCategories] AS [x0]
+) AS [t] ON [x.Products].[CategoryId] = [t].[Id]
+ORDER BY [t].[ParentId], [t].[Id]" (0723d8ff)
+2019-10-27T16:33:27.9220354+07:00 0HLQQO2AQN292:00000016 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllCategory (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 4.7572ms. (50a9e262)
+2019-10-27T16:33:27.9221660+07:00 0HLQQO2AQN292:00000016 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[KaiCoreApp.Application.ViewModels.Product.ProductCategoryViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:33:27.9227368+07:00 0HLQQO2AQN292:00000016 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllCategory (KaiCoreApp.Web)" in 5.8416ms (afa2e885)
+2019-10-27T16:33:27.9229263+07:00 0HLQQO2AQN292:00000016 [INF] Request finished in 6.9968ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:33:27.9286040+07:00 0HLQQO2AQN290:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2019-10-27T16:33:27.9304644+07:00 0HLQQO2AQN290:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2019-10-27T16:33:27.9315593+07:00 0HLQQO2AQN290:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE [x0].[Status] = 1
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:33:27.9330222+07:00 0HLQQO2AQN290:0000001D [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 13.0551ms. (50a9e262)
+2019-10-27T16:33:27.9331471+07:00 0HLQQO2AQN290:0000001D [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:33:27.9352872+07:00 0HLQQO2AQN290:0000001D [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 15.9141ms (afa2e885)
+2019-10-27T16:33:27.9354642+07:00 0HLQQO2AQN290:0000001D [INF] Request finished in 17.2328ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:33:27.9980110+07:00 0HLQQO2AQN290:0000001E [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:33:27.9987144+07:00 0HLQQO2AQN290:0000001E [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:27.9989348+07:00 0HLQQO2AQN290:0000001E [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:27.9991754+07:00 0HLQQO2AQN290:0000001E [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:27.9995921+07:00 0HLQQO2AQN290:0000001E [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:28.0005155+07:00 0HLQQO2AQN290:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2019-10-27T16:33:28.0025022+07:00 0HLQQO2AQN290:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2019-10-27T16:33:28.0036849+07:00 0HLQQO2AQN290:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE [x0].[Status] = 1
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:33:28.0047836+07:00 0HLQQO2AQN290:0000001E [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 5.5208ms. (50a9e262)
+2019-10-27T16:33:28.0049096+07:00 0HLQQO2AQN290:0000001E [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:33:28.0071079+07:00 0HLQQO2AQN290:0000001E [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 8.2192ms (afa2e885)
+2019-10-27T16:33:28.0073633+07:00 0HLQQO2AQN290:0000001E [INF] Request finished in 9.3686ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:33:28.0184253+07:00 0HLQQO2AQN290:0000001F [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/product-1.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0195629+07:00 0HLQQO2AQN290:0000001F [INF] Request finished in 1.2865ms 404  (791a596a)
+2019-10-27T16:33:28.0200994+07:00 0HLQQO2AQN292:00000017 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/vegeta.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0266457+07:00 0HLQQO2AQN290:00000020 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/obito-thap-vi.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0266497+07:00 0HLQQO2AQN28S:00000014 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/hinata.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0290705+07:00 0HLQQO2AQN292:00000017 [INF] Sending file. Request path: '"/client-side/images/products/vegeta.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\vegeta.jpg"' (27b0a520)
+2019-10-27T16:33:28.0291449+07:00 0HLQQO2AQN290:00000020 [INF] Sending file. Request path: '"/client-side/images/products/obito-thap-vi.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\obito-thap-vi.jpg"' (27b0a520)
+2019-10-27T16:33:28.0291899+07:00 0HLQQO2AQN292:00000017 [INF] Request finished in 9.1251ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0292155+07:00 0HLQQO2AQN290:00000020 [INF] Request finished in 2.6121ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0339667+07:00 0HLQQO2AQN292:00000018 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/naruto.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0341019+07:00 0HLQQO2AQN290:00000021 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/sasuke-3.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0354417+07:00 0HLQQO2AQN28S:00000014 [INF] Sending file. Request path: '"/client-side/images/products/hinata.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\hinata.jpg"' (27b0a520)
+2019-10-27T16:33:28.0355132+07:00 0HLQQO2AQN28S:00000014 [INF] Request finished in 8.8673ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0356343+07:00 0HLQQO2AQN292:00000018 [INF] Sending file. Request path: '"/client-side/images/products/naruto.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\naruto.jpg"' (27b0a520)
+2019-10-27T16:33:28.0356821+07:00 0HLQQO2AQN292:00000018 [INF] Request finished in 1.9673ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0356855+07:00 0HLQQO2AQN290:00000021 [INF] Sending file. Request path: '"/client-side/images/products/sasuke-3.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\sasuke-3.jpg"' (27b0a520)
+2019-10-27T16:33:28.0357273+07:00 0HLQQO2AQN290:00000021 [INF] Request finished in 1.6535ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0383491+07:00 0HLQQO2AQN28S:00000015 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/naruto-2.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0402946+07:00 0HLQQO2AQN295:00000016 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/luffy.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0458132+07:00 0HLQQO2AQN290:00000022 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/zoro.jpg   (ca22a1cb)
+2019-10-27T16:33:28.0461587+07:00 0HLQQO2AQN28S:00000015 [INF] Sending file. Request path: '"/client-side/images/products/naruto-2.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\naruto-2.jpg"' (27b0a520)
+2019-10-27T16:33:28.0463496+07:00 0HLQQO2AQN28S:00000015 [INF] Request finished in 8.0087ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0463722+07:00 0HLQQO2AQN295:00000016 [INF] Sending file. Request path: '"/client-side/images/products/luffy.jpg"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\client-side\images\products\luffy.jpg"' (27b0a520)
+2019-10-27T16:33:28.0464356+07:00 0HLQQO2AQN295:00000016 [INF] Request finished in 6.7969ms 200 image/jpeg (791a596a)
+2019-10-27T16:33:28.0469466+07:00 0HLQQO2AQN290:00000022 [INF] Request finished in 1.1551ms 404  (791a596a)
+2019-10-27T16:33:30.6551756+07:00 0HLQQO2AQN290:00000023 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=4&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:33:30.6558264+07:00 0HLQQO2AQN290:00000023 [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:30.6559822+07:00 0HLQQO2AQN290:00000023 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:30.6562989+07:00 0HLQQO2AQN290:00000023 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:30.6567255+07:00 0HLQQO2AQN290:00000023 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:30.6577052+07:00 0HLQQO2AQN290:00000023 [INF] Executed DbCommand ("0"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[CategoryId] = @__categoryId_Value_0)" (0723d8ff)
+2019-10-27T16:33:30.6590906+07:00 0HLQQO2AQN290:00000023 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE ([x].[Status] = 1) AND ([x].[CategoryId] = @__categoryId_Value_0)
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2019-10-27T16:33:30.6600126+07:00 0HLQQO2AQN290:00000023 [INF] Executed DbCommand ("1"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE ([x0].[Status] = 1) AND ([x0].[CategoryId] = @__categoryId_Value_0)
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:33:30.6612617+07:00 0HLQQO2AQN290:00000023 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 4.8391ms. (50a9e262)
+2019-10-27T16:33:30.6617722+07:00 0HLQQO2AQN290:00000023 [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:33:30.6625907+07:00 0HLQQO2AQN290:00000023 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 6.6748ms (afa2e885)
+2019-10-27T16:33:30.6627544+07:00 0HLQQO2AQN290:00000023 [INF] Request finished in 7.6065ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:33:30.6780415+07:00 0HLQQO2AQN290:00000024 [INF] Request starting HTTP/1.1 GET https://localhost:5001/client-side/images/products/product-1.jpg   (ca22a1cb)
+2019-10-27T16:33:30.6789637+07:00 0HLQQO2AQN290:00000024 [INF] Request finished in 0.928ms 404  (791a596a)
+2019-10-27T16:33:33.7284171+07:00 0HLQQO2AQN290:00000025 [INF] Request starting HTTP/1.1 GET https://localhost:5001/admin/product/GetAllPaging?categoryId=2&search=&page=1&pageSize=10   (ca22a1cb)
+2019-10-27T16:33:33.7294694+07:00 0HLQQO2AQN290:00000025 [INF] Route matched with "{area = \"Admin\", action = \"GetAllPaging\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPaging(System.Nullable`1[System.Int32], System.String, Int32, Int32)" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:33:33.7296249+07:00 0HLQQO2AQN290:00000025 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:33:33.7298766+07:00 0HLQQO2AQN290:00000025 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:33:33.7303305+07:00 0HLQQO2AQN290:00000025 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=KaiCoreApp.EF " (9958f5bb)
+2019-10-27T16:33:33.7347165+07:00 0HLQQO2AQN290:00000025 [INF] Executed DbCommand ("4"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[CategoryId] = @__categoryId_Value_0)" (0723d8ff)
+2019-10-27T16:33:33.7407528+07:00 0HLQQO2AQN290:00000025 [INF] Executed DbCommand ("5"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[CategoryId], [x].[Price], COALESCE([x].[PromotionPrice], 0.0) AS [PromotionPrice], [x].[OriginalPrice], [x].[Description], [x].[Content], [x].[HomeFlag], CAST(COALESCE([x].[HotFlag], 0) AS bit) AS [HotFlag], [x].[ViewCount], [x].[Image], [x].[Tags], [x].[Unit], [x].[Status], [x].[SeoPageTitle], [x].[SeoAlias], [x].[SeoKeywords], [x].[SeoDescription], [x].[CreatedDate], [x].[DateModified], CASE
+    WHEN [x].[CategoryId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[ParentId], [x.ProductCategory].[HomeOrder], CAST(COALESCE([x.ProductCategory].[HomeFlag], 0) AS bit) AS [HomeFlag0], [x.ProductCategory].[CreatedDate] AS [CreatedDate0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status] AS [Status0], [x.ProductCategory].[SeoPageTitle] AS [SeoPageTitle0], [x.ProductCategory].[SeoAlias] AS [SeoAlias0], [x.ProductCategory].[SeoKeywords] AS [SeoKeywords0], [x.ProductCategory].[SeoDescription] AS [SeoDescription0], [x.ProductCategory].[Id]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE ([x].[Status] = 1) AND ([x].[CategoryId] = @__categoryId_Value_0)
+ORDER BY [x].[CreatedDate] DESC, [x].[Id], [x.ProductCategory].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2019-10-27T16:33:33.7475222+07:00 0HLQQO2AQN290:00000025 [INF] Executed DbCommand ("6"ms) [Parameters=["@__categoryId_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[CreatedDate], [t].[Id], [t].[Id0], [x.ProductCategory.Products].[Id] AS [Id1], [x.ProductCategory.Products].[Name], [x.ProductCategory.Products].[CategoryId], [x.ProductCategory.Products].[Price], COALESCE([x.ProductCategory.Products].[PromotionPrice], 0.0) AS [PromotionPrice], [x.ProductCategory.Products].[OriginalPrice], [x.ProductCategory.Products].[Description], [x.ProductCategory.Products].[Content], [x.ProductCategory.Products].[HomeFlag], CAST(COALESCE([x.ProductCategory.Products].[HotFlag], 0) AS bit) AS [HotFlag], [x.ProductCategory.Products].[ViewCount], [x.ProductCategory.Products].[Image], [x.ProductCategory.Products].[Tags], [x.ProductCategory.Products].[Unit], [x.ProductCategory.Products].[Status], [x.ProductCategory.Products].[SeoPageTitle], [x.ProductCategory.Products].[SeoAlias], [x.ProductCategory.Products].[SeoKeywords], [x.ProductCategory.Products].[SeoDescription], [x.ProductCategory.Products].[CreatedDate] AS [CreatedDate0], [x.ProductCategory.Products].[DateModified]
+FROM [Products] AS [x.ProductCategory.Products]
+INNER JOIN (
+    SELECT [x0].[CreatedDate], [x0].[Id], [x.ProductCategory0].[Id] AS [Id0]
+    FROM [Products] AS [x0]
+    INNER JOIN [ProductCategories] AS [x.ProductCategory0] ON [x0].[CategoryId] = [x.ProductCategory0].[Id]
+    WHERE ([x0].[Status] = 1) AND ([x0].[CategoryId] = @__categoryId_Value_0)
+    ORDER BY [x0].[CreatedDate] DESC, [x0].[Id], [x.ProductCategory0].[Id]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t] ON [x.ProductCategory.Products].[CategoryId] = [t].[Id0]
+ORDER BY [t].[CreatedDate] DESC, [t].[Id], [t].[Id0]" (0723d8ff)
+2019-10-27T16:33:33.7483676+07:00 0HLQQO2AQN290:00000025 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 18.4043ms. (50a9e262)
+2019-10-27T16:33:33.7484950+07:00 0HLQQO2AQN290:00000025 [INF] Executing ObjectResult, writing value of type '"KaiCoreApp.Utilities.Dtos.PagedResult`1[[KaiCoreApp.Application.ViewModels.Product.ProductViewModel, KaiCoreApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-27T16:33:33.7496018+07:00 0HLQQO2AQN290:00000025 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.ProductController.GetAllPaging (KaiCoreApp.Web)" in 20.0357ms (afa2e885)
+2019-10-27T16:33:33.7497368+07:00 0HLQQO2AQN290:00000025 [INF] Request finished in 21.3669ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-27T16:34:33.0115848+07:00 0HLQQO2AQN290:00000026 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Admin/Account/Logout application/x-www-form-urlencoded 0 (ca22a1cb)
+2019-10-27T16:34:33.0192959+07:00 0HLQQO2AQN290:00000026 [INF] Route matched with "{area = \"Admin\", action = \"Logout\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.AccountController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:34:33.0194875+07:00 0HLQQO2AQN290:00000026 [INF] Authorization was successful. (0d575a54)
+2019-10-27T16:34:33.0203861+07:00 0HLQQO2AQN290:00000026 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.AccountController.Logout (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:34:33.0276639+07:00 0HLQQO2AQN290:00000026 [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2019-10-27T16:34:33.0283052+07:00 0HLQQO2AQN290:00000026 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2019-10-27T16:34:33.0285713+07:00 0HLQQO2AQN290:00000026 [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2019-10-27T16:34:33.0287984+07:00 0HLQQO2AQN290:00000026 [INF] User logged out. (f9c27106)
+2019-10-27T16:34:33.0289046+07:00 0HLQQO2AQN290:00000026 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.AccountController.Logout (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 8.4305ms. (50a9e262)
+2019-10-27T16:34:33.0293882+07:00 0HLQQO2AQN290:00000026 [INF] Executing RedirectResult, redirecting to "/Admin/Login/Index". (d98d540e)
+2019-10-27T16:34:33.0295686+07:00 0HLQQO2AQN290:00000026 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.AccountController.Logout (KaiCoreApp.Web)" in 10.1402ms (afa2e885)
+2019-10-27T16:34:33.0297322+07:00 0HLQQO2AQN290:00000026 [INF] Request finished in 18.2314ms 302  (791a596a)
+2019-10-27T16:34:33.0343195+07:00 0HLQQO2AQN290:00000027 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Admin/Login/Index   (ca22a1cb)
+2019-10-27T16:34:33.0350672+07:00 0HLQQO2AQN290:00000027 [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController" ("KaiCoreApp.Web"). (122b2fdf)
+2019-10-27T16:34:33.0354672+07:00 0HLQQO2AQN290:00000027 [INF] Executing action method "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Index (KaiCoreApp.Web)" - Validation state: Valid (dad538d7)
+2019-10-27T16:34:33.0356030+07:00 0HLQQO2AQN290:00000027 [INF] Executed action method "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Index (KaiCoreApp.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.039ms. (50a9e262)
+2019-10-27T16:34:33.0358169+07:00 0HLQQO2AQN290:00000027 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-10-27T16:34:33.0366628+07:00 0HLQQO2AQN290:00000027 [INF] Executed ViewResult - view "Index" executed in 0.9105ms. (f66409e9)
+2019-10-27T16:34:33.0368298+07:00 0HLQQO2AQN290:00000027 [INF] Executed action "KaiCoreApp.Web.Areas.Admin.Controllers.LoginController.Index (KaiCoreApp.Web)" in 1.6719ms (afa2e885)
+2019-10-27T16:34:33.0369898+07:00 0HLQQO2AQN290:00000027 [INF] Request finished in 2.7214ms 200 text/html; charset=utf-8 (791a596a)
+2019-10-27T16:34:33.0700101+07:00 0HLQQO2AQN290:00000028 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2019-10-27T16:34:33.0712038+07:00 0HLQQO2AQN28S:00000016 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/nprogress/nprogress.css   (ca22a1cb)
+2019-10-27T16:34:33.0718354+07:00 0HLQQO2AQN28S:00000016 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2019-10-27T16:34:33.0719084+07:00 0HLQQO2AQN28S:00000016 [INF] Request finished in 0.7463ms 200 text/css (791a596a)
+2019-10-27T16:34:33.0720493+07:00 0HLQQO2AQN295:00000017 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2019-10-27T16:34:33.0730563+07:00 0HLQQO2AQN295:00000017 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2019-10-27T16:34:33.0731407+07:00 0HLQQO2AQN295:00000017 [INF] Request finished in 1.0991ms 200 text/css (791a596a)
+2019-10-27T16:34:33.0746612+07:00 0HLQQO2AQN290:00000028 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2019-10-27T16:34:33.0747818+07:00 0HLQQO2AQN290:00000028 [INF] Request finished in 5.1618ms 200 text/css (791a596a)
+2019-10-27T16:34:33.0803276+07:00 0HLQQO2AQN290:00000029 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/animate.css/animate.css   (ca22a1cb)
+2019-10-27T16:34:33.0808256+07:00 0HLQQO2AQN28S:00000017 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/custom.css   (ca22a1cb)
+2019-10-27T16:34:33.0814614+07:00 0HLQQO2AQN295:00000018 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/notify/styles/metro/notify-metro.css   (ca22a1cb)
+2019-10-27T16:34:33.0816466+07:00 0HLQQO2AQN291:0000001E [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validate/additional-methods.js   (ca22a1cb)
+2019-10-27T16:34:33.0819164+07:00 0HLQQO2AQN292:00000019 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validate/jquery.validate.js   (ca22a1cb)
+2019-10-27T16:34:33.0821060+07:00 0HLQQO2AQN291:0000001E [INF] Sending file. Request path: '"/lib/jquery-validate/additional-methods.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validate\additional-methods.js"' (27b0a520)
+2019-10-27T16:34:33.0821641+07:00 0HLQQO2AQN291:0000001E [INF] Request finished in 0.5433ms 200 application/javascript (791a596a)
+2019-10-27T16:34:33.0826423+07:00 0HLQQO2AQN295:00000018 [INF] Sending file. Request path: '"/lib/notify/styles/metro/notify-metro.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\notify\styles\metro\notify-metro.css"' (27b0a520)
+2019-10-27T16:34:33.0835099+07:00 0HLQQO2AQN295:00000018 [INF] Request finished in 1.2999ms 200 text/css (791a596a)
+2019-10-27T16:34:33.0864736+07:00 0HLQQO2AQN292:00000019 [INF] Sending file. Request path: '"/lib/jquery-validate/jquery.validate.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validate\jquery.validate.js"' (27b0a520)
+2019-10-27T16:34:33.0865434+07:00 0HLQQO2AQN292:00000019 [INF] Request finished in 4.6417ms 200 application/javascript (791a596a)
+2019-10-27T16:34:33.0871747+07:00 0HLQQO2AQN291:0000001F [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validate/localization/messages_vi.js   (ca22a1cb)
+2019-10-27T16:34:33.0884111+07:00 0HLQQO2AQN295:00000019 [INF] Request starting HTTP/1.1 GET https://localhost:5001/app/controllers/login/index.js   (ca22a1cb)
+2019-10-27T16:34:33.0899874+07:00 0HLQQO2AQN291:0000001F [INF] Sending file. Request path: '"/lib/jquery-validate/localization/messages_vi.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validate\localization\messages_vi.js"' (27b0a520)
+2019-10-27T16:34:33.0902132+07:00 0HLQQO2AQN291:0000001F [INF] Request finished in 2.9503ms 200 application/javascript (791a596a)
+2019-10-27T16:34:33.0903156+07:00 0HLQQO2AQN295:00000019 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2019-10-27T16:34:33.0903922+07:00 0HLQQO2AQN295:00000019 [INF] Request finished in 1.9958ms 200 application/javascript (791a596a)
+2019-10-27T16:34:33.0909343+07:00 0HLQQO2AQN290:00000029 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2019-10-27T16:34:33.0910086+07:00 0HLQQO2AQN290:00000029 [INF] Request finished in 10.7136ms 200 text/css (791a596a)
+2019-10-27T16:34:33.0912127+07:00 0HLQQO2AQN28S:00000017 [INF] Sending file. Request path: '"/css/custom.css"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\css\custom.css"' (27b0a520)
+2019-10-27T16:34:33.0912580+07:00 0HLQQO2AQN28S:00000017 [INF] Request finished in 10.4725ms 200 text/css (791a596a)
+2019-10-27T16:34:33.0949438+07:00 0HLQQO2AQN290:0000002A [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2019-10-27T16:34:33.0955945+07:00 0HLQQO2AQN290:0000002A [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\ASPCORE_Git\KaiCoreApp.Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2019-10-27T16:34:33.0956659+07:00 0HLQQO2AQN290:0000002A [INF] Request finished in 0.7572ms 200 application/javascript (791a596a)

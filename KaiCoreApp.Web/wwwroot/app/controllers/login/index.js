@@ -46,8 +46,9 @@
             url: '/admin/login/authen',
             success: function (res) {
                 if (res.Success) {
-                    window.location.href = "/Admin/Home/Index";
                     kai.notify("Đăng nhập thành công, chào mừng về nhà.", "success");
+                    window.location.href = "/Admin/Home/Index";
+                   
                 }
                 else {
                     kai.notify('Đăng nhập thất bại, vui lòng nhập lại tài khoản và mật khẩu.', 'error');

@@ -1,6 +1,10 @@
 ﻿using KaiCoreApp.Application.Interfaces;
+using KaiCoreApp.Application.ViewModels.Product;
+using KaiCoreApp.Utilities.Helpers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace KaiCoreApp.Web.Areas.Admin.Controllers
 {
@@ -19,6 +23,13 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
         }
 
         #region Get data API
+
+        [HttpGet]
+        public IActionResult GetById(int id)
+        {
+            var model = _productCategoryService.GetById(id);
+            return new OkObjectResult(model);
+        }
 
         [HttpGet]
         public IActionResult GetAll()
@@ -68,6 +79,46 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
                     _productCategoryService.Save();
                     return new OkResult();
                 }
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SaveEntity(ProductCategoryViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                IEnumerable<ModelError> allErrors = ModelState.Values.SelectMany(v => v.Errors);
+
+                return new BadRequestObjectResult(allErrors);
+            }
+            else
+            {
+                model.SeoAlias = TextHelper.ToUnsignString(model.Name);
+                if (model.Id == 0)
+                {
+                    _productCategoryService.Add(model);
+                }
+                else
+                {
+                    _productCategoryService.Update(model);
+                }
+                _productCategoryService.Save();
+                return new OkObjectResult(model);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            if (id == 0)
+            {
+                return new BadRequestResult();
+            }
+            else
+            {
+                _productCategoryService.Delete(id);
+                _productCategoryService.Save();
+                return new OkObjectResult(id);
             }
         }
 
