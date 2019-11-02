@@ -9,15 +9,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KaiCoreApp.Data.Entities
 {
     [Table("Announcements")]
-    public class Announcement : ISwitchable, IDateTracking
+    public class Announcement : DomainEntity<string>, ISwitchable, IDateTracking
     {
         public Announcement()
         {
             AnnouncementUsers = new List<AnnouncementUser>();
         }
-        [Key]
-        [MaxLength(128)]
-        public string Id { get; set; }
 
         [Required]
         [StringLength(250)]

@@ -71,6 +71,8 @@ namespace KaiCoreApp.Web
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IFunctionRepository, FunctionRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IProductTagRepository, ProductTagRepository>();
+            services.AddTransient<ITagRepository, TagRepository>();
 
             //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();

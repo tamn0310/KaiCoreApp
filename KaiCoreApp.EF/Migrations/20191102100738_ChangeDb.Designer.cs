@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KaiCoreApp.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191015155312_InitialDb")]
-    partial class InitialDb
+    [Migration("20191102100738_ChangeDb")]
+    partial class ChangeDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,8 +60,7 @@ namespace KaiCoreApp.EF.Migrations
             modelBuilder.Entity("KaiCoreApp.Data.Entities.AdvertistmentPage", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(20);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
 
@@ -92,8 +91,7 @@ namespace KaiCoreApp.EF.Migrations
             modelBuilder.Entity("KaiCoreApp.Data.Entities.Announcement", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(128);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Content")
                         .HasMaxLength(250);
@@ -332,8 +330,8 @@ namespace KaiCoreApp.EF.Migrations
 
                     b.Property<string>("TagId")
                         .IsRequired()
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255);
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -671,8 +669,8 @@ namespace KaiCoreApp.EF.Migrations
 
                     b.Property<string>("TagId")
                         .IsRequired()
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255);
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -748,8 +746,7 @@ namespace KaiCoreApp.EF.Migrations
             modelBuilder.Entity("KaiCoreApp.Data.Entities.Tag", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("varchar(50)");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace KaiCoreApp.EF.Migrations
 {
-    public partial class InitialDb : Migration
+    public partial class ChangeDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace KaiCoreApp.EF.Migrations
                 name: "AdvertistmentPages",
                 columns: table => new
                 {
-                    Id = table.Column<string>(maxLength: 20, nullable: false),
+                    Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -330,7 +330,7 @@ namespace KaiCoreApp.EF.Migrations
                 name: "Tags",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
                     Type = table.Column<string>(maxLength: 50, nullable: false)
                 },
@@ -362,7 +362,7 @@ namespace KaiCoreApp.EF.Migrations
                 name: "Announcements",
                 columns: table => new
                 {
-                    Id = table.Column<string>(maxLength: 128, nullable: false),
+                    Id = table.Column<string>(nullable: false),
                     Title = table.Column<string>(maxLength: 250, nullable: false),
                     Content = table.Column<string>(maxLength: 250, nullable: true),
                     UserId = table.Column<Guid>(nullable: false),
@@ -484,7 +484,7 @@ namespace KaiCoreApp.EF.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     BlogId = table.Column<int>(nullable: false),
-                    TagId = table.Column<string>(type: "varchar(50)", nullable: false)
+                    TagId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -627,7 +627,7 @@ namespace KaiCoreApp.EF.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ProductId = table.Column<int>(nullable: false),
-                    TagId = table.Column<string>(type: "varchar(50)", nullable: false)
+                    TagId = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
