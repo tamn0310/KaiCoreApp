@@ -37,7 +37,7 @@
                     initTreeDropDownCategory(data.categoryId);
 
                     $('#txtDescM').val(data.Description);
-                    $('#txtImageM').val(data.ThumbnailImage);
+                    $('#txtImageM').val(data.Images);
 
                     $('#txtSeoKeyWordM').val(data.SeoKeyWords);
                     $('#txtSeoDescriptionM').val(data.SeoDescription);
@@ -53,8 +53,36 @@
                     kai.stopLoading();
                 },
                 error: function (status) {
+                    console.log(status);
                     kai.notify('Có lỗi xảy ra', 'error');
                     kai.stopLoading();
+                }
+            });
+        });
+
+        $('#btnSelectImg').on('click', function () {
+            $('#fileInputImage').click();
+        });
+        $("#fileInputImage").on('change', function () {
+            var fileUpload = $(this).get(0);
+            var files = fileUpload.files;
+            var data = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                data.append(files[i].name, files[i]);
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Upload/UploadImages",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (path) {
+                    $('#txtImageM').val(path);
+                    kai.notify('Tải ảnh lên thành công', 'success');
+
+                },
+                error: function () {
+                    kai.notify('có lỗi xảy ra khi tải ảnh lên', 'error');
                 }
             });
         });
@@ -114,7 +142,7 @@
                         HomeOrder: homeOrder,
                         SortOrder: order,
                         HomeFlag: showHome,
-                        Image: image,
+                        Images: image,
                         Status: status,
                         SeoPageTitle: seoPageTitle,
                         SeoAlias: seoAlias,
@@ -134,7 +162,8 @@
                         kai.stopLoading();
                         loadData(true);
                     },
-                    error: function () {
+                    error: function (res) {
+                        console.log(res);
                         kai.notify('Xảy ra lỗi', 'error');
                         kai.stopLoading();
                     }

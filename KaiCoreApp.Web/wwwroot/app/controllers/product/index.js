@@ -44,6 +44,33 @@
             $('#modalAddOrEdit').modal('show');
         });
 
+        $('#btnSelectImg').on('click', function () {
+            $('#fileInputImage').click();
+        });
+        $("#fileInputImage").on('change', function () {
+            var fileUpload = $(this).get(0);
+            var files = fileUpload.files;
+            var data = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                data.append(files[i].name, files[i]);
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Upload/UploadImages",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (path) {
+                    $('#txtImageM').val(path);
+                    kai.notify('Tải ảnh lên thành công', 'success');
+
+                },
+                error: function () {
+                    kai.notify('có lỗi xảy ra khi tải ảnh lên', 'error');
+                }
+            });
+        });
+
         $('body').on('click', '.btn-edit', function (e) {
             e.preventDefault();
             var that = $(this).data('id');
@@ -68,7 +95,7 @@
                     $('#txtOriginalPriceM').val(data.OriginalPrice);
                     $('#txtPromotionPriceM').val(data.PromotionPrice);
 
-                    //$('#txtImageM').val('');
+                    $('#txtImageM').val(data.Image);
 
                     $('#txtSeoPageTitleM').val(data.SeoPageTitle);
                     $('#txtSeoAliasM').val(data.SeoAlias);
@@ -132,7 +159,7 @@
                 var originalPrice = $('#txtOriginalPriceM').val();
                 var promotionPrice = $('#txtPromotionPriceM').val();
 
-                //var image = $('#txtImageM').val();
+                var image = $('#txtImageM').val();
 
                 var tags = $('#txtTagM').val();
                 var seoKeyword = $('#txtMetakeywordM').val();
@@ -152,7 +179,7 @@
                         Id: id,
                         Name: name,
                         CategoryID: categoryId,
-                        Image: '',
+                        Image: image,
                         Price: price,
                         OriginalPrice: originalPrice,
                         PromotionPrice: promotionPrice,
@@ -173,7 +200,7 @@
                         kai.startLoading();
                     },
                     success: function (response) {
-                        kai.notify('Cập nhật sản phẩm thành công', 'success');
+                        kai.notify('Cập nhật sản phẩm có tên là' + {  name  }+ 'thành công', 'success');
                         $('#modalAddOrEdit').modal('hide');
                         resetFormMaintainance();
 
@@ -249,7 +276,7 @@
         $('#txtOriginalPriceM').val('');
         $('#txtPromotionPriceM').val('');
 
-        //$('#txtImageM').val('');
+        $('#txtImageM').val('');
 
         $('#txtSeoPageTitleM').val('');
         $('#txtSeoAliasM').val('');
@@ -258,7 +285,7 @@
         $('#txtMetaDescriptionM').val('');
         $('#txtTagM').val('');
 
-        //$('#txtContentM').val('');
+        $('#txtContentM').val('');
 
         $('#ckStatusM').prop('checked', false);
         $('#ckHotM').prop('checked', false);
