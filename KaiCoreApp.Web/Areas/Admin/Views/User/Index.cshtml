@@ -1,4 +1,8 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Authorization
+@using KaiCoreApp.Web.Authorization
+@inject IAuthorizationService AuthorizationService
+
+@{
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
@@ -21,7 +25,13 @@
 
         <div class="title_right">
             <div class="col-md-2 col-sm-2 col-xs-12 form-group pull-right top_search">
-                <button class="btn btn-success" id="btn-create" type="button">Tạo mới</button>
+                @{
+                    var result = await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Create);
+                }
+                @if (result.Succeeded)
+                {
+                    <button class="btn btn-success" id="btn-create" type="button">Tạo mới</button>
+                }
             </div>
             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                 <div class="input-group">
@@ -88,10 +98,16 @@
             <td>{{{DateCreated}}}</td>
             <td>{{{Status}}}</td>
             <td>
-                <a href="#" data-id="{{Id}}" class="btn  btn-xs btn-info btn-edit"><i class="fa fa-pencil-square-o"></i></a>
+                @if ((await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Update)).Succeeded)
+                {
+                    <a href="#" data-id="{{Id}}" class="btn  btn-xs btn-info btn-edit"><i class="fa fa-pencil-square-o"></i></a>
+                }
             </td>
             <td>
-                <a href="#" data-id="{{Id}}" class="btn btn-xs  btn-danger btn-delete"><i class="fa fa-trash-o"></i></a>
+                @if ((await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Delete)).Succeeded)
+                {
+                    <a href="#" data-id="{{Id}}" class="btn btn-xs  btn-danger btn-delete"><i class="fa fa-trash-o"></i></a>
+                }
             </td>
         </tr>
     </script>

@@ -6,7 +6,9 @@ using KaiCoreApp.Data.IRepositories;
 using KaiCoreApp.EF;
 using KaiCoreApp.EF.Repositories;
 using KaiCoreApp.Infrastructure.Interfaces;
+using KaiCoreApp.Web.Authorization;
 using KaiCoreApp.Web.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -81,6 +83,8 @@ namespace KaiCoreApp.Web
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+
+            services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             //Config identity
             services.Configure<IdentityOptions>(options =>
