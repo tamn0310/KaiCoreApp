@@ -9,8 +9,10 @@ using KaiCoreApp.Infrastructure.Interfaces;
 using KaiCoreApp.Utilities.Constants;
 using KaiCoreApp.Utilities.Dtos;
 using KaiCoreApp.Utilities.Helpers;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace KaiCoreApp.Application.Implementations
@@ -110,6 +112,48 @@ namespace KaiCoreApp.Application.Implementations
             return Mapper.Map<Product, ProductViewModel>(_productRepository.FindById(id));
         }
 
+        public void ImportExcel(string filePath, int categoryId)
+        {
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                Product product;
+                for (int i = worksheet.Dimension.Start.Row + 1; i <= worksheet.Dimension.End.Row; i++)
+                {
+                    product = new Product();
+                    //nhap categoryId
+                    product.CategoryId = categoryId;
+
+                    //nhap name product
+                    product.Name = worksheet.Cells[i, 1].Value.ToString();
+                    //nhap des product
+                    product.Description = worksheet.Cells[i, 2].Value.ToString();
+
+                    //Price
+                    decimal.TryParse(worksheet.Cells[i, 3].Value.ToString(), out var originalPrice);
+                    product.OriginalPrice = originalPrice;
+                    decimal.TryParse(worksheet.Cells[i, 4].Value.ToString(), out var price);
+                    product.Price = originalPrice;
+                    decimal.TryParse(worksheet.Cells[i, 5].Value.ToString(), out var promotionPrice);
+                    product.PromotionPrice = originalPrice;
+                    //content product
+                    product.Content = worksheet.Cells[i, 6].Value.ToString();
+                    //seo product
+                    product.SeoPageTitle = worksheet.Cells[i, 7].Value.ToString();
+                    product.SeoDescription = worksheet.Cells[i, 8].Value.ToString();
+                    //check box product
+                    bool.TryParse(worksheet.Cells[i, 9].Value.ToString(), out var hotFlag);
+                    product.HotFlag = hotFlag;
+                    bool.TryParse(worksheet.Cells[i, 10].Value.ToString(), out var homeFlag);
+                    product.HomeFlag = homeFlag;
+                    //status
+                    product.Status = Status.Active;
+
+                    _productRepository.Add(product);
+                }
+            }
+        }
+
         public void Save()
         {
             _unitOfWork.Commit();
@@ -121,7 +165,6 @@ namespace KaiCoreApp.Application.Implementations
 
             if (!string.IsNullOrEmpty(productVm.Tags))
             {
-                
                 string[] tags = productVm.Tags.Split(',');
                 foreach (string t in tags)
                 {
