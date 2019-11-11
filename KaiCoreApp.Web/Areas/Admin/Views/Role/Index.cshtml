@@ -2,8 +2,13 @@
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
+@section Styles{
+    <link href="~/lib/jquery-treegrid/css/jquery.treegrid.css" rel="stylesheet" />
+}
 @section Script{
+    <script src="~/lib/jquery-treegrid/js/jquery.treegrid.js"></script>
     <script src="~/app/controllers/role/index.js" asp-append-version="true"></script>
+
     <script>
         var roleObj = new RoleController();
         roleObj.initialize();
@@ -26,9 +31,7 @@
                         <button class="btn btn-default" id="btn-search" type="button">Tìm</button>
                     </span>
                 </div>
-
             </div>
-
         </div>
     </div>
 
@@ -69,22 +72,22 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 
     <script id="table-template" type="x-tmpl-mustache">
         <tr>
             <td>{{Name}}</td>
             <td>{{Description}}</td>
             <td>
-                <a href="#" data-id="{{Id}}" class="btn  btn-xs btn-info btn-edit"><i class="fa fa-pencil-square-o"></i></a>
-                <a href="#" data-id="{{Id}}" class="btn btn-xs  btn-danger btn-delete"><i class="fa fa-trash-o"></i></a>
+                <a href="#" data-id="{{Id}}" class="btn  btn-xs btn-primary btn-grant" title="Xem quyền"><i class="fa fa-eye-slash"></i></a>
+                <a href="#" data-id="{{Id}}" class="btn  btn-xs btn-info btn-edit" title="Sửa Role"><i class="fa fa-pencil-square-o"></i></a>
+                <a href="#" data-id="{{Id}}" class="btn btn-xs  btn-danger btn-delete" title="Xóa Role"><i class="fa fa-trash-o"></i></a>
             </td>
         </tr>
     </script>
 </div>
 @Html.Partial("_AddEditModal.cshtml")
+@Html.Partial("_AssignPermission.cshtml")

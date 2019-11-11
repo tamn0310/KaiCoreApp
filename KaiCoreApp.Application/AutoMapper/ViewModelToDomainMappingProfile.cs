@@ -22,6 +22,9 @@ namespace KaiCoreApp.Application.AutoMapper
             CreateMap<AppUserViewModel, AppUser>()
                 .ConstructUsing(c => new AppUser(c.Id.GetValueOrDefault(Guid.Empty), c.FullName, c.Avatar, c.Email,
                                                     c.PhoneNumber, c.Status, c.UserName));
+
+            CreateMap<PermissionViewModel, Permission>()
+                .ConstructUsing(c => new Permission(c.RoleId, c.FunctionId, c.CanCreate, c.CanRead, c.CanUpdate, c.CanDelete));
         }
     }
 }

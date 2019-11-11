@@ -85,6 +85,10 @@
     {
       "library": "ckeditor@4.12.1",
       "destination": "wwwroot/lib/ckeditor/"
+    },
+    {
+      "library": "jquery-treegrid@0.2.0",
+      "destination": "wwwroot/lib/jquery-treegrid/"
     }
   ]
 }
