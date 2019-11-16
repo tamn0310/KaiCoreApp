@@ -1,15 +1,14 @@
 ﻿using KaiCoreApp.Infrastructure.SharedKernel;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace KaiCoreApp.Data.Entities
 {
     [Table("BillDetails")]
     public class BillDetail : DomainEntity<int>
     {
-        public BillDetail() { }
+        public BillDetail()
+        {
+        }
 
         public BillDetail(int id, int billId, int productId, int quantity, decimal price)
         {
@@ -18,7 +17,6 @@ namespace KaiCoreApp.Data.Entities
             ProductId = productId;
             Quantity = quantity;
             Price = price;
-           
         }
 
         public BillDetail(int billId, int productId, int quantity, decimal price)
@@ -27,8 +25,8 @@ namespace KaiCoreApp.Data.Entities
             ProductId = productId;
             Quantity = quantity;
             Price = price;
-           
         }
+
         public int BillId { set; get; }
 
         public int ProductId { set; get; }

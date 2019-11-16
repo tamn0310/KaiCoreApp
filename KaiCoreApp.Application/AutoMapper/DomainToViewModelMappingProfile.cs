@@ -15,6 +15,8 @@ namespace KaiCoreApp.Application.AutoMapper
             CreateMap<AppUser, AppUserViewModel>();
             CreateMap<AppRole, AppRoleViewModel>();
             CreateMap<Permission, PermissionViewModel>();
+            CreateMap<Bill, BillViewModel>();
+            CreateMap<BillDetail, BillDetailViewModel>();
         }
     }
 }

@@ -89,6 +89,10 @@
     {
       "library": "jquery-treegrid@0.2.0",
       "destination": "wwwroot/lib/jquery-treegrid/"
+    },
+    {
+      "library": "bootstrap-datepicker@1.9.0",
+      "destination": "wwwroot/lib/bootstrap-datepicker/"
     }
   ]
 }

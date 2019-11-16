@@ -13,16 +13,16 @@ namespace KaiCoreApp.Data.Entities
         {
         }
 
-        public AppUser(Guid id, string fullname,
-            string avatar, string email, string phonenumber, Status status, string username)
+        public AppUser(Guid id, string fullName, string userName,
+            string email, string phoneNumber, string avatar, Status status)
         {
             Id = id;
-            FullName = fullname;
-            Avatar = avatar;
+            FullName = fullName;
+            UserName = userName;
             Email = email;
-            PhoneNumber = phonenumber;
+            PhoneNumber = phoneNumber;
+            Avatar = avatar;
             Status = status;
-            UserName = username;
         }
 
         public string FullName { get; set; }

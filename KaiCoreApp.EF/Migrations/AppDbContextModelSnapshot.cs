@@ -219,7 +219,7 @@ namespace KaiCoreApp.EF.Migrations
                         .IsRequired()
                         .HasMaxLength(256);
 
-                    b.Property<Guid>("CustomerId");
+                    b.Property<Guid?>("CustomerId");
 
                     b.Property<string>("CustomerMessage")
                         .IsRequired()
@@ -420,8 +420,7 @@ namespace KaiCoreApp.EF.Migrations
             modelBuilder.Entity("KaiCoreApp.Data.Entities.Function", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("varchar(128)");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("IconCss");
 
@@ -744,7 +743,9 @@ namespace KaiCoreApp.EF.Migrations
             modelBuilder.Entity("KaiCoreApp.Data.Entities.Tag", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -891,8 +892,7 @@ namespace KaiCoreApp.EF.Migrations
                 {
                     b.HasOne("KaiCoreApp.Data.Entities.AppUser", "User")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CustomerId");
                 });
 
             modelBuilder.Entity("KaiCoreApp.Data.Entities.BillDetail", b =>

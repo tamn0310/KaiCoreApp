@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KaiCoreApp.Data.Entities
 {
     [Table("AdvertistmentPages")]
-    public class AdvertistmentPage:DomainEntity<string>
+    public class AdvertistmentPage : DomainEntity<string>
     {
         public string Name { get; set; }
 

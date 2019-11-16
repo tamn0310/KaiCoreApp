@@ -59,6 +59,7 @@
             }
         });
     },
+
     dateFormatJson: function (datetime) {
         if (datetime == null || datetime == '')
             return '';
@@ -78,6 +79,7 @@
             mm = "0" + mm;
         return day + "/" + month + "/" + year;
     },
+
     dateTimeFormatJson: function (datetime) {
         if (datetime == null || datetime == '')
             return '';
