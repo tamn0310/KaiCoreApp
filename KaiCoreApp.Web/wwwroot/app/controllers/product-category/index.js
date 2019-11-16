@@ -154,7 +154,7 @@
                         kai.startLoading();
                     },
                     success: function (response) {
-                        kai.notify('Thành công', 'success');
+                        kai.notify('Thêm danh mục thành công', 'success');
                         $('#modalAddEdit').modal('hide');
 
                         resetFormMaintainance();

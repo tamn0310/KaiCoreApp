@@ -26,5 +26,9 @@ namespace KaiCoreApp.Application.Interfaces
         void AddQuantity(int productId, List<ProductQuantityViewModel> productQuantities);
 
         List<ProductQuantityViewModel> GetQuantities(int productId);
+
+        void AddImages(int productId, string[] images);
+
+        List<ProductImageViewModel> GetImages(int productId);
     }
 }

@@ -1,11 +1,13 @@
 ﻿var productController = function () {
     var quantityManagement = new QuantityManagement(self);
+    var imageManagement = new ImageManagement(self);
     this.initialize = function () {
         loadCate();
         loadData();
         registerEvent();
         registerControls();
         quantityManagement.initialize();
+        imageManagement.initialize();
     }
 
     function registerEvent() {
@@ -20,7 +22,8 @@
                 txtPriceM: {
                     required: true,
                     number: true
-                }
+                },
+                txtTagM: { required: true }
             }
         });
         //todo: binding events to controller
@@ -202,7 +205,7 @@
                         kai.startLoading();
                     },
                     success: function (response) {
-                        kai.notify('Cập nhật sản phẩm có tên là' + { name } + 'thành công', 'success');
+                        kai.notify('Cập nhật sản phẩm thành công', 'success');
                         $('#modalAddOrEdit').modal('hide');
                         resetFormMaintainance();
 
@@ -228,13 +231,13 @@
             var fileUpload = $("#fileInputExcel").get(0);
             var files = fileUpload.files;
 
-            // Create FormData object  
+            // Create FormData object
             var fileData = new FormData();
-            // Looping over all files and add it to FormData object  
+            // Looping over all files and add it to FormData object
             for (var i = 0; i < files.length; i++) {
                 fileData.append("files", files[i]);
             }
-            // Adding one more key to FormData object  
+            // Adding one more key to FormData object
             fileData.append('categoryId', $('#ddlCategoryIdImportExcel').combotree('getValue'));
             $.ajax({
                 url: '/Admin/Product/ImportExcel',
@@ -257,7 +260,6 @@
                 type: 'POST',
                 beforeSend: function () {
                     kai.startLoading();
-
                 },
                 success: function (res) {
                     window.location.href = res;
@@ -389,7 +391,7 @@
                         Image: item.Image == null ? '<img src="/admin-side/not-product.png" width=25px />' : '<img src="' + item.Image + '" width=25px',
                         CategoryName: item.ProductCategory.Name,
                         Price: kai.formatNumber(item.Price, 0),
-                        CreatedDate: kai.dateTimeFormatJson(item.CreatedDate),
+                        CreatedDate: item.CreatedDate,
                         Status: kai.getStatus(item.Status)
                     });
                     $('#lblTotalRecords').text(res.RowCount);

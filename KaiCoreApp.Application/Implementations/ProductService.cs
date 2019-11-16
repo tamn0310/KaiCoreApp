@@ -23,15 +23,18 @@ namespace KaiCoreApp.Application.Implementations
         private readonly ITagRepository _tagRepository;
         private readonly IProductTagRepository _productTagRepository;
         private readonly IProductQuantityRepository _productQuantityRepository;
+        private readonly IProductImageRepository _productImageRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public ProductService(IProductRepository productRepository, ITagRepository tagRepository,
-            IProductTagRepository productTagRepository, IProductQuantityRepository productQuantityRepository, IUnitOfWork unitOfWork)
+            IProductTagRepository productTagRepository, IProductQuantityRepository productQuantityRepository,
+            IProductImageRepository productImageRepository, IUnitOfWork unitOfWork)
         {
             this._productRepository = productRepository;
             this._productTagRepository = productTagRepository;
             this._tagRepository = tagRepository;
             this._productQuantityRepository = productQuantityRepository;
+            this._productImageRepository = productImageRepository;
             this._unitOfWork = unitOfWork;
         }
 
@@ -68,6 +71,20 @@ namespace KaiCoreApp.Application.Implementations
                 _productRepository.Add(product);
             }
             return productVm;
+        }
+
+        public void AddImages(int productId, string[] images)
+        {
+            _productImageRepository.RemoveMultiple(_productImageRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var image in images)
+            {
+                _productImageRepository.Add(new ProductImage()
+                {
+                    Path = image,
+                    ProductId = productId,
+                    Caption = string.Empty
+                });
+            }
         }
 
         public void AddQuantity(int productId, List<ProductQuantityViewModel> productQuantities)
@@ -125,6 +142,11 @@ namespace KaiCoreApp.Application.Implementations
         public ProductViewModel GetById(int id)
         {
             return Mapper.Map<Product, ProductViewModel>(_productRepository.FindById(id));
+        }
+
+        public List<ProductImageViewModel> GetImages(int productId)
+        {
+            return _productImageRepository.FindAll(x => x.ProductId == productId).ProjectTo<ProductImageViewModel>().ToList();
         }
 
         public List<ProductQuantityViewModel> GetQuantities(int productId)

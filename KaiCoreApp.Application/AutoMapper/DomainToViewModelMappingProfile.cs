@@ -18,6 +18,7 @@ namespace KaiCoreApp.Application.AutoMapper
             CreateMap<Bill, BillViewModel>();
             CreateMap<BillDetail, BillDetailViewModel>();
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
+            CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
         }
     }
 }
