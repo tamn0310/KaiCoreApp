@@ -22,14 +22,16 @@ namespace KaiCoreApp.Application.Implementations
         private readonly IProductRepository _productRepository;
         private readonly ITagRepository _tagRepository;
         private readonly IProductTagRepository _productTagRepository;
+        private readonly IProductQuantityRepository _productQuantityRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public ProductService(IProductRepository productRepository, ITagRepository tagRepository,
-            IProductTagRepository productTagRepository, IUnitOfWork unitOfWork)
+            IProductTagRepository productTagRepository, IProductQuantityRepository productQuantityRepository, IUnitOfWork unitOfWork)
         {
             this._productRepository = productRepository;
             this._productTagRepository = productTagRepository;
             this._tagRepository = tagRepository;
+            this._productQuantityRepository = productQuantityRepository;
             this._unitOfWork = unitOfWork;
         }
 
@@ -66,6 +68,19 @@ namespace KaiCoreApp.Application.Implementations
                 _productRepository.Add(product);
             }
             return productVm;
+        }
+
+        public void AddQuantity(int productId, List<ProductQuantityViewModel> productQuantities)
+        {
+            _productQuantityRepository.RemoveMultiple(_productQuantityRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var quantity in productQuantities)
+            {
+                _productQuantityRepository.Add(new ProductQuantity()
+                {
+                    ProductId = productId,
+                    Quantity = quantity.Quantity
+                });
+            }
         }
 
         public void Delete(int id)
@@ -110,6 +125,11 @@ namespace KaiCoreApp.Application.Implementations
         public ProductViewModel GetById(int id)
         {
             return Mapper.Map<Product, ProductViewModel>(_productRepository.FindById(id));
+        }
+
+        public List<ProductQuantityViewModel> GetQuantities(int productId)
+        {
+            return _productQuantityRepository.FindAll(x => x.ProductId == productId).ProjectTo<ProductQuantityViewModel>().ToList();
         }
 
         public void ImportExcel(string filePath, int categoryId)

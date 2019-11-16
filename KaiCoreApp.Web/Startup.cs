@@ -78,6 +78,7 @@ namespace KaiCoreApp.Web
             services.AddTransient<IPermissionRepository, PermissionRepository>();
             services.AddTransient<IBillRepository, BillRepository>();
             services.AddTransient<IBillDetailRepository, BillDetailRepository>();
+            services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
 
             //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();

@@ -1,9 +1,11 @@
 ﻿var productController = function () {
+    var quantityManagement = new QuantityManagement(self);
     this.initialize = function () {
         loadCate();
         loadData();
         registerEvent();
         registerControls();
+        quantityManagement.initialize();
     }
 
     function registerEvent() {
