@@ -242,11 +242,31 @@
                 contentType: false,  // tell jQuery not to set contentType
                 success: function (data) {
                     $('#modal-import-excel').modal('hide');
+                    kai.notify('Thêm sản phẩm thành công', 'success');
                     loadData();
-
                 }
             });
             return false;
+        });
+
+        $('#btn-export').on('click', function () {
+            $.ajax({
+                url: "/Admin/Product/ExportExcel",
+                type: 'POST',
+                beforeSend: function () {
+                    kai.startLoading();
+
+                },
+                success: function (res) {
+                    window.location.href = res;
+                    kai.stopLoading();
+                },
+                error: function (res) {
+                    console.log(res);
+                    kai.notify('có lỗi xảy ra khi export', 'error');
+                    kai.stopLoading();
+                }
+            });
         });
     }
 
