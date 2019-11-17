@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using KaiCoreApp.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using KaiCoreApp.Web.Models;
-using Microsoft.AspNetCore.Authorization;
+using System.Diagnostics;
 
 namespace KaiCoreApp.Web.Controllers
 {
-    [Authorize]
-
     public class HomeController : Controller
     {
         public IActionResult Index()

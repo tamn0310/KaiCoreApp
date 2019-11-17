@@ -396,14 +396,14 @@
                         CreatedDate: item.CreatedDate,
                         Status: kai.getStatus(item.Status)
                     });
-                    $('#lblTotalRecords').text(res.RowCount);
-                    if (render != '') {
-                        $('#tbl-product').html(render);
-                    }
-                    wrapPaging(res.RowCount, function () {
-                        loadData();
-                    }, isPageChanged);
                 });
+                $('#lblTotalRecords').text(res.RowCount);
+                if (render != '') {
+                    $('#tbl-product').html(render);
+                }
+                wrapPaging(res.RowCount, function () {
+                    loadData();
+                }, isPageChanged);
             },
             error: function (status) {
                 console.log(status);
