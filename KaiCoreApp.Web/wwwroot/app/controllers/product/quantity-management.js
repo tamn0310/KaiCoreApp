@@ -46,6 +46,7 @@
                 type: 'post',
                 dataType: 'json',
                 success: function (response) {
+                    kai.notify('Cập nhật số lượng sản phẩm thành công', 'success');
                     $('#modal-quantity-management').modal('hide');
                     $('#table-quantity-content').html('');
                 }

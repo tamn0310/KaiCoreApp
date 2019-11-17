@@ -10,6 +10,7 @@
     <script src="~/lib/jquery-easyui-1.8.8/jquery.easyui.min.js"></script>
     <script src="~/app/controllers/product/image-management.js"></script>
     <script src="~/app/controllers/product/quantity-management.js"></script>
+    <script src="~/app/controllers/product/whole-price-management.js"></script>
     <script src="~/app/controllers/product/index.js"></script>
     <script>
         var product = new productController();
@@ -53,13 +54,14 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th style="width:10%">#</th>
-                            <th style="width:25%">Tên Sản Phẩm</th>
-                            <th style="width:20%">Danh Mục</th>
+                            <th style="width:15%">Tên Sản Phẩm</th>
+                            <th style="width:15%">Danh Mục</th>
                             <th style="width:10%">Giá</th>
                             <th style="width:15%">Hình Ảnh</th>
-                            <th style="width:15%">Ngày Tạo</th>
+                            <th style="width:20%">Ngày Tạo</th>
                             <th width="5%">Trạng Thái</th>
+                            <th style="width:20%">#</th>
+
                         </tr>
                     </thead>
                     <tbody id="tbl-product">
@@ -94,6 +96,13 @@
 
 <script id="table-template" type="x-tmpl-mustache">
     <tr>
+
+        <td>{{Name}}</td>
+        <td>{{CategoryName}}</td>
+        <td>{{Price}}</td>
+        <td>{{{Image}}}</td>
+        <td>{{CreatedDate}}</td>
+        <td>{{{Status}}}</td>
         <th scope="row">
             <button class="btn btn-default btn-sm btn-edit" data-id="{{Id}}" title="Chỉnh sửa"><i class="fa fa-pencil"></i></button>
             <button class="btn btn-danger btn-sm btn-delete" data-id="{{Id}}" title="Xóa"><i class="fa fa-trash"></i></button>
@@ -101,12 +110,6 @@
             <a href="#" data-id="{{Id}}" class="btn btn-xs btn-quantity" title="Quản lí số lượng"><i class="fa fa-hourglass-start"></i></a>
             <a href="#" data-id="{{Id}}" class="btn btn-xs btn-whole-price" title="Quản lí giá sỉ"><i class="fa fa-money"></i></a>
         </th>
-        <td>{{Name}}</td>
-        <td>{{CategoryName}}</td>
-        <td>{{Price}}</td>
-        <td>{{{Image}}}</td>
-        <td>{{CreatedDate}}</td>
-        <td>{{{Status}}}</td>
     </tr>
 </script>
 
@@ -114,3 +117,4 @@
 @Html.Partial("_ImportExcelModal.cshtml")
 @Html.Partial("_QuantityManagement.cshtml")
 @Html.Partial("_ImageManagement.cshtml")
+@Html.Partial("_WholePriceManagement.cshtml")

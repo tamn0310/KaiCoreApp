@@ -24,17 +24,19 @@ namespace KaiCoreApp.Application.Implementations
         private readonly IProductTagRepository _productTagRepository;
         private readonly IProductQuantityRepository _productQuantityRepository;
         private readonly IProductImageRepository _productImageRepository;
+        private readonly IWholePriceRepository _wholePriceRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public ProductService(IProductRepository productRepository, ITagRepository tagRepository,
             IProductTagRepository productTagRepository, IProductQuantityRepository productQuantityRepository,
-            IProductImageRepository productImageRepository, IUnitOfWork unitOfWork)
+            IProductImageRepository productImageRepository, IWholePriceRepository wholePriceRepository, IUnitOfWork unitOfWork)
         {
             this._productRepository = productRepository;
             this._productTagRepository = productTagRepository;
             this._tagRepository = tagRepository;
             this._productQuantityRepository = productQuantityRepository;
             this._productImageRepository = productImageRepository;
+            this._wholePriceRepository = wholePriceRepository;
             this._unitOfWork = unitOfWork;
         }
 
@@ -236,6 +238,26 @@ namespace KaiCoreApp.Application.Implementations
                 product.ProductTags.Add(productTag);
             }
             _productRepository.Update(product);
+        }
+
+        public void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices)
+        {
+            _wholePriceRepository.RemoveMultiple(_wholePriceRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var wholePrice in wholePrices)
+            {
+                _wholePriceRepository.Add(new WholePrice()
+                {
+                    ProductId = productId,
+                    FromQuantity = wholePrice.FromQuantity,
+                    ToQuantity = wholePrice.ToQuantity,
+                    Price = wholePrice.Price
+                });
+            }
+        }
+
+        public List<WholePriceViewModel> GetWholePrices(int productId)
+        {
+            return _wholePriceRepository.FindAll(x => x.ProductId == productId).ProjectTo<WholePriceViewModel>().ToList();
         }
     }
 }
