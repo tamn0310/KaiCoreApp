@@ -1,7 +1,7 @@
 ﻿using KaiCoreApp.Data.Entities;
 using KaiCoreApp.EF.Extensions;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace KaiCoreApp.EF.Configurations
 {

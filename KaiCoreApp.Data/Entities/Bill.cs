@@ -6,17 +6,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace KaiCoreApp.Data.Entities
 {
     [Table("Bills")]
     public class Bill : DomainEntity<int>, ISwitchable, IDateTracking
     {
-        public Bill() { }
+        public Bill()
+        {
+        }
 
         public Bill(string customerName, string customerAddress, string customerMobile, string customerMessage,
-            BillStatus billStatus, PaymentMethod paymentMethod, Status status, string customerId)
+            BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid? customerId)
         {
             CustomerName = customerName;
             CustomerAddress = customerAddress;
@@ -29,7 +30,7 @@ namespace KaiCoreApp.Data.Entities
         }
 
         public Bill(int id, string customerName, string customerAddress, string customerMobile, string customerMessage,
-           BillStatus billStatus, PaymentMethod paymentMethod, Status status, string customerId)
+           BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid? customerId)
         {
             Id = id;
             CustomerName = customerName;
@@ -41,6 +42,7 @@ namespace KaiCoreApp.Data.Entities
             Status = status;
             CustomerId = customerId;
         }
+
         [Required]
         [MaxLength(256)]
         public string CustomerName { set; get; }
@@ -67,8 +69,7 @@ namespace KaiCoreApp.Data.Entities
         [DefaultValue(Status.Active)]
         public Status Status { set; get; } = Status.Active;
 
-        [StringLength(450)]
-        public string CustomerId { set; get; }
+        public Guid? CustomerId { set; get; }
 
         [ForeignKey("CustomerId")]
         public virtual AppUser User { set; get; }
