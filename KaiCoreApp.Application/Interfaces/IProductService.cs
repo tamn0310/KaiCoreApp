@@ -1,4 +1,5 @@
-﻿using KaiCoreApp.Application.ViewModels.Product;
+﻿using KaiCoreApp.Application.ViewModels.Common;
+using KaiCoreApp.Application.ViewModels.Product;
 using KaiCoreApp.Utilities.Dtos;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace KaiCoreApp.Application.Interfaces
     {
         List<ProductViewModel> GetAll();
 
-        PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string search, int page, int pageSize);
+        PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string sort, string search, int page, int pageSize);
 
         ProductViewModel Add(ProductViewModel product);
 
@@ -34,5 +35,15 @@ namespace KaiCoreApp.Application.Interfaces
         void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices);
 
         List<WholePriceViewModel> GetWholePrices(int productId);
+
+        List<ProductViewModel> GetHotProduct(int top);
+
+        List<ProductViewModel> GetLastest(int top);
+
+        List<ProductViewModel> GetRelatedProducts(int id, int top);
+
+        List<ProductViewModel> GetUpsellProducts(int top);
+
+        List<TagViewModel> GetProductTags(int productId);
     }
 }

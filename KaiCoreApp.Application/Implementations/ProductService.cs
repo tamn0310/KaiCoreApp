@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using KaiCoreApp.Application.Interfaces;
+using KaiCoreApp.Application.ViewModels.Common;
 using KaiCoreApp.Application.ViewModels.Product;
 using KaiCoreApp.Data.Entities;
 using KaiCoreApp.Data.Enums;
@@ -117,13 +118,42 @@ namespace KaiCoreApp.Application.Implementations
             return _productRepository.FindAll().ProjectTo<ProductViewModel>().ToList();
         }
 
-        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string search, int page, int pageSize)
+        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string sort, string search, int page, int pageSize)
         {
             var query = _productRepository.FindAll(x => x.Status == Status.Active);
             if (!string.IsNullOrEmpty(search))
+            {
                 query = query.Where(x => x.Name.Contains(search));
+            }
+            if (!string.IsNullOrEmpty(sort))
+            {
+                switch (sort)
+                {
+                    case "price_asc":
+                        query = query.OrderBy(x => x.Price);
+                        break;
+
+                    case "price_dec":
+                        query = query.OrderByDescending(x => x.Price);
+                        break;
+
+                    case "name_asc":
+                        query = query.OrderBy(x => x.Name);
+                        break;
+
+                    case "name_dec":
+                        query = query.OrderByDescending(x => x.Name);
+                        break;
+
+                    default:
+                        query = query.OrderByDescending(x => x.CreatedDate);
+                        break;
+                }
+            }
             if (categoryId.HasValue)
+            {
                 query = query.Where(x => x.CategoryId == categoryId.Value);
+            }
             int totalRow = query.Count();
 
             query = query.OrderByDescending(x => x.CreatedDate)
@@ -258,6 +288,51 @@ namespace KaiCoreApp.Application.Implementations
         public List<WholePriceViewModel> GetWholePrices(int productId)
         {
             return _wholePriceRepository.FindAll(x => x.ProductId == productId).ProjectTo<WholePriceViewModel>().ToList();
+        }
+
+        public List<ProductViewModel> GetHotProduct(int top)
+        {
+            return _productRepository.FindAll(x => x.Status == Status.Active && x.HotFlag == true).OrderByDescending(x => x.CreatedDate)
+                .Take(top).ProjectTo<ProductViewModel>().ToList();
+        }
+
+        public List<ProductViewModel> GetLastest(int top)
+        {
+            return _productRepository.FindAll(x => x.Status == Status.Active).OrderByDescending(x => x.CreatedDate)
+                .Take(top).ProjectTo<ProductViewModel>().ToList();
+        }
+
+        public List<ProductViewModel> GetRelatedProducts(int id, int top)
+        {
+            var product = _productRepository.FindById(id);
+            return _productRepository.FindAll(x => x.Status == Status.Active && x.Id != id && x.CategoryId == product.CategoryId)
+                .OrderByDescending(x => x.CreatedDate)
+                .Take(top).ProjectTo<ProductViewModel>().ToList();
+        }
+
+        public List<ProductViewModel> GetUpsellProducts(int top)
+        {
+            return _productRepository.FindAll(x => x.PromotionPrice != null)
+                .OrderByDescending(x => x.DateModified)
+                .Take(top).ProjectTo<ProductViewModel>().ToList();
+        }
+
+        public List<TagViewModel> GetProductTags(int productId)
+        {
+            var tags = _tagRepository.FindAll();
+            var productTags = _productTagRepository.FindAll();
+
+            var query = from t in tags
+                        join pt in productTags
+                        on t.Id equals pt.TagId
+                        where pt.ProductId == productId
+                        select new TagViewModel()
+                        {
+                            Id = t.Id,
+                            Name = t.Name
+                        };
+
+            return query.ToList();
         }
     }
 }
