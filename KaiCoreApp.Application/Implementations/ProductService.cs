@@ -117,13 +117,42 @@ namespace KaiCoreApp.Application.Implementations
             return _productRepository.FindAll().ProjectTo<ProductViewModel>().ToList();
         }
 
-        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string search, int page, int pageSize)
+        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string sort, string search, int page, int pageSize)
         {
             var query = _productRepository.FindAll(x => x.Status == Status.Active);
             if (!string.IsNullOrEmpty(search))
+            {
                 query = query.Where(x => x.Name.Contains(search));
+            }
+            if (!string.IsNullOrEmpty(sort))
+            {
+                switch (sort)
+                {
+                    case "price_asc":
+                        query = query.OrderBy(x => x.Price);
+                        break;
+
+                    case "price_dec":
+                        query = query.OrderByDescending(x => x.Price);
+                        break;
+
+                    case "name_asc":
+                        query = query.OrderBy(x => x.Name);
+                        break;
+
+                    case "name_dec":
+                        query = query.OrderByDescending(x => x.Name);
+                        break;
+
+                    default:
+                        query = query.OrderByDescending(x => x.CreatedDate);
+                        break;
+                }
+            }
             if (categoryId.HasValue)
+            {
                 query = query.Where(x => x.CategoryId == categoryId.Value);
+            }
             int totalRow = query.Count();
 
             query = query.OrderByDescending(x => x.CreatedDate)

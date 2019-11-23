@@ -50,9 +50,9 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllPaging(int? categoryId, string search, int page, int pageSize)
+        public IActionResult GetAllPaging(int? categoryId, string search, string sort, int page, int pageSize)
         {
-            var model = _productService.GetAllPaging(categoryId, search, page, pageSize);
+            var model = _productService.GetAllPaging(categoryId, search, sort, page, pageSize);
             return new ObjectResult(model);
         }
 

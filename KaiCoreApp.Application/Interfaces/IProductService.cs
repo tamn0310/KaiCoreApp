@@ -9,7 +9,7 @@ namespace KaiCoreApp.Application.Interfaces
     {
         List<ProductViewModel> GetAll();
 
-        PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string search, int page, int pageSize);
+        PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string sort, string search, int page, int pageSize);
 
         ProductViewModel Add(ProductViewModel product);
 

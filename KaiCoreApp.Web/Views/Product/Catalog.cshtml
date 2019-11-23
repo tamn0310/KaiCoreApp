@@ -1,0 +1,106 @@
+﻿@model KaiCoreApp.Web.Models.ProductViewModels.CatalogViewModel
+
+@{
+    ViewData["Title"] = Model.Category.Name;
+    ViewData["MetaKeyword"] = Model.Category.SeoKeywords;
+    ViewData["MetaDescription"] = Model.Category.SeoDescription;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="home"> <a href="/" title="Trờ về trang chủ">Trang chủ</a> <span>/</span> </li>
+                    <li><strong>@Model.Category.Name</strong> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Main Container -->
+<section class="main-container col1-layout">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <article class="col-main">
+                    <h2 class="page-heading"> <span class="page-heading-title">@Model.Category.Name</span> </h2>
+                    <div class="toolbar">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <div class="btn-group">
+                                    <div id="grid-view" class="btn btn-default active" data-toggle="tooltip" title="Dạng lưới"><a href="#"><i class="fa fa-th"></i></a></div>
+                                </div>
+                                <a href="compare.html" id="compare-total">Product Compare (3)</a>
+                            </div>
+                            <form action="/@Model.Category.SeoAlias-c.@(Model.Category.Id).html" method="get">
+                                <div class="col-sm-2 text-right sort-by">
+                                    <label class="control-label" for="input-sort">Sắp xếp theo:</label>
+                                </div>
+                                <div class="col-md-3 col-sm-2 text-right">
+                                    <select id="input-sort" name="sortBy" asp-for="SortType" onchange="this.form.submit()"
+                                            asp-items="Model.SortTypes" class="form-control col-sm-3">
+                                    </select>
+                                </div>
+                                <div class="col-sm-1 text-right show-limit">
+                                    <label class="control-label" for="input-limit">Hiển thị:</label>
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                    <select id="input-limit" name="limit" asp-for="Limit" onchange="this.form.submit()"
+                                            asp-items="Model.Limits" class="form-control">
+                                    </select>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="category-products">
+                        <ul class="products-grid">
+                            @foreach (var item in Model.Data.Results)
+                            {
+                                var url = "/" + item.SeoAlias + "-p" + item.Id + ".html";
+                                <li class="item col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                    <div class="item-inner">
+                                        <div class="item-img">
+                                            <div class="item-img-info">
+                                                <a class="product-image" title="Product Title Here" href="@url">
+                                                    <img alt="@item.Name" src="@item.Image">
+                                                </a>
+                                                <div class="jtv-box-hover">
+                                                    <ul class="add-to-links">
+                                                        <li><a class="link-quickview" href="quick_view.html"><i class="icon-magnifier-add icons"></i><span class="hidden">Quick View</span></a></li>
+                                                        <li><a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a></li>
+                                                        <li><a class="link-compare" href="compare.html"><i class="icon-shuffle icons"></i><span class="hidden">Compare</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-inner">
+                                                <div class="item-title"> <a title="@item.Name" href="@url"> @item.Name </a> </div>
+                                                <div class="item-content">
+                                                    <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0") Đồng</span> </span> </div>
+                                                    </div>
+                                                    <div class="action">
+                                                        <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Thêm vào giỏ</span> </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    @(await Component.InvokeAsync("Pager", Model.Data))
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Main Container End --> 
