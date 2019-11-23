@@ -1,6 +1,6 @@
 ﻿using KaiCoreApp.Data.Entities;
 using KaiCoreApp.Utilities.Dtos;
-using KaiCoreApp.Web.Models.AccountViewModel;
+using KaiCoreApp.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

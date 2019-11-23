@@ -42,7 +42,23 @@
             <li><a title="Wishlist" href="wishlist.html">Wishlist</a> </li>
             <li><a title="Checkout" href="checkout.html">Checkout</a> </li>
             <li><a title="Blog" href="blog.html"><span>Blog</span></a> </li>
-            <li class="last"><a title="Đăng nhập" href="/dang-nhap.html"><span>Đăng nhập</span></a> </li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li>
+                    <div>@User.GetSpecificClaim("FullName")</div>
+                </li>
+                <li>
+                   
+                    <form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm" method="post">
+                        <a href="#" onclick="document.getElementById('logoutForm').submit()"><span>Đăng xuất</span></a>
+                    </form>
+                </li>
+            }
+            else
+            {
+                <li class="last"><a title="Đăng nhập" href="/login.html"><span>Đăng nhập</span></a> </li>
+                <li class="last"><a title="Đăng ký" href="/register.html"><span>Đăng ký</span></a> </li>
+            }
         </ul>
     </div>
 </div>

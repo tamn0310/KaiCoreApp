@@ -15,8 +15,8 @@ namespace KaiCoreApp.Web.Extensions
         /// <returns></returns>
         public static Task SendEmailConfirmationAsync(this IEmailSender emailSender, string email, string link)
         {
-            return emailSender.SendEmailAsync(email, "Confirm your email",
-                $"Please confirm your account by clicking this link: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>");
+            return emailSender.SendEmailAsync(email, "Xác nhận email của bạn",
+                $"Vui lòng xác nhận tài khoản của bạn bằng cách nhấp vào liên kết này: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>");
         }
     }
 }
