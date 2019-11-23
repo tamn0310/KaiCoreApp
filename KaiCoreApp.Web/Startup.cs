@@ -8,6 +8,7 @@ using KaiCoreApp.EF.Repositories;
 using KaiCoreApp.Infrastructure.Interfaces;
 using KaiCoreApp.Web.Authorization;
 using KaiCoreApp.Web.Helpers;
+using KaiCoreApp.Web.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -48,7 +49,8 @@ namespace KaiCoreApp.Web
                     o => o.MigrationsAssembly("KaiCoreApp.EF")));
 
             services.AddIdentity<AppUser, AppRole>()
-                .AddEntityFrameworkStores<AppDbContext>();
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
@@ -62,7 +64,7 @@ namespace KaiCoreApp.Web
 
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
-
+            services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimnsPrincipalFactory>();
 

@@ -1,0 +1,79 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="home"> <a href="/" title="Quay lại trang chủ">Trang chủ</a> <span>/</span> </li>
+                    <li> <a href="#" title="Đăng ký tài khảon">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->
+
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="account-login">
+            <div class="page-title text-center">
+                <h2>Đăng ký tài khoản</h2>
+            </div>
+            <fieldset class="col2-set">
+                <strong>Tạo mới tài khoản</strong>
+                <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                    <div class="content">
+                        <ul class="form-list">
+                            <li>
+                               <div asp-validation-summary="All" class="text-danger"></div>
+                            </li>
+                            <li>
+                                <label for="email">Tên đầy đủ: <span class="required">*</span></label>
+                                <br>
+                                <input type="text" asp-for="FullName" title="Họ tên đầy đủ" class="input-text required-entry" name="fullName">
+                            </li>
+                            <li>
+                                <label for="pass">Email: <span class="required">*</span></label>
+                                <br>
+                                <input type="text" title="Địa chỉ Email" asp-for="Email" class="input-text required-entry" name="email">
+                            </li>
+                            <li>
+                                <label for="pass">Mật khẩu: <span class="required">*</span></label>
+                                <br>
+                                <input type="password" title="Mật khẩu" asp-for="Password" class="input-text required-entry" name="password">
+                            </li>
+                            <li>
+                                <label for="pass">Nhập lại mật khẩu: <span class="required">*</span></label>
+                                <br>
+                                <input type="password" title="Nhập lại mật khẩu" asp-for="ConfirmPassword" class="input-text required-entry pas" name="confirmPassword">
+                            </li>
+                            <li>
+                                <label for="pass">Ngày sinh: </label>
+                                <br>
+                                <input type="date" title="Ngày sinh" asp-for="BirthDay" class="input-text required-entry" name="birthDay">
+                            </li>
+                            <li>
+                                <label for="pass">Số điện thoại: </label>
+                                <br>
+                                <input type="text" title="Số điện thoại" asp-for="PhoneNumber" class="input-text required-entry" name="phoneNumber">
+                            </li>
+                            <li>
+                                <label for="pass">Địa chỉ: </label>
+                                <br>
+                                <input type="text" title="Địa chỉ" asp-for="Address" class="input-text required-entry" name="address">
+                            </li>
+                        </ul>
+                        <div class="buttons-set">
+                            <button type="submit" class="button login"><span>Đăng ký</span></button>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</section>
