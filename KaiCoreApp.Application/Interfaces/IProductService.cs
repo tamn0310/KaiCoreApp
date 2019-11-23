@@ -1,4 +1,5 @@
-﻿using KaiCoreApp.Application.ViewModels.Product;
+﻿using KaiCoreApp.Application.ViewModels.Common;
+using KaiCoreApp.Application.ViewModels.Product;
 using KaiCoreApp.Utilities.Dtos;
 using System;
 using System.Collections.Generic;
@@ -38,5 +39,11 @@ namespace KaiCoreApp.Application.Interfaces
         List<ProductViewModel> GetHotProduct(int top);
 
         List<ProductViewModel> GetLastest(int top);
+
+        List<ProductViewModel> GetRelatedProducts(int id, int top);
+
+        List<ProductViewModel> GetUpsellProducts(int top);
+
+        List<TagViewModel> GetProductTags(int productId);
     }
 }
