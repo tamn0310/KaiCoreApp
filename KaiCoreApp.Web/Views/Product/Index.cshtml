@@ -1,9 +1,8 @@
-﻿@model KaiCoreApp.Web.Models.ProductViewModels.CatalogViewModel
-
+﻿@model KaiCoreApp.Web.Models.ProductViewModels.ListViewModel
 @{
-    ViewData["Title"] = Model.Category.Name;
-    ViewData["MetaKeyword"] = Model.Category.SeoKeywords;
-    ViewData["MetaDescription"] = Model.Category.SeoDescription;
+    ViewData["Title"] = "Tất cả sản phẩm";
+    ViewData["MetaKeyword"] = "Tất cả sản phẩm";
+    ViewData["MetaDescription"] = "Tất cả sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,8 +12,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a href="/" title="Trờ về trang chủ">Trang chủ</a> <span>/</span> </li>
-                    <li><strong>@Model.Category.Name</strong> </li>
+                    <li class="home"> <a href="/" title="Trở về trang chủ">Trang chủ</a> <span>/</span> </li>
+                    <li> <strong>Tất cả sản phẩm</strong> </li>
                 </ul>
             </div>
         </div>
@@ -27,15 +26,16 @@
         <div class="row">
             <div class="col-sm-12 col-xs-12">
                 <article class="col-main">
-                    <h2 class="page-heading"> <span class="page-heading-title">@Model.Category.Name</span> </h2>
+                    <h2 class="page-heading"> <span class="page-heading-title">Tất cả sản phẩm</span> </h2>
                     <div class="toolbar">
                         <div class="row">
                             <div class="col-md-4 col-sm-5">
                                 <div class="btn-group">
-                                    <div id="grid-view" class="btn btn-default active" data-toggle="tooltip" title="Dạng lưới"><a href="#"><i class="fa fa-th"></i></a></div>
+                                    <div id="grid-view" class="btn btn-default active" data-toggle="tooltip" title="Xem dạng lưới"><a href="#"><i class="fa fa-th"></i></a></div>
                                 </div>
                             </div>
-                            <form action="/@Model.Category.SeoAlias-c.@(Model.Category.Id).html" method="get">
+                            <!--Form sort, show all product-->
+                            <form action="/products.html" method="get">
                                 <div class="col-sm-2 text-right sort-by">
                                     <label class="control-label" for="input-sort">Sắp xếp theo:</label>
                                 </div>
@@ -53,20 +53,19 @@
                                     </select>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                     <div class="category-products">
                         <ul class="products-grid">
-                            @foreach (var item in Model.Data.Results)
+                            @foreach (var allProduct in Model.Data.Results)
                             {
-                                var url = "/" + item.SeoAlias + "-p." + item.Id + ".html";
+                                var url = "/" + allProduct.SeoAlias + "-p." + allProduct.Id + ".html";
                                 <li class="item col-lg-3 col-md-4 col-sm-4 col-xs-6">
                                     <div class="item-inner">
                                         <div class="item-img">
                                             <div class="item-img-info">
-                                                <a class="product-image" title="@item.Name" href="@url">
-                                                    <img alt="@item.Name" src="@item.Image" width="268px" height="268px">
+                                                <a class="product-image" title="@allProduct.Name" href="@url">
+                                                    <img alt="@allProduct.Name" src="@allProduct.Image" width="268px" height="268px">
                                                 </a>
                                                 <div class="jtv-box-hover">
                                                     <ul class="add-to-links">
@@ -79,11 +78,17 @@
                                         </div>
                                         <div class="item-info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title="@item.Name" href="@url"> @item.Name </a> </div>
+                                                <div class="item-title">
+                                                    <a title="@allProduct.Name" href="@url">@allProduct.Name </a>
+                                                </div>
                                                 <div class="item-content">
                                                     <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
                                                     <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0") Đồng</span> </span> </div>
+                                                        <div class="price-box">
+                                                            <span class="regular-price">
+                                                                <span class="price">@allProduct.Price.ToString("N0") ₫</span>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                     <div class="action">
                                                         <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Thêm vào giỏ</span> </button>
@@ -99,8 +104,7 @@
                 </article>
             </div>
             @(await Component.InvokeAsync("Pager", Model.Data))
-
         </div>
     </div>
 </section>
-<!-- Main Container End --> 
+<!-- Main Container End -->

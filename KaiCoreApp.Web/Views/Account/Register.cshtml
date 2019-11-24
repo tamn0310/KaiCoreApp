@@ -3,6 +3,9 @@
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Scripts{ 
+    <recaptcha-script validation-message-element-id="recaptchaErrorMessage"/>
+}
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -30,7 +33,7 @@
                     <div class="content">
                         <ul class="form-list">
                             <li>
-                               <div asp-validation-summary="All" class="text-danger"></div>
+                                <div asp-validation-summary="All" class="text-danger"></div>
                             </li>
                             <li>
                                 <label for="email">Tên đầy đủ: <span class="required">*</span></label>
@@ -66,6 +69,10 @@
                                 <label for="pass">Địa chỉ: </label>
                                 <br>
                                 <input type="text" title="Địa chỉ" asp-for="Address" class="input-text required-entry" name="address">
+                            </li>
+                            <li>
+                               <recaptcha/>
+                                <span class="text-danger" id="recaptchaErrorMessage"></span>
                             </li>
                         </ul>
                         <div class="buttons-set">

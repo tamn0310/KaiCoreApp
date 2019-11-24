@@ -19,9 +19,19 @@ namespace KaiCoreApp.Web.Controllers
         }
 
         [Route("products.html")]
-        public IActionResult Index()
+        public IActionResult Index(string search, string sortBy, int? limit, int page = 1)
         {
-            return View();
+            var product = new ListViewModel();
+            ViewData["BodyClass"] = "category-page";
+            if (limit == null)
+            {
+                limit = _configuration.GetValue<int>("Limit");
+            }
+            product.Limit = limit;
+            product.SortType = sortBy;
+            product.Data = _productService.GetAll(sortBy, string.Empty, page, limit.Value);
+
+            return View(product);
         }
 
         [Route("{alias}-c.{id}.html")]

@@ -12,6 +12,8 @@ namespace KaiCoreApp.Application.Interfaces
 
         PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string sort, string search, int page, int pageSize);
 
+        PagedResult<ProductViewModel> GetAll(string sort, string search, int page, int limit);
+
         ProductViewModel Add(ProductViewModel product);
 
         void Update(ProductViewModel product);

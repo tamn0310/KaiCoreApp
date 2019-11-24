@@ -20,6 +20,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using PaulMiami.AspNetCore.Mvc.Recaptcha;
 using System;
 
 namespace KaiCoreApp.Web
@@ -116,6 +117,13 @@ namespace KaiCoreApp.Web
 
                 //User settings
                 options.User.RequireUniqueEmail = true;
+            });
+
+            //add captcha
+            services.AddRecaptcha(new RecaptchaOptions
+            {
+                SiteKey = Configuration["Recaptcha:SiteKey"],
+                SecretKey = Configuration["Recaptcha:SecretKey"]
             });
         }
 
