@@ -50,6 +50,22 @@ namespace KaiCoreApp.Web.Controllers
             return View(catalog);
         }
 
+        [Route("search.html")]
+        public IActionResult Search(string search, int? limit, string sortBy, int page = 1)
+        {
+            var searchResult = new SearchResultBiewModel();
+            ViewData["BodyClass"] = "category-page";
+            if (limit == null)
+            {
+                limit = _configuration.GetValue<int>("Limit");
+            }
+            searchResult.Limit = limit;
+            searchResult.SortType = sortBy;
+            searchResult.Data = _productService.GetAll(sortBy, search, page, limit.Value);
+            searchResult.Search = search;
+            return View(searchResult);
+        }
+
         [Route("{alias}-p.{id}.html", Name = "ProductDetail")]
         public IActionResult Details(int id)
         {
