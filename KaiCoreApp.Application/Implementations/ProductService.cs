@@ -367,7 +367,7 @@ namespace KaiCoreApp.Application.Implementations
                         break;
                 }
             }
-           
+
             int totalRow = query.Count();
 
             query = query.OrderByDescending(x => x.CreatedDate)
@@ -383,6 +383,16 @@ namespace KaiCoreApp.Application.Implementations
                 PageSize = limit
             };
             return paginationSet;
+        }
+
+        public bool CheckAvailability(int productId)
+        {
+            var quantity = _productQuantityRepository.FindSingle(x => x.ProductId == productId);
+            if (quantity == null)
+            {
+                return false;
+            }
+            return quantity.Quantity > 0;
         }
     }
 }

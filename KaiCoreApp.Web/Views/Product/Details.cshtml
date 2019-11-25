@@ -10,8 +10,14 @@
     var related = Model.RelatedProducts;
     var upsell = Model.UpsellProducts;
 }
-@section Scripts{ 
+@section Scripts{
     <script src="~/client-side/js/cloud-zoom.js"></script>
+
+    <script src="~/client-app/controller/product/details.js"></script>
+    <script>
+        var productObj = new ProductDetailController();
+        productObj.initialize();
+    </script>
 }
 
 <!-- Breadcrumbs -->
@@ -108,12 +114,12 @@
                                                 <div class="pull-left">
                                                     <div class="custom pull-left">
                                                         <label>Số lượng :</label>
-                                                        <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
-                                                        <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
-                                                        <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
+                                                        <button onClick="var result = document.getElementById('txtQuantity'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
+                                                        <input type="text" class="input-text qty" title="txtQuantity" value="1" maxlength="12" id="txtQuantity" name="txtQuantity">
+                                                        <button onClick="var result = document.getElementById('txtQuantity'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
                                                     </div>
                                                 </div>
-                                                <button onClick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart" type="button">Thêm vào giỏ hàng</span></button>
+                                                <button class="button btn-cart" title="Thêm vào giỏ hàng" id="btnAddToCart" data-id="@Model.Product.Id" type="button">Thêm vào giỏ hàng</button>
                                             </div>
                                             <div class="email-addto-box">
                                                 <ul class="add-to-links">
@@ -149,7 +155,7 @@
                         <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                             <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Chi tiết sản phẩm </a> </li>
                             <li><a href="#product_tabs_tags" data-toggle="tab">Tags</a></li>
-                            <li> <a href="#reviews_tabs" data-toggle="tab">Đáng giá</a> </li>
+                            <li> <a href="#reviews_tabs" data-toggle="tab">Đánh giá</a> </li>
                         </ul>
                         <div id="productTabContent" class="tab-content">
                             <!--chi tiết mô tả sản phẩm-->

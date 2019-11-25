@@ -10,12 +10,15 @@ namespace KaiCoreApp.Web.Controllers
         private readonly IProductService _productService;
         private readonly IProductCategoryService _productCategoryService;
         private IConfiguration _configuration;
+        private IBillService _billService;
 
-        public ProductController(IProductService productService, IProductCategoryService productCategoryService, IConfiguration configuration)
+        public ProductController(IProductService productService, IProductCategoryService productCategoryService,
+            IConfiguration configuration, IBillService billService)
         {
             this._productService = productService;
             this._productCategoryService = productCategoryService;
             this._configuration = configuration;
+            this._billService = billService;
         }
 
         [Route("products.html")]
@@ -77,6 +80,7 @@ namespace KaiCoreApp.Web.Controllers
             model.UpsellProducts = _productService.GetUpsellProducts(6);
             model.ProductImages = _productService.GetImages(id);
             model.Tags = _productService.GetProductTags(id);
+            model.Available = _productService.CheckAvailability(id);
             return View(model);
         }
     }
