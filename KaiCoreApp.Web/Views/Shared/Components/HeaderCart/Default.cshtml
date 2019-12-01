@@ -1,0 +1,47 @@
+﻿@model List<ShoppingCartViewModel>
+<div class="mini-cart" id="headerCart">
+    <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+        <a href="/cart.html">
+            @if (Model.Count > 0)
+            {
+                <span class="cart_count">@Model.Count</span>
+                <span class="price">Tổng tiền: @Model.Sum(x=>x.Quantity*x.Price).ToString("N0")</span>
+            }
+        </a>
+    </div>
+    <div>
+        <div class="jtv-top-cart-content">
+            @if (Model.Count > 0)
+            {
+                <ul class="mini-products-list" id="cart-sidebar">
+                    @foreach (var item in Model)
+                    {
+                        var url = "/" + item.Product.SeoAlias + "-p." + item.Product.Id + ".html";
+                        <li class="item first">
+                            <div class="item-inner">
+                                <a class="product-image" title="@item.Product.Name" href="@url">
+                                    <img alt="@item.Product.Name" src="@item.Product.Image">
+                                </a>
+                                <div class="product-details">
+                                    <div class="access">
+                                        <a class="jtv-btn-remove remove-cart" data-id="@item.Product.Id" title="Xóa sản phẩm" href="#">Xóa</a>
+                                    </div>
+                                    <p class="product-name"><a href="@url">@item.Product.Name</a> </p>
+                                    <strong>@item.Quantity</strong> x <span class="price">@((item.Product.PromotionPrice ?? item.Product.Price).ToString("N0"))</span>
+                                </div>
+                            </div>
+                        </li>
+                    }
+                </ul>
+                <div class="actions">
+                    <button class="btn-checkout" title="Checkout" type="button" onClick="checkout.html"><span>Checkout</span> </button>
+                    <a href="/cart.html" class="view-cart"><span>Xem giỏ hàng</span></a>
+                </div>
+            }
+            else
+            {
+                <div>Không có sản phẩm nào</div>
+            }
+        </div>
+    </div>
+</div>

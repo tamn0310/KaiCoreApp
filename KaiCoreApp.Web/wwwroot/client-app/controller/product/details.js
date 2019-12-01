@@ -16,9 +16,13 @@
                     quantity: parseInt($('#txtQuantity').val())
                 },
                 success: function () {
-                    alert(1);
+                    kai.notify('Sản phẩm đã được thêm vào giỏ.', 'success');
+                    loadHeaderCart();
                 }
             });
         });
+    }
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
     }
 }

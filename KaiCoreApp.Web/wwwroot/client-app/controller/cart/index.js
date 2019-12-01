@@ -16,7 +16,7 @@
                 },
                 success: function () {
                     kai.notify('Xoá sản phẩm khỏi giỏ hàng thành công.', 'success');
-                    //loadHeaderCart();
+                    loadHeaderCart();
                     loadData();
                 }
             });
@@ -36,7 +36,7 @@
                     },
                     success: function () {
                         kai.notify('Cập nhật số lượng sản phẩm thành công.', 'success');
-                        //loadHeaderCart();
+                        loadHeaderCart();
                         loadData();
                     }
                 });
@@ -115,6 +115,10 @@
                 }
             });
         });
+    }
+
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
     }
 
     //Load data

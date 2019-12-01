@@ -16,8 +16,8 @@
                 },
                 success: function (response) {
                     kai.notify('Sản phẩm đã được thêm vào giỏ', 'success');
-                    //loadHeaderCart();
-                    loadMyCart();
+                    loadHeaderCart();
+                    //loadMyCart();
                 }
             });
         });
@@ -33,16 +33,16 @@
                 },
                 success: function (response) {
                     kai.notify('Sản phẩm đã được xóa.', 'success');
-                    //loadHeaderCart();
+                    loadHeaderCart();
                     //loadMyCart();
                 }
             });
         });
     }
 
-    //function loadHeaderCart() {
-    //    $("#headerCart").load("/AjaxContent/HeaderCart");
-    //}
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
+    }
 
     //function loadMyCart() {
     //    $("#sidebarCart").load("/AjaxContent/MyCart");
