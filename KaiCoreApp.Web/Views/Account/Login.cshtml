@@ -1,0 +1,78 @@
+﻿@model LoginViewModel
+@inject SignInManager<AppUser> SignInManager
+
+@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="home"> <a href="/" title="Quay lại trang chủ">Trang chủ</a> <span>/</span> </li>
+                    <li> <a href="#" title="Đăng ký tài khảon">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="account-login">
+            <div class="page-title">
+                <h2>Đăng nhập hoặc tạo mới tài khoản</h2>
+            </div>
+            <fieldset class="col2-set">
+                <div class="col-1 new-users">
+                    <strong>Người dùng mới</strong>
+                    <div class="content">
+                        <p>Bằng cách tạo tài khoản với cửa hàng của chúng tôi, bạn sẽ có thể chuyển qua quy trình thanh toán nhanh hơn, lưu trữ nhiều địa chỉ giao hàng, xem và theo dõi đơn hàng của bạn trong tài khoản của bạn và hơn thế nữa.</p>
+                        <div class="buttons-set">
+                            <button onclick="window.location.href='/register.html'" class="button create-account"><span>Tạo mới tài khoản</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 registered-users">
+                    <strong>Đăng nhập</strong>
+                    <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                        <div class="content">
+                            <ul class="form-list">
+                                <li>
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                </li>
+                                <li>
+                                    <label for="email">Địa chỉ Email: <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" asp-for="Email" title="Địa chỉ Email" class="input-text required-entry" name="email">
+                                </li>
+                                <li>
+                                    <label for="pass">Mật khẩu <span class="required">*</span></label>
+                                    <br>
+                                    <input type="password" asp-for="Password" title="Mật khẩu" class="input-text required-entry validate-password" name="password">
+                                </li>
+                                <li>
+                                    <label for="rememberMe">Remember Me <span class="required">*</span></label>
+                                    <br>
+                                    <input asp-for="RememberMe" />
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button type="submit" class="button login"><span>Đăng nhập</span></button>
+                                <a class="forgot-word" asp-action="ForgotPassword">Quên mật khẩu?</a>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

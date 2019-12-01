@@ -1,6 +1,6 @@
 ﻿using KaiCoreApp.Data.Entities;
 using KaiCoreApp.Utilities.Dtos;
-using KaiCoreApp.Web.Models;
+using KaiCoreApp.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -38,7 +38,7 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure:false);
+                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");

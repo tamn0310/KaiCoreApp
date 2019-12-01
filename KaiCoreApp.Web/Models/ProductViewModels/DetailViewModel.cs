@@ -7,6 +7,7 @@ namespace KaiCoreApp.Web.Models.ProductViewModels
     public class DetailViewModel
     {
         public ProductViewModel Product { get; set; }
+        public bool Available { get; set; }
 
         public List<ProductViewModel> RelatedProducts { get; set; }
 

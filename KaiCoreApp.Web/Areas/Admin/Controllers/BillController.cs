@@ -98,23 +98,28 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
             return new OkObjectResult(enums);
         }
 
-       
-
         [HttpPost]
         public IActionResult ExportExcel(int billId)
         {
             string sWebRootFolder = _hostingEnvironment.WebRootPath;
             string sFileName = $"Đơn hàng_{billId}.xlsx";
+
             // Template File
             string templateDocument = Path.Combine(sWebRootFolder, "templates", "BillTemplate_Kai.xlsx");
+
+            var pathFolder = Path.Combine(sWebRootFolder, "export-files");
+            if (!Directory.Exists(pathFolder))
+            {
+                Directory.CreateDirectory(pathFolder);
+            }
 
             string url = $"{Request.Scheme}://{Request.Host}/{"export-files"}/{sFileName}";
             FileInfo file = new FileInfo(Path.Combine(sWebRootFolder, "export-files", sFileName));
             if (file.Exists)
             {
                 file.Delete();
-                file = new FileInfo(Path.Combine(sWebRootFolder, sFileName));
             }
+            file = new FileInfo(Path.Combine(sWebRootFolder, "export-files", sFileName));
             using (FileStream templateDocumentStream = System.IO.File.OpenRead(templateDocument))
             {
                 using (ExcelPackage package = new ExcelPackage(templateDocumentStream))

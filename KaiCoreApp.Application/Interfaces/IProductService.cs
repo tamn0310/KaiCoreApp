@@ -12,6 +12,8 @@ namespace KaiCoreApp.Application.Interfaces
 
         PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string sort, string search, int page, int pageSize);
 
+        PagedResult<ProductViewModel> GetAll(string sort, string search, int page, int limit);
+
         ProductViewModel Add(ProductViewModel product);
 
         void Update(ProductViewModel product);
@@ -45,5 +47,7 @@ namespace KaiCoreApp.Application.Interfaces
         List<ProductViewModel> GetUpsellProducts(int top);
 
         List<TagViewModel> GetProductTags(int productId);
+
+        bool CheckAvailability(int productId);
     }
 }

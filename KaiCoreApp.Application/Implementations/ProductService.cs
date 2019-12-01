@@ -334,5 +334,65 @@ namespace KaiCoreApp.Application.Implementations
 
             return query.ToList();
         }
+
+        public PagedResult<ProductViewModel> GetAll(string sort, string search, int page, int limit)
+        {
+            var query = _productRepository.FindAll(x => x.Status == Status.Active);
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(x => x.Name.Contains(search));
+            }
+            if (!string.IsNullOrEmpty(sort))
+            {
+                switch (sort)
+                {
+                    case "price_asc":
+                        query = query.OrderBy(x => x.Price);
+                        break;
+
+                    case "price_dec":
+                        query = query.OrderByDescending(x => x.Price);
+                        break;
+
+                    case "name_asc":
+                        query = query.OrderBy(x => x.Name);
+                        break;
+
+                    case "name_dec":
+                        query = query.OrderByDescending(x => x.Name);
+                        break;
+
+                    default:
+                        query = query.OrderByDescending(x => x.CreatedDate);
+                        break;
+                }
+            }
+
+            int totalRow = query.Count();
+
+            query = query.OrderByDescending(x => x.CreatedDate)
+                .Skip((page - 1) * limit).Take(limit);
+
+            var data = query.ProjectTo<ProductViewModel>().ToList();
+
+            var paginationSet = new PagedResult<ProductViewModel>()
+            {
+                Results = data,
+                CurrentPage = page,
+                RowCount = totalRow,
+                PageSize = limit
+            };
+            return paginationSet;
+        }
+
+        public bool CheckAvailability(int productId)
+        {
+            var quantity = _productQuantityRepository.FindSingle(x => x.ProductId == productId);
+            if (quantity == null)
+            {
+                return false;
+            }
+            return quantity.Quantity > 0;
+        }
     }
 }

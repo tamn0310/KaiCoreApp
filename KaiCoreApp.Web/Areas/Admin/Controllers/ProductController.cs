@@ -52,7 +52,7 @@ namespace KaiCoreApp.Web.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAllPaging(int? categoryId, string search, string sort, int page, int pageSize)
         {
-            var model = _productService.GetAllPaging(categoryId, search, sort, page, pageSize);
+            var model = _productService.GetAllPaging(categoryId, sort, search, page, pageSize);
             return new ObjectResult(model);
         }
 

@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts{
+    <script src="~/lib/mustache.js/mustache.js"></script>
+    <script src="~/client-app/controller/cart/index.js" asp-append-version="true"></script>
+    <script>
+        var cartController = new CartController();
+        cartController.initialize();
+    </script>
+}
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="col-main">
+            <div class="shopping-cart-inner">
+                <div class="page-title">
+                    <h2>Tổng quan giỏ hàng</h2>
+                </div>
+                <div class="page-content">
+                    <div class="heading-counter warning">Giỏ hàng của bạn có: <span>2 Product</span> </div>
+                    <div class="order-detail-content">
+                        <table class="table table-bordered table-responsive jtv-cart-summary">
+                            <thead>
+                                <tr>
+                                    <th class="cart_product">Ảnh sản phẩm</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng tiền</th>
+                                    <th class="action"><i class="fa fa-trash-o"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-cart-content">
+                            </tbody>
+                            <tfoot>
+                               
+                                <tr>
+                                    <td colspan="3"><strong>Tổng tiền:</strong></td>
+                                    <td colspan="3"><strong id="lblTotalAmount"></strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <script id="template-cart" type="x-tmpl-mustache">
+                            <tr>
+                                <td class="cart_product">
+                                    <a href="{{Url}}"><img src="{{Image}}" alt="{{ProductName}}"></a>
+                                </td>
+                                <td class="cart_description">
+                                    <p class="product-name"><a href="#"> {{ProductName}} </a></p>
+                                </td>
+                                <td class="price"><span>{{Price}} ₫</span></td>
+                                <td class="qty">
+                                    <input class="form-control input-sm txtQuantity" type="text" data-id="{{ProductId}}" value="{{Quantity}}">
+                                </td>
+                                <td class="price"><span>{{Amount}}</span></td>
+                                <td class="action"><a href="#" data-id="{{ProductId}}" class="btn-delete">Xóa</a></td>
+                            </tr>
+                        </script>
+                        <div class="cart_navigation">
+                            <a href="/products.html" class="button continue-shopping" title="Tiếp tục mua hàng">
+                                <span>Tiếp tục mua hàng</span>
+                            </a>
+                            <a class="button continue-shopping" id="btnClearAll" title="Làm sạch giỏ hàng">
+                                <span>Làm sạch giỏ hàng</span>
+                            </a>
+                            <a href="/checkout.html" class="button btn-proceed-checkout" title="Kiểm tra giỏ hàng">
+                                <span>Kiểm tra giỏ hàng</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
