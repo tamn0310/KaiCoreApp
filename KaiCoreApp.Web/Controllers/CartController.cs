@@ -12,10 +12,12 @@ namespace KaiCoreApp.Web.Controllers
     public class CartController : Controller
     {
         private IProductService _productService;
+        private IBillService _billService;
 
-        public CartController(IProductService productService)
+        public CartController(IProductService productService, IBillService billService)
         {
             this._productService = productService;
+            this._billService = billService;
         }
 
         [Route("cart.html", Name = "Cart")]

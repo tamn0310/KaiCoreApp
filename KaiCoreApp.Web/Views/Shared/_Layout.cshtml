@@ -14,7 +14,7 @@
 
     <!-- Favicon  -->
     <link rel="shortcut icon" type="image/x-icon" href="~/client-side/favicon.ico">
-
+    <link href="~/lib/notify/styles/metro/notify-metro.css" rel="stylesheet" />
     <!-- CSS Style -->
     <link rel="stylesheet" href="~/client-side/style.css">
     <link href="~/client-side/css/font-awesome.min.css" rel="stylesheet" />
@@ -66,9 +66,15 @@
 
     <!-- rev-slider js -->
     <script type="text/javascript" src="/client-side/js/rev-slider.js"></script>
-
+    <script src="~/lib/notify/notify.js"></script>
+    <script src="~/lib/notify/styles/metro/notify-metro.js"></script>
+    <script src="~/lib/mustache.js/mustache.js"></script>
+    <script src="~/client-app/Shared/kai.js"></script>
+    <script src="~/client-app/controller/base/index.js"></script>
+    <script>
+        var addCart = new BaseController();
+        addCart.initialize();
+    </script>
     @RenderSection("Scripts", required: false);
-
-    
 </body>
 </html>
