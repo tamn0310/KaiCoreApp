@@ -1,0 +1,53 @@
+﻿@model BillViewModel
+<h1>Đơn hàng mới</h1>
+<table>
+    <tr>
+        <td>Tên khách hàng</td>
+        <td>@Model.CustomerName</td>
+    </tr>
+    <tr>
+        <td>Địa chỉ</td>
+        <td>@Model.CustomerAddress</td>
+    </tr>
+    <tr>
+        <td>Số điện thoại</td>
+        <td>@Model.CustomerMobile</td>
+    </tr>
+    <tr>
+        <td>Ngày tạo</td>
+        <td>@Model.CreatedDate.ToString("dd/MM/yyyy hh:mm")</td>
+    </tr>
+    <tr>
+        <td>Chi tiết</td>
+        <td>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá tiền</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.BillDetails)
+                    {
+                        <tr>
+                            <td>@item.Product.Name</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Price</td>
+                            <td>@((item.Quantity * item.Price).ToString("N0"))</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
+                            Thành tiền: @Model.BillDetails.Sum(x => x.Quantity * x.Price).ToString("N0")
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </td>
+    </tr>
+</table>

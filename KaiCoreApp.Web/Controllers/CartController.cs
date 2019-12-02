@@ -1,11 +1,16 @@
 ﻿using KaiCoreApp.Application.Interfaces;
+using KaiCoreApp.Application.ViewModels.Product;
 using KaiCoreApp.Utilities.Constants;
 using KaiCoreApp.Web.Extensions;
 using KaiCoreApp.Web.Models;
+using KaiCoreApp.Web.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace KaiCoreApp.Web.Controllers
 {
@@ -13,11 +18,18 @@ namespace KaiCoreApp.Web.Controllers
     {
         private IProductService _productService;
         private IBillService _billService;
+        private IViewRenderService _viewRender;
+        private IConfiguration _configuration;
+        private IEmailSender _emailSender;
 
-        public CartController(IProductService productService, IBillService billService)
+        public CartController(IProductService productService, IBillService billService, IViewRenderService viewRender,
+            IConfiguration configuration, IEmailSender emailSender)
         {
             this._productService = productService;
             this._billService = billService;
+            this._viewRender = viewRender;
+            this._configuration = configuration;
+            this._emailSender = emailSender;
         }
 
         [Route("cart.html", Name = "Cart")]
@@ -27,9 +39,68 @@ namespace KaiCoreApp.Web.Controllers
         }
 
         [Route("checkout.html", Name = "Checkout")]
+        [HttpGet]
         public IActionResult Checkout()
         {
-            return View();
+            var model = new CheckoutViewModel();
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+            model.Carts = session;
+            return View(model);
+        }
+
+        [Route("checkout.html", Name = "Checkout")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Checkout(CheckoutViewModel model)
+        {
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+            if (ModelState.IsValid)
+            {
+                if (session != null)
+                {
+                    var details = new List<BillDetailViewModel>();
+                    foreach (var item in session)
+                    {
+                        details.Add(new BillDetailViewModel()
+                        {
+                            Product = item.Product,
+                            Price = item.Price,
+                            Quantity = item.Quantity,
+                            ProductId = item.Product.Id
+                        });
+                    }
+                    var billViewModel = new BillViewModel()
+                    {
+                        CustomerName = model.CustomerName,
+                        CustomerMobile = model.CustomerMobile,
+                        CustomerAddress = model.CustomerAddress,
+                        CustomerMessage = model.CustomerMessage,
+                        BillStatus = Data.Enums.BillStatus.New,
+                        BillDetails = details,
+                    };
+                    if (User.Identity.IsAuthenticated == true)
+                    {
+                        billViewModel.CustomerId = Guid.Parse(User.GetSpecificClaim("UserId"));
+                    }
+
+                    _billService.Create(billViewModel);
+                    try
+                    {
+                        _billService.Save();
+                        var content = await _viewRender.RenderToStringAsync("Cart/_BillMail", billViewModel);
+                        //send mail
+                        await _emailSender.SendEmailAsync(_configuration["MailSettings:AdminMail"], "New mail to KaiShop", content);
+                        ViewData["Success"] = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewData["Success"] = false;
+                        ModelState.AddModelError("", ex.Message);
+                    }
+                }
+            }
+            model.Carts = session;
+            return View(model);
         }
 
         #region AJAX Request
