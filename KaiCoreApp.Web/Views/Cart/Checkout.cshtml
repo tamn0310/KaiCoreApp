@@ -1,0 +1,173 @@
+﻿@model CheckoutViewModel
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <recaptcha-script validation-message-element-id="recatchaErrorMessage" />
+}
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="home"> <a href="/" title="Về trang chủ">Trang chủ</a> <span>/</span> </li>
+                    <li> <strong>Đặt hàng</strong> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-container -->
+<div class="main-container col1-layout">
+    <div class="main container">
+        <div class="row">
+            <section class="col-sm-12 col-xs-12">
+                <div class="col-main">
+                    @if (ViewData["Success"] != null)
+                    {
+                        if ((bool)ViewData["Success"] == true)
+                        {
+                            <div class="alert alert-success">
+                                Cám ơn bạn đã đặt hàng. Chúng tôi sẽ xác nhận đơn hàng của bạn sớm nhất có thể.
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger">
+                                Có lỗi xảy ra trong tiến trình đặt hàng. Vui lòng liên hệ với quản trị viên để được giải quyết.
+                            </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <form action="/checkout.html" method="post">
+                            @Html.AntiForgeryToken()
+                            <div class="page-title">
+                                <h1>Đặt hàng</h1>
+                            </div>
+                            <div class="page-content checkout-page">
+                                <h3 class="checkout-sep">1. Phương thức thanh toán</h3>
+                                <div class="box-border">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4>Thanh toán với tư cách là khách hoặc đăng ký</h4>
+                                            <p>Đăng ký với chúng tôi để thuận tiện trong tương lai:</p>
+                                            <button class="button" onclick="window.location.href='/register.html'">Tiếp tục</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4>Login</h4>
+                                            <p>Đã đăng ký tài khoản? Vui lòng ấn vào nút bên dưới:</p>
+                                            <button class="button" onclick="window.location.href='/login.html'">Đăng nhập</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="checkout-sep">2. Thông tin vận chuyển</h3>
+                                <div class="box-border">
+                                    <ul>
+                                        <li class="row">
+                                            <div class="col-sm-6">
+                                                <label for="first_name_1" class="required">Họ và tên</label>
+                                                <input asp-for="CustomerName" class="input form-control" type="text">
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <label for="last_name_1" class="required">Số điện thoại</label>
+                                                <input class="input form-control" type="text" asp-for="CustomerMobile">
+                                            </div>
+                                        </li>
+
+                                        <li class="row">
+                                            <div class="col-sm-6">
+                                                <label for="company_name_1">Địa chỉ</label>
+                                                <input class="input form-control" type="text" asp-for="CustomerAddress" />
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <label for="email_address_1" class="required">Lời nhắn</label>
+                                                <input class="input form-control" type="text" asp-for="CustomerMessage">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button class="button">Tiếp tục</button>
+                                </div>
+                                <h3 class="checkout-sep">3. Thông tin thanh toán</h3>
+                                <div class="box-border">
+                                    <ul>
+                                        @for (int i = 0; i < Model.PaymentMethods.Count; i++)
+                                        {
+                                            <li>
+                                                <label asp-for="@Model.PaymentMethods[i].Value" for="radio_button_5">
+                                                    <input type="radio" name="paymentMethod" asp-for="PaymentMethod" value="@Model.PaymentMethods[i].Value" id="radio_button_5">
+                                                    @Model.PaymentMethods[i].Name
+                                                </label>
+                                            </li>
+                                        }
+                                    </ul>
+                                    <button class="button">Continue</button>
+                                </div>
+
+                                <h3 class="checkout-sep">4. Chi tiết đơn hàng</h3>
+                                <div class="box-border">
+                                    <div class="order-detail-content">
+                                        <table class="table table-bordered table-responsive jtv-cart-summary">
+                                            <thead>
+                                                <tr>
+                                                    <th class="cart_product">Ảnh sản phẩm</th>
+                                                    <th>Tên sản phẩm</th>
+                                                    <th>Giá tiền</th>
+                                                    <th>Số lượng</th>
+                                                    <th>Tổng tiền</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Carts)
+                                                {
+                                                    <tr>
+                                                        <td class="cart_product">
+                                                            <a href="@item.Product.SeoAlias-p.@(item.Product.Id).html">
+                                                                <img src="@item.Product.Image" alt="@item.Product.Name">
+                                                            </a>
+                                                        </td>
+                                                        <td class="cart_description">
+                                                            <p class="product-name">
+                                                                <a href="@item.Product.SeoAlias-p.@(item.Product.Id).html">
+                                                                    @item.Product.Name
+                                                                </a>
+                                                            </p>
+                                                        </td>
+                                                        <td class="price"><span>@item.Price.ToString("N0") ₫</span></td>
+                                                        <td class="qty">
+                                                            @item.Quantity
+                                                        </td>
+                                                        <td class="price"><span>@((item.Price * item.Quantity).ToString("N0")) ₫</span></td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="3"><strong>Tổng tiền</strong></td>
+                                                    <td colspan="2"><strong>@(Model.Carts.Sum(x => x.Quantity * x.Price).ToString("N0")) ₫</strong></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                        <div class="cart_navigation">
+                                            <recaptcha />
+                                            <span class="text-danger" id="recatchaErrorMessage"></span>
+                                            <button type="submit" class="button" style="margin-right:5px">Đặt hàng</button>
+                                            <button type="button" onclick="window.location.href='/cart.html'" class="button pull-right">Quay lại giỏ hàng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    }
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!--End main-container -->
