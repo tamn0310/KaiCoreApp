@@ -90,6 +90,8 @@ namespace KaiCoreApp.Web
             services.AddTransient<IFooterRepository, FooterRepository>();
             services.AddTransient<ISystemConfigRepository, SystemConfigRepository>();
             services.AddTransient<ISlideRepository, SlideRepository>();
+            services.AddTransient<IFeedBackRepository, FeedbackRepository>();
+            services.AddTransient<IContactRepository, ContactRepository>();
 
             //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -100,6 +102,8 @@ namespace KaiCoreApp.Web
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IBlogService, BlogService>();
             services.AddTransient<ICommonService, CommonService>();
+            services.AddTransient<IContactService, ContactService>();
+            services.AddTransient<IFeedbackService, FeedbackService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 

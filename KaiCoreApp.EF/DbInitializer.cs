@@ -94,6 +94,22 @@ namespace KaiCoreApp.EF
                 });
             }
 
+            if (!_context.Contacts.Any())
+            {
+                _context.Contacts.Add(new Contact()
+                {
+                    Id = CommonConstants.DefaultContactId,
+                    Address = "Bình Dương - Bình Thành - Hương Trà - Huế",
+                    Email = "Tamn0310@gmail.com",
+                    Name = "Kai Shop",
+                    Phone = "0899918754",
+                    Status = Status.Active,
+                    Website = "http://kaishop.com",
+                    Lat = 16.3485083,
+                    Lng = 107.5228381
+                });
+            }
+
             if (_context.Footers.Count(x => x.Id == CommonConstants.DefaultFooterId) == 0)
             {
                 string content = "Footer";

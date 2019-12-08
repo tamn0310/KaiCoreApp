@@ -27,6 +27,8 @@ namespace KaiCoreApp.Application.AutoMapper
             CreateMap<Slide, SlideViewModel>();
             CreateMap<SystemConfig, SystemConfigViewModel>();
             CreateMap<Footer, FooterViewModel>();
+            CreateMap<Feedback, FeedbackViewModel>();
+            CreateMap<Contact, ContactViewModel>();
         }
     }
 }
