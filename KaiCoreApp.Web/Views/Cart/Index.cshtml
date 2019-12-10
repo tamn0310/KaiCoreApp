@@ -19,16 +19,15 @@
                     <h2>Tổng quan giỏ hàng</h2>
                 </div>
                 <div class="page-content">
-                    <div class="heading-counter warning">Giỏ hàng của bạn có: <span>2 Product</span> </div>
                     <div class="order-detail-content">
                         <table class="table table-bordered table-responsive jtv-cart-summary">
                             <thead>
                                 <tr>
                                     <th class="cart_product">Ảnh sản phẩm</th>
                                     <th>Tên sản phẩm</th>
-                                    <th>Giá</th>
+                                    <th>Giá tiền</th>
                                     <th>Số lượng</th>
-                                    <th>Tổng tiền</th>
+                                    <th>Thành tiền</th>
                                     <th class="action"><i class="fa fa-trash-o"></i></th>
                                 </tr>
                             </thead>
@@ -54,7 +53,7 @@
                                 <td class="qty">
                                     <input class="form-control input-sm txtQuantity" type="text" data-id="{{ProductId}}" value="{{Quantity}}">
                                 </td>
-                                <td class="price"><span>{{Amount}}</span></td>
+                                <td class="price"><span>{{Amount}} ₫</span></td>
                                 <td class="action"><a href="#" data-id="{{ProductId}}" class="btn-delete">Xóa</a></td>
                             </tr>
                         </script>

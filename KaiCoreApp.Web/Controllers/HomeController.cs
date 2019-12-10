@@ -30,7 +30,7 @@ namespace KaiCoreApp.Web.Controllers
             homeVm.HotProducts = _productService.GetHotProduct(5);
             homeVm.TopSellProducts = _productService.GetLastest(5);
             homeVm.LastestBlogs = _blogService.GetLastest(5);
-            homeVm.HomeSlides = _commonService.GetSlides("top");
+            homeVm.HomeSlides = _commonService.GetSlides("brand");
             return View(homeVm);
         }
 
