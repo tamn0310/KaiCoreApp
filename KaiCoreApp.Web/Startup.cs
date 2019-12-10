@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using KaiCoreApp.Application.Dapper.Implementation;
+using KaiCoreApp.Application.Dapper.Interface;
 using KaiCoreApp.Application.Implementations;
 using KaiCoreApp.Application.Interfaces;
 using KaiCoreApp.Data.Entities;
@@ -104,6 +106,9 @@ namespace KaiCoreApp.Web
             services.AddTransient<ICommonService, CommonService>();
             services.AddTransient<IContactService, ContactService>();
             services.AddTransient<IFeedbackService, FeedbackService>();
+
+            //Report
+            services.AddTransient<IReportService, ReportService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 

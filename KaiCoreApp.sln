@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KaiCoreApp.Web", "KaiCoreApp.Web\KaiCoreApp.Web.csproj", "{7AA96045-90EB-41FF-A81E-62D0D3C604C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiCoreApp.Application.Dapper", "KaiCoreApp.Application.Dapper\KaiCoreApp.Application.Dapper.csproj", "{9F737BD1-563F-418F-88F0-32AAAD3055BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{7AA96045-90EB-41FF-A81E-62D0D3C604C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA96045-90EB-41FF-A81E-62D0D3C604C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA96045-90EB-41FF-A81E-62D0D3C604C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F737BD1-563F-418F-88F0-32AAAD3055BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F737BD1-563F-418F-88F0-32AAAD3055BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F737BD1-563F-418F-88F0-32AAAD3055BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F737BD1-563F-418F-88F0-32AAAD3055BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{A3F2C8E2-CFEB-4A6F-9FF5-A66DD1D720AE} = {8F264B45-A47F-46BB-8585-F3431FB59D55}
 		{8C12EFC2-D7FB-4A95-8755-850D221FB076} = {1D1E6998-28F7-4492-925A-EB05D5A90D47}
 		{7AA96045-90EB-41FF-A81E-62D0D3C604C9} = {AD95876E-8184-493B-9A10-BD46973B0190}
+		{9F737BD1-563F-418F-88F0-32AAAD3055BF} = {1D1E6998-28F7-4492-925A-EB05D5A90D47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0A99FB5-8584-40D5-8A32-66B340E3C7EB}
