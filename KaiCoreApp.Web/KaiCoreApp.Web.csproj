@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="wwwroot\lib\parsleyjs\bower_components\bootstrap\bower.json" />
     <Content Include="wwwroot\lib\parsleyjs\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="wwwroot\lib\parsleyjs\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
@@ -48,6 +52,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KaiCoreApp.Application.Dapper\KaiCoreApp.Application.Dapper.csproj" />
     <ProjectReference Include="..\KaiCoreApp.Application\KaiCoreApp.Application.csproj" />
     <ProjectReference Include="..\KaiCoreApp.Data\KaiCoreApp.Data.csproj" />
     <ProjectReference Include="..\KaiCoreApp.EF\KaiCoreApp.EF.csproj" />
@@ -60,6 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="bundleconfig.json" />
     <None Include="wwwroot\lib\Chart.js\.github\ISSUE_TEMPLATE.md" />
     <None Include="wwwroot\lib\Chart.js\.github\PULL_REQUEST_TEMPLATE.md" />
     <None Include="wwwroot\lib\echarts\.github\CONTRIBUTING.md" />

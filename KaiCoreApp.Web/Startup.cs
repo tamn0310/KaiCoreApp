@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using KaiCoreApp.Application.Dapper.Implementation;
+using KaiCoreApp.Application.Dapper.Interface;
 using KaiCoreApp.Application.Implementations;
 using KaiCoreApp.Application.Interfaces;
 using KaiCoreApp.Data.Entities;
@@ -90,6 +92,8 @@ namespace KaiCoreApp.Web
             services.AddTransient<IFooterRepository, FooterRepository>();
             services.AddTransient<ISystemConfigRepository, SystemConfigRepository>();
             services.AddTransient<ISlideRepository, SlideRepository>();
+            services.AddTransient<IFeedBackRepository, FeedbackRepository>();
+            services.AddTransient<IContactRepository, ContactRepository>();
 
             //Service
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -100,6 +104,11 @@ namespace KaiCoreApp.Web
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IBlogService, BlogService>();
             services.AddTransient<ICommonService, CommonService>();
+            services.AddTransient<IContactService, ContactService>();
+            services.AddTransient<IFeedbackService, FeedbackService>();
+
+            //Report
+            services.AddTransient<IReportService, ReportService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 

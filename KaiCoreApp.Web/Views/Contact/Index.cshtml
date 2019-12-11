@@ -1,0 +1,91 @@
+﻿@model ContactPageViewModel
+@{
+    ViewData["Title"] = "Trang liên hệ";
+}
+
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="home"> <a title="Go to Home Page" href="/">Trang chủ</a> <span>/</span> </li>
+                    <li class="category1601"> <strong>Liên hệ</strong> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- main-container -->
+<div class="main-container col2-right-layout">
+    <div class="main container">
+        <div class="row">
+            <section class="col-md-12 wow">
+                <div class="col-md-12">
+                    <div class="page-title">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="static-contain">
+                        <fieldset class="group-select">
+                            @if (ViewData["Success"] != null)
+                            {
+                                if ((bool)ViewData["Success"] == true)
+                                {
+                                    <div class="alert alert-success">
+                                        Cám ơn bạn đã gửi phản hồi
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="alert alert-danger">
+                                        Có lỗi xảy ra trong tiến trình gửi phản hồi.
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <form action="/contact.html" method="post">
+                                    <ul>
+                                        <li id="billing-new-address-form">
+                                            <fieldset>
+                                                <div asp-validation-summary="All" class="text-danger"></div>
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="billing[address_id]" value="" id="billing:address_id">
+                                                <ul>
+                                                    <li>
+                                                        <label>Họ và tên <span class="required">*</span></label>
+                                                        <br>
+                                                        <input type="text" title="Nhập họ tên của bạn" asp-for="Feedback.Name" class="input-text required-entry">
+                                                    </li>
+                                                    <li>
+                                                        <label>Địa chỉ Email <span class="required">*</span></label>
+                                                        <br>
+                                                        <input type="text" title="Nhập địa chỉ email của bạn" asp-for="Feedback.Email" class="input-text required-entry">
+                                                    </li>
+                                                    <li class="">
+                                                        <label>Lời nhắn<em class="required">*</em></label>
+                                                        <br>
+                                                        <div style="float:none" class="">
+                                                            <textarea asp-for="Feedback.Message" title="Nhập lời nhắn" class="required-entry input-text" cols="5" rows="3"></textarea>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                        </li>
+                                        <p class="require"><em class="required">* </em>Trường bắt buộc phải nhập</p>
+                                        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+                                        <div class="buttons-set">
+                                            <button type="submit" title="ấn để gửi" class="button submit"> <span> Gửi đi </span> </button>
+                                        </div>
+                                    </ul>
+                                </form>
+                            }
+                        </fieldset>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!--End main-container --> 
