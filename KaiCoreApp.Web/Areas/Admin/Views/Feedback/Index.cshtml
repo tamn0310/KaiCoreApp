@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+@section Styles{
+    <link href="~/lib/jquery-easyui-1.8.8/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <link href="~/lib/jquery-easyui-1.8.8/themes/icon.css" rel="stylesheet" />
+}
+@section Script{
+    <script src="~/lib/jquery-easyui-1.8.8/jquery.easyui.min.js"></script>
+    <script src="~/app/controllers/feedback/index.js"></script>
+    <script>
+        var feedback = new feedbackController();
+        feedback.initialize();
+    </script>
+
+}
+
+<div class="page-title">
+    <div class="title_left">
+        <h3>Danh sách phản hồi</h3>
+    </div>
+
+    <div class="title_right">
+        <div class="col-md-3 col-sm-5 col-xs-12 form-group pull-right">
+            <div class="input-group">
+                <input type="text" id="txtSearch" class="form-control" placeholder="Nhập từ khóa">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" id="btnSearch" type="button">Tìm kiếm</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width:15%">Tên người dùng</th>
+                            <th style="width:15%">Email</th>
+                            <th style="width:30%">Message</th>
+                            <th style="width:20%">Ngày Tạo</th>
+                            <th style="width:20%">#</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tbl-product">
+                    </tbody>
+                </table>
+                <!--Paging-->
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="dataTables_info" id="datatable-checkbox_info" role="status" aria-live="polite">
+                            <select id="ddlShowPage">
+                                <option value="10" selected="selected">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                            </select>
+                            <span class="item-per-page">
+                                bản ghi/trang.
+                            </span>
+                            Tổng số bản ghi: <strong id="lblTotalRecords"></strong>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="datatable-checkbox_paginate">
+                            <ul id="paginationUL"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="table-template" type="x-tmpl-mustache">
+    <tr>
+
+        <td>{{Name}}</td>
+        <td>{{Email}}</td>
+        <td>{{Message}}</td>
+        <td>{{CreatedDate}}</td>
+        <th scope="row">
+            <button class="btn btn-default btn-sm btn-edit" data-id="{{Id}}" title="Xem chi tiết"><i class="fa fa-pencil"></i></button>
+        </th>
+    </tr>
+</script>
